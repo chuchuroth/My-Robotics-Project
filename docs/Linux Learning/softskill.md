@@ -206,6 +206,8 @@ It's common to struggle with decision-making, and it's great that you're looking
 
 I hope this helps!
 
+------
+
 The rise of AI is reshaping the landscape of work and life, requiring us to adapt and evolve. Here's advice on how to thrive in this AI-driven era:
 
 **Key Skills to Cultivate:**
