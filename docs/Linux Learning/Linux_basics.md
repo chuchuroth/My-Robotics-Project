@@ -54,7 +54,7 @@ When using an Ubuntu system, especially if you're new to it or transitioning fro
 - **History**: Press the up arrow to see previous commands or type `history` for the full list.
 
 These are the must-knows to get comfortable with Ubuntu. You’ll mostly use the terminal for these, but Ubuntu’s graphical interface (like the file manager or software center) can handle some tasks too if you’re not ready to go full command-line warrior. What are you planning to do with your Ubuntu system? That might narrow down what’s most useful to focus on!
------
+***
 Here’s a breakdown of some of the most common commands you’ll encounter when coding with Python, managing projects with Git, and working in a Linux environment like Ubuntu. These are practical, everyday commands that developers rely on. I’ll keep it focused and concise, grouping them by tool.
 
 ### **Python Commands**
@@ -177,7 +177,7 @@ Imagine you’re starting a Python project on Ubuntu:
 - Run it: `python3 main.py`
 
 These commands cover the basics for coding with Python, version control with Git, and navigating Linux. They’re the foundation—once you’re comfortable, you’ll naturally pick up more advanced ones. What kind of coding project are you working on? That could point me toward more specific commands!
---------
+***
 
 
 
@@ -248,7 +248,7 @@ Here's a breakdown of basic Linux operations and essential concepts:
 
 Learning Linux involves getting comfortable with the command line. Start with the basic commands, and gradually explore more advanced concepts.
 
------------
+***
 Deploying a simple Python application involves setting up an environment to ensure it runs smoothly, securely, and efficiently on your target system (e.g., a local machine, a server, or a cloud instance like AWS/Google Cloud). I’ll assume you’re deploying on an Ubuntu-like Linux system since we’ve been talking about Ubuntu, but I’ll note variations where relevant. Here’s a step-by-step rundown of the necessary environment setup and system settings to watch out for.
 
 ---
@@ -443,7 +443,7 @@ Let’s say you have a Flask app (`app.py`):
 - **Network**: If it’s a server, ensure SSH (`sudo apt install openssh-server`) and your IP/domain are configured.
 
 What kind of app are you deploying? A web app, a script, or something else? That’ll help me refine this further!
----------
+***
 Let’s break this down clearly and concisely.
 
 ### **What is `pip`?**
@@ -538,7 +538,7 @@ Here are tools that do similar jobs, either for Python or other languages:
 - It’s the default, so most Python tutorials assume you’re using it.
 
 If you’re deploying that Python app we talked about earlier, `pip` is likely all you need for a basic setup—just `pip install -r requirements.txt` in your virtual environment. But if your project gets complex (e.g., conflicting dependencies), Poetry or Pipenv might save you headaches. What’s your app doing that might influence which tool you pick?
-----
+***
 ### Key Points
 - It seems likely that installing ROS2 on Windows can be done from source or binary packages, with binary being easier for most users.
 - Installing from source means compiling the code yourself, offering customization but requiring more technical setup.
@@ -689,7 +689,7 @@ In summary, installing ROS2 on Windows from binary packages is the go-to for eas
 - [Reddit discussion ROS2 Windows pain points](https://www.reddit.com/r/ROS/comments/lounu1/is_installing_ros2_on_windows_a_pain_for_everyone/)
 - [Stack Overflow Win11 ROS2 install query](https://stackoverflow.com/questions/71725255/can-win11-install-ros2)
 - [ROS2 Tutorials Colcon on Windows](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
----------------
+***
 ### Key Points
 - It seems likely that popular command-line interfaces include Bash, CMD, Powershell, Zsh, and Fish, each serving different operating systems and user needs.
 - Research suggests these interfaces vary in syntax, features, and scripting capabilities, with Unix-like systems (Linux, macOS) using Bash, Zsh, and Fish, and Windows using CMD and Powershell.
@@ -802,7 +802,7 @@ In summary, popular command-line interfaces like Bash, CMD, Powershell, Zsh, and
 - [Powershell - Wikipedia](https://en.wikipedia.org/wiki/Powershell)
 - [Zsh - Wikipedia](https://en.wikipedia.org/wiki/Zsh)
 - [Fish shell - Wikipedia](https://en.wikipedia.org/wiki/Fish_(shell))
---------
+***
 ### Key Points
 - It seems likely that the "bash: sudo: command not found" error means 'sudo' is either not installed or not in your system's PATH.
 - Research suggests checking if 'sudo' exists, ensuring PATH includes /usr/bin, and installing it if missing, possibly using 'su' if available.
@@ -961,7 +961,7 @@ In summary, the "bash: sudo: command not found" error is likely due to 'sudo' no
 
 
 
------------
+***
 ### Key Points
 - It seems likely that the "bash: apt-get: command not found" error means you're on a system where `apt-get` isn't available, possibly not a Debian-based Linux distribution, or it's not in your PATH.
 - Research suggests checking your operating system, ensuring `apt-get` is installed for Debian-based systems, and using alternatives like Homebrew for macOS or other package managers for non-Debian Linux.
