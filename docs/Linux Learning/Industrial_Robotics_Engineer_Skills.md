@@ -3,71 +3,70 @@ To effectively cover the knowledge areas outlined in your PLC certificate course
 **Modul 1: Grundlagen**
 
 - **Automatisierungsgeräte & Programmiersprachen (DIN EN 61131-3):**
-  - Siemens offers comprehensive learning documents covering automation devices and programming languages. citeturn0search5
+  - Siemens offers comprehensive learning documents covering automation devices and programming languages. 
 
 - **Projektierung mit TIA-Portal & Programmierung mit TIA-Portal:**
-  - The "Siemens TIA Portal Training Course" on YouTube provides a series of tutorials for beginners. citeturn0search11
+  - The "Siemens TIA Portal Training Course" on YouTube provides a series of tutorials for beginners. 
 
 - **Variablen, Datentypen, Zahlensysteme & Logische Funktionen:**
-  - SolisPLC offers tutorials on Siemens PLC training, covering hardware, software, and programming fundamentals. citeturn0search1
+  - SolisPLC offers tutorials on Siemens PLC training, covering hardware, software, and programming fundamentals.
 
 **Modul 2: Automatisierungstechnik**
 
 - **Bibliotheken, Programmstrukturen & Multiinstanzen von Zählern und Zeiten:**
-  - Siemens' SCE Learning Documents provide in-depth materials on these topics. citeturn0search5
+  - Siemens' SCE Learning Documents provide in-depth materials on these topics. 
 
 - **Arbeiten mit FC, FB und DB & Vergleichs- und Zeitfunktionen:**
-  - The "Siemens PLC Programming Tutorial in TIA Portal" video offers practical insights into working with function blocks and data blocks. citeturn0search3
+  - The "Siemens PLC Programming Tutorial in TIA Portal" video offers practical insights into working with function blocks and data blocks. 
 
 - **Flankenauswertung & Speicherfunktionen:**
-  - SolisPLC's tutorials delve into these advanced programming concepts. citeturn0search1
+  - SolisPLC's tutorials delve into these advanced programming concepts.
 
 **Modul 3: WinCC TIA-Portal - Prozessvisualisierung**
 
 - **Systemmeldungen, Rezepturen & Meldungen, Warnungen, Alarme:**
-  - Siemens' SCE Learning Documents include comprehensive guides on WinCC and process visualization. citeturn0search5
+  - Siemens' SCE Learning Documents include comprehensive guides on WinCC and process visualization. 
 
 - **Animationen, Bildweiterschaltung & Musterprojekte:**
-  - The "Siemens TIA Portal Training Course" playlist offers tutorials on creating animations and screen navigation in WinCC. citeturn0search11
-
+  - The "Siemens TIA Portal Training Course" playlist offers tutorials on creating animations and screen navigation in WinCC. 
 - **Integration mit Basic-Panel und WINCC im TIA-Portal:**
-  - SolisPLC provides tutorials on integrating HMI panels with WinCC in TIA Portal. citeturn0search1
+  - SolisPLC provides tutorials on integrating HMI panels with WinCC in TIA Portal. 
 
 **Modul 4: Factory IO und Industrie 4.0**
 
 - **Pick & Place und Palettierer-Anlagen & Automatisierung mit Factory IO und SPS:**
-  - The "Factory I/O PLC Automation Training Course" offers a series of videos demonstrating automation scenarios using Factory I/O. citeturn0search2
+  - The "Factory I/O PLC Automation Training Course" offers a series of videos demonstrating automation scenarios using Factory I/O. 
 
 - **Virtuelle SPS (PLCSim) & Prozesssimulationen (PLC-LAB):**
-  - Siemens' SCE Learning Documents provide resources on using PLCSim for virtual commissioning. citeturn0search5
+  - Siemens' SCE Learning Documents provide resources on using PLCSim for virtual commissioning. 
 
 - **Projektarbeit, SCL-Anwendungen & spezielle Baugruppen:**
-  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video offers insights into SCL applications. citeturn0search4
+  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video offers insights into SCL applications. 
 
 **Modul 5: Projektarbeit / Wiederholung / Prüfungsvorbereitung**
 
 - **Datentypen, Multiinstanzen & GDB, Merker, IDB-Gültigkeitsbereiche:**
-  - Siemens' SCE Learning Documents cover these advanced topics in detail. citeturn0search5
+  - Siemens' SCE Learning Documents cover these advanced topics in detail. 
 
 - **HMI, Factory IO & Zahlensysteme:**
-  - The "Factory I/O PLC Automation Training Course" provides practical examples integrating HMI with Factory I/O. citeturn0search2
+  - The "Factory I/O PLC Automation Training Course" provides practical examples integrating HMI with Factory I/O. 
 
 - **Bausteinhierarchien & Schrittketten:**
-  - SolisPLC tutorials discuss program structuring and sequence control. citeturn0search1
+  - SolisPLC tutorials discuss program structuring and sequence control. 
 
 **Modul 6: Structured Control Language (SCL)**
 
 - **Einführung SCL-Editor & Prozesssimulation mit Factory IO:**
-  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video introduces the SCL editor and its applications. citeturn0search4
+  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video introduces the SCL editor and its applications.
 
 - **Übungen mit TIA, PLCSim & Projekt mit SCL und Factory IO:**
-  - Siemens' SCE Learning Documents offer exercises combining TIA Portal, PLCSim, and SCL. citeturn0search5
+  - Siemens' SCE Learning Documents offer exercises combining TIA Portal, PLCSim, and SCL. 
 
 - **Einfache und erweiterte Anweisungen, Flankenauswertung, Konstanten, Konvertierungen & Mathematische Funktionen, Operatoren:**
-  - SolisPLC tutorials cover these SCL programming aspects in detail. citeturn0search1
+  - SolisPLC tutorials cover these SCL programming aspects in detail. 
 
 - **Programmsteuerung (IF, CASE, FOR, WHILE, Repeat UNTIL, GOTO) & Schieben und Rotieren:**
-  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video demonstrates control structures and bit manipulation in SCL. citeturn0search4
+  - The "Siemens SCL Programming for the Factory I/O Stacker Crane" video demonstrates control structures and bit manipulation in SCL. 
 
 These resources should provide a comprehensive foundation for your PLC certification studies. 
 
