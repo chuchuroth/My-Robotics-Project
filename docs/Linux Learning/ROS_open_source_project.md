@@ -6,13 +6,13 @@ Engaging with open-source robotics projects is a fantastic way to deepen your un
 
 Begin by exploring existing projects to find one that aligns with your interests:
 
-- **Awesome Robotics Projects:** A curated list of open-source robotics projects, including affordable and visionary initiatives. citeturn0search0
+- **Awesome Robotics Projects:** A curated list of open-source robotics projects, including affordable and visionary initiatives. 
 
-- **Awesome Open Source Robots:** A collection of robots with open-source software and hardware. citeturn0search5
+- **Awesome Open Source Robots:** A collection of robots with open-source software and hardware. 
 
-- **OpenCat:** An open-source quadruped robotic pet framework developed by Petoi. citeturn0search14
+- **OpenCat:** An open-source quadruped robotic pet framework developed by Petoi. 
 
-- **Open Robotics:** An organization offering numerous open-source robotics projects and tools. citeturn0search4
+- **Open Robotics:** An organization offering numerous open-source robotics projects and tools. 
 
 ---
 
