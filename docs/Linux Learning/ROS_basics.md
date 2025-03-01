@@ -211,7 +211,7 @@ In summary, environment variables are essential for configuring and managing you
 
 
 
-
+***
 
 It's fantastic that you're starting your programming journey! Here's a curated list of resources that are excellent for beginners, covering various learning styles:
 
@@ -269,7 +269,7 @@ It's fantastic that you're starting your programming journey! Here's a curated l
 I hope this helps you on your coding journey!
 
 
-
+***
 
 ROS has moved from primarily a research tool, to one with very real world applications. Here are a few key areas where ROS is being used:
 
@@ -313,7 +313,7 @@ ROS has moved from primarily a research tool, to one with very real world applic
 It's important to note that while some robots may "run" ROS directly, in many industrial applications, ROS is used as a development platform. The final product might use a more streamlined, embedded system for real-time performance and reliability.
 
 
-
+***
 
 You're right, while ROS is fantastic for development, many production-ready robots rely on streamlined, embedded systems for the critical real-time performance and reliability needed in demanding applications. Here are some examples:
 
@@ -367,7 +367,7 @@ You're right, while ROS is fantastic for development, many production-ready robo
 
 In essence, these embedded systems are highly tailored to the specific needs of the robot and its application, prioritizing real-time performance, reliability, and safety.
 
-
+***
 
 
 That's a fantastic goal! Robotics is a challenging but incredibly rewarding field. Here's a breakdown of online resources to help you on your journey, focusing on a well-rounded approach:
