@@ -137,6 +137,7 @@ Hier sind Antworten auf die Fragen zu den Soft Skills basierend auf dem Dokument
   *Sehr wichtig. Ich kommuniziere frühzeitig, falls es Probleme gibt.*  
 
 Falls du bestimmte Fragen detaillierter beantwortet haben möchtest, sag einfach Bescheid! 😊
+
 ----
 It's common to struggle with decision-making, and it's great that you're looking for ways to improve. Here's a breakdown of advice, focusing on both friendships and financial decisions:
 
@@ -240,6 +241,7 @@ The rise of AI is reshaping the landscape of work and life, requiring us to adap
 **In summary:**
 
 The AI era presents both challenges and opportunities. By focusing on developing uniquely human skills, embracing lifelong learning, and leveraging AI as a tool, you can thrive in this rapidly changing world.
+
 ----
 Absolutely! That's a comprehensive list of AI and related tools. Analyzing each one in detail would be extensive, so I'll provide a breakdown with key information, focusing on function, cost, collaboration, and use-scenarios.
 
@@ -368,6 +370,7 @@ Absolutely! That's a comprehensive list of AI and related tools. Analyzing each 
 * **Education:** Study tools, document analysis, presentation creation.
 
 To give you more specific information about a tool, please ask me about the tool itself.
+
 ----------
 For a technical interview, you'll want to be prepared to demonstrate your coding skills, problem-solving abilities, and technical knowledge. Here's a breakdown of recommended tools and strategies:
 
@@ -437,6 +440,7 @@ For a technical interview, you'll want to be prepared to demonstrate your coding
 * Practice on Leetcode or Hackerrank.
 
 By utilizing these tools and practicing your skills, you'll be well-prepared for your technical interview.
+
 ----
 Alright, let's dive into learning how to use Make (formerly Integromat), a powerful visual automation tool.
 
