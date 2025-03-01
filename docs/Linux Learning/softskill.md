@@ -137,3 +137,70 @@ Hier sind Antworten auf die Fragen zu den Soft Skills basierend auf dem Dokument
   *Sehr wichtig. Ich kommuniziere frühzeitig, falls es Probleme gibt.*  
 
 Falls du bestimmte Fragen detaillierter beantwortet haben möchtest, sag einfach Bescheid! 😊
+----
+It's common to struggle with decision-making, and it's great that you're looking for ways to improve. Here's a breakdown of advice, focusing on both friendships and financial decisions:
+
+**Understanding the Root of the Problem:**
+
+* **Identify Patterns:**
+    * Take time to reflect on past decisions. What were the common factors that led to poor outcomes? Did you ignore red flags? Were you influenced by emotions?
+    * Journaling can be very helpful for this. Write down the circumstances, your thoughts, and the results of each decision.
+* **Recognize Your Biases:**
+    * We all have biases that can cloud our judgment. For example, you might be prone to "confirmation bias," where you only see information that confirms your existing beliefs.
+    * Learning about common cognitive biases can help you become more aware of them.
+* **Emotional Influence:**
+    * Are your decisions driven by fear, desperation, or a need for approval? Emotional decision-making often leads to poor choices.
+    * Learning to regulate your emotions is a very valuable skill.
+
+**Improving Friendships:**
+
+* **Define Your Values:**
+    * What qualities do you value in a friend? Honesty, loyalty, kindness? Having clear values will help you identify compatible people.
+    * Make a list of what you want in a friend.
+* **Observe Behavior:**
+    * Pay close attention to how people treat you and others. Do their actions align with their words?
+    * Look for consistency and reliability.
+* **Trust Your Gut:**
+    * If something feels off about a person, don't ignore it. Your intuition can be a valuable guide.
+    * It is ok to take your time to get to know people.
+* **Healthy Boundaries:**
+    * Learn to set healthy boundaries. Don't be afraid to say no to things that don't feel right.
+    * Understand that it is ok to distance yourself from people that are detrimental to your well being.
+
+**Improving Financial Decisions:**
+
+* **Educate Yourself:**
+    * Learn the basics of personal finance. Read books, articles, or take online courses.
+    * Understand concepts like budgeting, investing, and debt management.
+* **Create a Budget:**
+    * Track your income and expenses. This will give you a clear picture of your financial situation.
+    * Set realistic financial goals.
+* **Seek Professional Advice:**
+    * Consider consulting a financial advisor. They can provide personalized guidance based on your needs.
+    * Do your research before choosing a financial advisor.
+* **Avoid Impulsive Decisions:**
+    * Don't make major financial decisions when you're feeling emotional.
+    * Take your time to research and consider all options.
+* **Be wary of "get rich quick" schemes:**
+    * If it sounds to good to be true, it likely is.
+
+**General Decision-Making Strategies:**
+
+* **Gather Information:**
+    * The more information you have, the better equipped you'll be to make informed decisions.
+    * Do your research.
+* **Pros and Cons List:**
+    * Write down the advantages and disadvantages of each option. This can help you see the situation more clearly.
+* **"Sleep on It":**
+    * Don't rush into decisions. Give yourself time to think things over.
+* **Learn from Mistakes:**
+    * Everyone makes mistakes. Don't dwell on them, but use them as learning opportunities.
+
+**Key Takeaways:**
+
+* Self-awareness is crucial.
+* Educate yourself.
+* Don't be afraid to seek help.
+* Be patient with yourself. Improving decision-making skills takes time and practice.
+
+I hope this helps!
