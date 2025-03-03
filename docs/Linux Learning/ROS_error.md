@@ -1,3 +1,16 @@
+* If you still get errors, try clearing previous builds:
+
+
+
+```
+rm -rf build install log
+colcon build --symlink-install
+```
+
+
+
+***
+
 This error occurs because `rosdep` cannot find the dependency `[gz_ros2_control]`. This package is part of **Gazebo (Gazebo-ROS 2 integration)**, and its rosdep key may not be correctly mapped or installed.  
 
 ### **Steps to Fix the Issue**  
