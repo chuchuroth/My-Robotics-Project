@@ -125,7 +125,97 @@ Absolutely! That's a comprehensive list of AI and related tools. Analyzing each 
 * **Education:** Study tools, document analysis, presentation creation.
 
 To give you more specific information about a tool, please ask me about the tool itself.
+
+
 ------
+
+Here’s the grouping of websites based on their functions:
+
+---
+
+### **Website Creation & Management**
+- **To build websites**: [10Web](https://10web.io/), [Durable](https://durable.co/)  
+- **To manage websites**: [Durable](https://durable.co/)  
+- **To build web apps**: [Bubble](https://bubble.io/)  
+- **To design packaging**: [Pacdora](https://www.pacdora.com/de)  
+
+---
+
+### **AI Development & Tools**
+- **To hire AI experts**: [Aithor](https://aithor.com/)  
+- **To train chatbots**: [Chatbase](https://www.chatbase.co/)  
+- **To design chatbots**: [Voiceflow](https://www.voiceflow.com/)  
+- **To build AI apps**: [Dora.run](https://www.dora.run/)  
+- **To explore AI models**: [ChatPlayground](https://www.chatplayground.ai/)  
+- **To create synthetic voices**: [Parakeet](https://www.parakeet-ai.com/)  
+- **To analyze data**: [Apob.ai](https://apob.ai/)  
+
+---
+
+### **Multimedia Content Creation**
+- **To create multimedia**: [Akool](https://akool.com/)  
+- **To produce video content**: [Eyecannndy](https://eyecannndy.com/)  
+- **To animate videos**: [Artflow](https://app.artflow.ai/)  
+- **To create marketing videos**: [Invideo](https://invideo.io/)  
+- **To create short videos**: [Clipshort](https://www.clipshort.co/)  
+- **To generate visual art**: [Midjourney](https://www.midjourney.com/home)  
+- **To design visuals**: [Freepick](https://freepick.com/ai), [Recraft](https://www.recraft.ai/)  
+- **To create presentations**: [Gamma](https://gamma.app/), [PromeAI](https://www.promeai.pro/), [Tome](https://tome.app/)  
+- **To create slides**: [Gamma](https://gamma.app/)  
+
+---
+
+### **Text & Writing**
+- **To write marketing copy**: [Copycopter](https://copycopter.ai/)  
+- **To write letters**: [Letterly](https://letterly.app/)  
+- **To generate text**: [Easy Peasy](https://easy-peasy.ai/)  
+- **To check grammar**: [Spellar.ai](https://spellar.ai/)  
+- **To write content**: [Jasper](https://www.jasper.ai/)  
+- **To automate workflows**: [Make](https://www.make.com/)  
+- **To summarize text**: [Mindgrasp](https://mindgrasp.ai/)  
+- **To expand text**: [Blaze](https://blaze.today/aiblaze/)  
+
+---
+
+### **Video Editing & Design**
+- **To edit videos**: [Filmora](https://filmora.wondershare.net/), [Ssemble](https://www.ssemble.com/)  
+- **To clip videos**: [Clipgoat](https://www.clipgoat.com/)  
+- **To make motion graphics**: [Jitter](https://jitter.video/)  
+- **To enhance images**: [Picwish](https://picwish.com/de/)  
+- **To customize icons**: [Lordicon](https://lordicon.com/)  
+
+---
+
+### **Productivity & Collaboration**
+- **To document processes**: [Scribehow](https://scribehow.com/)  
+- **To collaborate on data**: [Airtable](https://www.airtable.com/)  
+- **To manage workflows**: [Flux1](https://flux1.ai/)  
+- **To study effectively**: [UnstuckStudy](https://unstuckstudy.com/)  
+- **To transcribe meetings**: [Fireflies](https://fireflies.ai/)  
+
+---
+
+### **E-commerce & Business**
+- **To automate support**: [Backpackbot](https://backpackbot.ai/)  
+- **To manage campaigns**: [Predis](https://predis.ai/)  
+- **To strategize content**: [Meshy.ai](https://www.meshy.ai/)  
+- **To print on demand**: [Printify](https://printify.com/)  
+- **To sell surplus goods**: [GovDeals](https://www.govdeals.com/)  
+
+---
+
+### **File & Asset Management**
+- **To edit images**: [Cleanup](https://cleanup.pictures/)  
+- **To edit PDFs**: [LightPDF](https://lightpdf.com/)  
+- **To convert PDFs**: [SimplePDF](https://simplepdf.com/)  
+- **To organize assets**: [Eagle](https://en.eagle.cool/)  
+- **To edit files**: [TinyWow](https://tinywow.com/)  
+
+---
+
+Let me know if you’d like further refinements or additional categories!
+***
+***
 For a technical interview, you'll want to be prepared to demonstrate your coding skills, problem-solving abilities, and technical knowledge. Here's a breakdown of recommended tools and strategies:
 
 **1. Coding Environment:**
