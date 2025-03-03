@@ -122,6 +122,8 @@ As an electrical engineer, certain foundational and specialized knowledge areas 
 Mastery of these areas will help you thrive as an electrical engineer, whether in academia, R&D, or industry.
 
 ---
+***
+***
 
 
 Here’s a typical **Software Engineering** curriculum for a **4-year university program**, covering both foundational and advanced topics.
