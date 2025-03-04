@@ -296,3 +296,6 @@ Darüber hinaus habe ich Erfahrung mit Kundenkontakt und der Erstellung technisc
 
 Falls du möchtest, kann ich noch spezifischere Antworten für dich ausarbeiten! 😊
 
+
+final: let me show some cool demos...
+
