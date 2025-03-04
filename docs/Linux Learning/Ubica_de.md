@@ -169,6 +169,7 @@ Hier sind einige Punkte, die du im Interview über deine jetzige Tätigkeit erz�
 
 ### **1. Deine Rolle und Verantwortlichkeiten**  
 *"Bei Poppe Mechatronik bin ich als Co-Founder tätig. Unser Unternehmen konzentriert sich auf [Erklärung der Haupttätigkeit – z. B. Robotik, Automatisierung, IoT, industrielle Anwendungen]. In meiner Rolle bin ich für die technische Entwicklung, Optimierung von Robotiklösungen und die Integration neuer Technologien verantwortlich."*  
+* wir haben chinesiche Team von TikTok begegnet, die haben ein groß 3D-Druck Fabrik in China, da haben wir von einige Themen zusammengearbeitet wie xxx*
 
 Falls das Unternehmen noch nicht so etabliert ist, kannst du sagen:  
 *"Wir sind ein junges Unternehmen, das innovative Lösungen in [Branche] entwickelt. Derzeit arbeiten wir an [Projekt/Produkt], um [Problem] effizienter zu lösen."*  
