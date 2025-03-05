@@ -8,6 +8,11 @@ If you have **ROS (Robot Operating System)** and **Windows 11**, the best way to
 printenv ROS_DISTRO
 ```
 
+#### remove repository
+```
+rm -r ros2_RobotSimulation
+```
+
 ## ✅ **Best Ubuntu Setup for ROS on Windows 11**
 ### **1. WSL 2 (Windows Subsystem for Linux) + Ubuntu** (Recommended for Development)  
 If you want to **develop ROS in Ubuntu** while keeping Windows 11 as your main OS, **WSL 2** is a great choice.  
