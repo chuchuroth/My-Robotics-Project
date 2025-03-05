@@ -307,9 +307,10 @@ Um die **Erwartungen von Ubica Robotics** zu erfüllen, solltest du in deinem Vo
 
 🔹 **Wie du das betonen kannst:**  
 ✅ **Erfahrung mit Performance-Optimierung:**  
-- In deiner Masterarbeit hast du ein autonomes Kransystem analysiert und durch eine bessere Entscheidungsstrategie die Bearbeitungszeit um **20 % reduziert**.  
-- Bei FLEX-Elektrowerkzeuge hast du IoT-Lösungen konfiguriert und **die Roboterausfallszeiten um 15 % gesenkt**.  
-
+- In deiner Masterarbeit hast du ein autonomes Kransystem analysiert und durch eine bessere Entscheidungsstrategie die Bearbeitungszeit um **20 % reduziert**.   
+- Bei FLEX-Elektrowerkzeuge hast du IoT-Lösungen konfiguriert und **die Roboterausfallszeiten um 15 % gesenkt**.
+  * I optimized the Obstacle Avoidance Algorithms and the Path Planning Algorithm. I try both logic, the random walk, which says The mower moves in a straight line until it hits an obstacle or boundary, then turns at a random angle and continues. This is a simple, rule-based approach requiring minimal computation, and a more rule-rigid Obstacle Avoidance Algorithm, which says based on sensor inputs “if ultrasonic detects object < 20 cm, stop and turn 90°”). Often uses Potential Field Methods, where obstacles repel and goals attract. and I add Finite state machines, which dictate mower behavior (e.g., “mow → return to dock if battery < 20% → charge → resume”). Rules are pre-programmed based on sensor inputs (e.g., rain, battery level). and also Heuristic Scheduling (Rule-Based), which uses predefined heuristics (e.g., “mow 30% of lawn per session”).
+  
 ✅ **So kannst du es formulieren:**  
 *"Ich habe bereits verschiedene Robotiksysteme hinsichtlich Performance analysiert und gezielt optimiert. Beispielsweise habe ich bei meiner Masterarbeit die Effizienz eines autonomen Kransystems um 20 % verbessert, indem ich die Bewegungsplanung optimiert habe. Ich würde eine ähnliche Herangehensweise bei Ubica Robotics anwenden, um die Scanroboter noch effizienter zu machen."*  
 
