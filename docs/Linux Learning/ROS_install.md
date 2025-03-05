@@ -10,7 +10,7 @@ printenv ROS_DISTRO
 
 #### remove repository
 ```
-rm -r ros2_RobotSimulation
+rm -r <directory>
 ```
 
 ## ✅ **Best Ubuntu Setup for ROS on Windows 11**
