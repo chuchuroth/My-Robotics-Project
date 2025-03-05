@@ -241,20 +241,21 @@ Hier ist eine Analyse der Aufgaben sowie Vorschläge, wie du sie im Vorstellungs
 ✅ **Effizienz steigern:** Falls ein Roboter z. B. zu lange für eine Aufgabe braucht, kannst du die Bewegungsplanung optimieren oder Algorithmen anpassen.  
 ✅ **Beispiel für das Interview:**  
 *"In meiner Masterarbeit habe ich ein autonomes Kransystem analysiert und durch Anpassung der Steuerungsstrategie die Bearbeitungszeit um 20 % reduziert. Ich würde eine ähnliche Methode bei Ubica Robotics anwenden – Leistungsdaten erfassen, Engpässe identifizieren und gezielte Verbesserungen vorschlagen."*  
-
+example : Master Arbeit , Kran Maschine , ...
 ---
 
 ### **4. Durchführung & Auswertung interner Tests zur Qualitätssicherung**  
 ➡ **Was bedeutet das?**  
 - Bevor Roboter an Kunden gehen, müssen sie getestet werden.  
 - Du wirst Fehler identifizieren und Dokumentation für das Entwicklungsteam erstellen.  
+example: generate test reports for certification 
 
 ➡ **Wie solltest du damit umgehen?**  
 ✅ **Systematische Testprotokolle nutzen:** Definiere Testfälle (z. B. Hinderniserkennung, Akkulaufzeit, Navigation).  
 ✅ **Fehlermeldungen dokumentieren & weiterleiten:** Falls der Roboter z. B. in bestimmten Situationen falsche Entscheidungen trifft, meldest du dies an das Entwicklungsteam.  
 ✅ **Beispiel für das Interview:**  
 *"Ich habe bereits Tests für Robotiksysteme durchgeführt. Bei FLEX-Elektrowerkzeuge habe ich IoT-Lösungen getestet und Optimierungen vorgenommen, um Roboterausfälle zu reduzieren. In dieser Rolle würde ich systematische Tests durchführen und sicherstellen, dass die Roboter zuverlässig und effizient arbeiten."*  
-
+* example: autonomous mowing machine, use another path planning method, more coherent with the environment ...
 ---
 
 ### **5. Begleitung & Unterstützung von Evaluationsscans & Inbetriebnahmen beim Kunden**  
