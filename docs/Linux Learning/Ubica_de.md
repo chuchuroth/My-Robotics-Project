@@ -297,7 +297,94 @@ Darüber hinaus habe ich Erfahrung mit Kundenkontakt und der Erstellung technisc
 
 ---
 
-Falls du möchtest, kann ich noch spezifischere Antworten für dich ausarbeiten! 😊
+Um die **Erwartungen von Ubica Robotics** zu erfüllen, solltest du in deinem Vorstellungsgespräch **zusätzliche Qualifikationen und Erfahrungen betonen**. Hier sind konkrete Ergänzungen, die dich als perfekten Kandidaten positionieren:  
+
+---
+
+### **1. Analytische Fähigkeiten zur Optimierung von Robotersystemen**  
+**Ubica erwartet:**  
+> „Ausgeprägte analytische Fähigkeiten, um eigenständig Optimierungspotenziale im Produkt zu identifizieren und gezielte Verbesserungsmaßnahmen abzuleiten.“  
+
+🔹 **Wie du das betonen kannst:**  
+✅ **Erfahrung mit Performance-Optimierung:**  
+- In deiner Masterarbeit hast du ein autonomes Kransystem analysiert und durch eine bessere Entscheidungsstrategie die Bearbeitungszeit um **20 % reduziert**.  
+- Bei FLEX-Elektrowerkzeuge hast du IoT-Lösungen konfiguriert und **die Roboterausfallszeiten um 15 % gesenkt**.  
+
+✅ **So kannst du es formulieren:**  
+*"Ich habe bereits verschiedene Robotiksysteme hinsichtlich Performance analysiert und gezielt optimiert. Beispielsweise habe ich bei meiner Masterarbeit die Effizienz eines autonomen Kransystems um 20 % verbessert, indem ich die Bewegungsplanung optimiert habe. Ich würde eine ähnliche Herangehensweise bei Ubica Robotics anwenden, um die Scanroboter noch effizienter zu machen."*  
+
+---
+
+### **2. Erfahrung in Anwendungsoptimierung & Performance-Steigerung**  
+**Ubica erwartet:**  
+> „Erste relevante Erfahrungen im Bereich Anwendungsoptimierung, idealerweise mit Fokus auf Performance-Steigerung und Effizienz.“  
+
+🔹 **Wie du das betonen kannst:**  
+✅ **Relevante Erfahrung mit Systemoptimierung:**  
+- Dein Fokus lag auf **Leistungssteigerung und Fehlerminimierung** bei autonomen Robotern.  
+- Bei FLEX hast du Softwarelösungen angepasst, um **Roboterausfälle zu reduzieren**.  
+- Beim **AGiTra-Projekt** hast du eine **ROS-basierte Anwendung zur Entscheidungsfindung** optimiert.  
+
+✅ **So kannst du es formulieren:**  
+*"In mehreren Projekten habe ich Robotiksysteme analysiert und Optimierungspotenziale identifiziert. Beispielsweise habe ich bei FLEX-Elektrowerkzeuge IoT-Software für Roboter verbessert und so die Effizienz um 15 % gesteigert. Auch bei meiner Masterarbeit habe ich die Task-Optimierung eines autonomen Kransystems durch bessere Entscheidungslogik verbessert. Ich freue mich darauf, diese Fähigkeiten bei Ubica Robotics in die Optimierung der Scanroboter einzubringen."*  
+
+---
+
+### **3. Sehr gute Kenntnisse in Linux-basierten Systemen**  
+**Ubica erwartet:**  
+> „Sehr gute Kenntnisse in der Arbeit mit Linux-basierten Systemen.“  
+
+🔹 **Wie du das betonen kannst:**  
+✅ **Relevante Erfahrung:**  
+- Du hast bei FLEX **IoT-Lösungen auf Ubuntu konfiguriert** und in einer Linux-Umgebung gearbeitet.  
+- Deine Masterarbeit erforderte **ROS-Installation & Troubleshooting in Linux**.  
+
+✅ **So kannst du es formulieren:**  
+*"Ich habe umfassende Erfahrung mit Linux-basierten Systemen, insbesondere mit Ubuntu. Während meiner Masterarbeit habe ich ROS auf Linux konfiguriert und Fehlerbehebungen durchgeführt. Auch bei FLEX habe ich IoT-Systeme in einer Linux-Umgebung eingerichtet und für den produktiven Einsatz optimiert."*  
+
+---
+
+### **4. Praktische Erfahrung mit Python zur Softwarekonfiguration**  
+**Ubica erwartet:**  
+> „Praktische Erfahrung mit der Programmiersprache Python zur Konfiguration und Anpassung von Softwarelösungen.“  
+
+🔹 **Wie du das betonen kannst:**  
+✅ **Python als Kernkompetenz:**  
+- Du hast **Python in ROS-Node-Integration** genutzt.  
+- Du hast **Simulationsskripte in Unity für autonome Systeme geschrieben**.  
+- Du hast eine **IoT-Anwendung in Python für die Echtzeit-Überwachung von Robotern entwickelt**.  
+
+✅ **So kannst du es formulieren:**  
+*"Ich nutze Python intensiv für die Konfiguration und Anpassung von Softwarelösungen. In meiner Masterarbeit habe ich eine ROS-basierte Steuerung in Python entwickelt, um autonome Kranbewegungen zu optimieren. Zudem habe ich Python für die Echtzeit-Überwachung von IoT-Systemen genutzt, um Roboterausfälle zu minimieren. Ich freue mich darauf, meine Python-Kenntnisse für die Konfiguration der Ubica-Scanroboter einzusetzen."*  
+
+---
+
+### **5. Erfahrung mit ROS2 (idealerweise)**  
+**Ubica erwartet:**  
+> „Idealerweise Erfahrung mit dem Robot Operating System (ROS2).“  
+
+🔹 **Wie du das betonen kannst:**  
+✅ **ROS1 als Kernkompetenz, ROS2 in Weiterbildung:**  
+- Du hast **umfangreiche Erfahrung mit ROS1** und arbeitest derzeit daran, **ROS2-Kenntnisse zu vertiefen**.  
+- Du hast **ROS-Node-Integration und Simulationsumgebungen eingerichtet**.  
+
+✅ **So kannst du es formulieren:**  
+*"Ich habe tiefgehende Erfahrung mit ROS1, insbesondere in der Softwareintegration und Optimierung autonomer Systeme. Ich arbeite derzeit daran, mein Wissen in ROS2 zu erweitern, um mit der neuesten Generation von Robotiksystemen zu arbeiten. Mein Fokus liegt dabei auf der Migration von ROS1 zu ROS2 und der Implementierung moderner Navigationsalgorithmen."*  
+
+---
+
+## **Zusammenfassung für dein Vorstellungsgespräch**  
+Falls du gefragt wirst, wie du die Erwartungen erfüllst, kannst du antworten:  
+
+**"Ich bringe umfassende Erfahrung in der Optimierung autonomer Systeme mit und habe bereits Robotikprojekte mit ROS, Python und Linux erfolgreich umgesetzt. In meiner Masterarbeit habe ich die Effizienz eines autonomen Kransystems um 20 % verbessert, und bei FLEX-Elektrowerkzeuge habe ich IoT-Lösungen entwickelt, die die Ausfallzeiten um 15 % reduziert haben.  
+
+Mein Schwerpunkt liegt auf der **Anwendungsoptimierung**, der **Performance-Steigerung** und der **Fehlersuche in autonomen Robotern**. Ich habe umfangreiche Erfahrung mit **Linux-basierten Systemen**, der **Konfiguration von Software mit Python** und arbeite aktiv daran, meine **ROS2-Kenntnisse weiter auszubauen**.  
+
+Ich bin überzeugt, dass meine analytischen Fähigkeiten, mein technisches Know-how und meine praktische Erfahrung es mir ermöglichen, die Ubica-Scanroboter effizient zu integrieren und zu optimieren."**  
+
+---
+
+
 
 
 final: let me show some cool demos...
