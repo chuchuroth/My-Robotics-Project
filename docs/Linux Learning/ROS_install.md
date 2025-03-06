@@ -2,6 +2,13 @@ If you have **ROS (Robot Operating System)** and **Windows 11**, the best way to
 
 ---
 
+#### check Ubuntu Version
+
+```
+lsb_release -a
+
+```
+
 #### check ROS version
 
 ```
