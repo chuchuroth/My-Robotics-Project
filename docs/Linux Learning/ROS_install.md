@@ -9,6 +9,12 @@ lsb_release -a
 
 ```
 
+#### run ubuntu
+
+```
+ubuntu2204.exe
+```
+
 #### check ROS version
 
 ```
