@@ -26,20 +26,22 @@ printenv ROS_DISTRO
 rm -r <directory>
 ```
 
-* If you still get errors, try clearing previous builds:
+#### If you still get errors, try clearing previous builds:
 ```
 rm -rf build install log
 colcon build --symlink-install
 ```
 
-create work sprce
-
+#### create workspace
+```
+mkdir -p ~/ros2_ws/src
+```
 
 
 #### create package
 ```
-ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name> # c
-ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name> #python
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    #c
+ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     #python
 ```
 
 
