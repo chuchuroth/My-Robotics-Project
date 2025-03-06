@@ -116,6 +116,7 @@ If you just **want to test ROS without modifying Windows**, a VM is a simple sol
 🔹 **For development & learning** → **WSL 2 + Ubuntu**  
 🔹 **For real hardware & full ROS use** → **Dual boot Ubuntu & Windows 11**  
 🔹 **For occasional testing** → **Use a VM**  
+
 ----------
 **WSL 2 + Ubuntu** is the easiest way to run ROS on Windows 11 while keeping your system intact. Below is a step-by-step guide to installing **Ubuntu 20.04 or 22.04** with ROS 2.  
 
@@ -707,6 +708,7 @@ ROS has moved from primarily a research tool, to one with very real world applic
     * Many of the companies developing last mile delivery robots are using ROS.
 
 It's important to note that while some robots may "run" ROS directly, in many industrial applications, ROS is used as a development platform. The final product might use a more streamlined, embedded system for real-time performance and reliability.
+
 ---------
 You're right, while ROS is fantastic for development, many production-ready robots rely on streamlined, embedded systems for the critical real-time performance and reliability needed in demanding applications. Here are some examples:
 
