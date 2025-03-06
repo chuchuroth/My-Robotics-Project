@@ -32,6 +32,17 @@ rm -rf build install log
 colcon build --symlink-install
 ```
 
+create work sprce
+
+
+
+#### create package
+```
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name> # c
+ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name> #python
+```
+
+
 ## ✅ **Best Ubuntu Setup for ROS on Windows 11**
 ### **1. WSL 2 (Windows Subsystem for Linux) + Ubuntu** (Recommended for Development)  
 If you want to **develop ROS in Ubuntu** while keeping Windows 11 as your main OS, **WSL 2** is a great choice.  
