@@ -148,3 +148,21 @@ AI能提供建议，但**长期的决策、趋势判断仍然依赖人类智慧*
 
 ### **总结**
 **《思考，快与慢》**让我们意识到自己的思维方式存在局限，教会我们如何运用慢思考，减少偏见和错误，提高决策质量，同时理解人类心理如何影响幸福感和行为模式。在日常生活和工作中，我们可以通过训练思维方式，让决策更加理性和高效。
+
+***
+
+things i need for interview:
+
+general selbst introduction in en and de (2 pages)
+
+specific questions:
+what i have been doing recently (robot simulation demo 1 page, chatgpt: make a summary of my project using software engineering language, to explain to people what I have done step-by-step, which skills are involved, and what result I have realized with my projects ) + business related (about how I come up with the business idea, reason for quiting, 1 page)
+what i have done at flex (1 page)
+projects related to the position (1 page)
+why this particular company (1 page)
+
+Softskill question:
+how good are you with people/communication, (examples 1 page)
+
+说什么其实不重要，重要的是“怎么说”，注意说话的口气和音调，语速适中，气息平稳，自信，不要犹豫，不要有太长的停顿。回答问题时干脆，清晰，不要模棱两可，似是而非，不要有多余的emotion。在那一刻大笑或者紧张都非常容易使自己分心。如果准备充分的话，其实任何问题都不需要纠结，也可以做到游刃有余，就是照着准备好的稿子念，完全不需要有情绪，如果准备不充分，那就会慌里慌张，关键处还容易忘词。
+其实对演员的要求就跟面试很接近，在那一刻你需要扮演一个角色，这个角色可能跟你平时生活的角色有一些区分，你不能单凭自己的本能或习惯去跟人打交道，但是你要适应这个场景，尽量表现自然地“扮演”另一个角色。其实这也是成年人在现实世界里经常遇到的境遇，就是你需要根据眼前的场景扮演另一个角色，这并不总是那么“舒服”，可能会让你觉得“十分别扭“，但这是成年人必须有的素质和技能。因为生活并不总按照你的喜好和口味来迎合你，有时你需要迎合当下那个场景，在那个场合下，你需要扮演另一个人。
