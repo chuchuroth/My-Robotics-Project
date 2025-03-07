@@ -4,14 +4,15 @@
 ```
 mkdir -p ~/ros2_ws/src      # create workspace
 cd src && git clone <url>   # clone a repo
-cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install -i --from-path src --rosdistro humble -y # build the workspace and run test and check dependency
+cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install -i --from-path src --rosdistro humble -y
+# build the workspace and run test and check dependency
 
 sudo apt install <package>  # install an existing package from ROS
 ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package  # create a package for yourself
 
 ros2 run <package> <node>   # run node
 
-
+source install/local_setup.bash  # source local workspace
 
 
 ```
