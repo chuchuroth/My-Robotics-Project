@@ -34,7 +34,7 @@ printenv ROS_DISTRO  # check ROS version
 
 common issue:
 * dependency issue
-* package override issue
+* package override issue: If a package in a merged underlay workspace is overridden...
 * PATH issue
 
 
