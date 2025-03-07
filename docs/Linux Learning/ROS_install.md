@@ -32,7 +32,10 @@ printenv ROS_DISTRO  # check ROS version
 
 ```
 
-
+common issue:
+* dependency issue
+* package override issue
+* PATH issue
 
 
 
