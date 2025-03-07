@@ -8,57 +8,34 @@ cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install 
 # build the workspace and run test and check dependency
 
 sudo apt install <package>  # install an existing package from ROS
-ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package  # create a package for yourself
+* create a package for yourself:
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    #c 
+ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     #python
 
 ros2 run <package> <node>   # run node
 
 source install/local_setup.bash  # source local workspace
 
+rm -r <directory> # remove repository
 
-```
----
-
-#### check Ubuntu Version
-
-```
-lsb_release -a
-
-```
-
-#### run ubuntu
-
-```
-ubuntu2204.exe
-```
-
-#### check ROS version
-
-```
-printenv ROS_DISTRO
-```
-
-#### remove repository
-```
-rm -r <directory>
-```
-
-#### If you still get errors, try clearing previous builds:
-```
 rm -rf build install log
-colcon build --symlink-install
+colcon build --symlink-install  # If you still get errors, try clearing previous builds
+
 ```
 
-#### create workspace
+#### system info:
 ```
-mkdir -p ~/ros2_ws/src
+ubuntu2204.exe   #### run ubuntu
+lsb_release -a  #  check Ubuntu Version
+uname -a # check linux version
+printenv ROS_DISTRO  # check ROS version
+
 ```
 
 
-#### create package
-```
-ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    #c
-ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     #python
-```
+
+
+
 
 If you have **ROS (Robot Operating System)** and **Windows 11**, the best way to set up Ubuntu depends on performance needs and convenience:
 ## ✅ **Best Ubuntu Setup for ROS on Windows 11**
