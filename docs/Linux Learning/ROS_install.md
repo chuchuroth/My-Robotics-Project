@@ -7,10 +7,11 @@ cd src && git clone <url>   # clone a repo
 cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install -i --from-path src --rosdistro humble -y
 # build the workspace and run test and check dependency
 
-sudo apt install <package>  # install an existing package from ROS (same as install dependency)
-* create a package for yourself:
-ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    #c 
-ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     #python
+sudo apt install <package>  # install an existing package from ROS
+rosdep install --from-paths src --ignore-src -r -y #install dependency
+
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    # create a package with cpp
+ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     # create a package with python
 
 ros2 run <package> <node>   # run node
 
