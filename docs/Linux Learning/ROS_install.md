@@ -1,7 +1,7 @@
 
 ### most basic commands ROS:
 
-```
+```bash
 mkdir -p ~/ros2_ws/src      # create workspace
 cd src && git clone <url>   # clone a repo
 cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install -i --from-path src --rosdistro humble -y
@@ -25,8 +25,8 @@ colcon build --symlink-install  # If you still get errors, try clearing previous
 ```
 
 #### system info:
-```
-ubuntu2204.exe   #### run ubuntu
+```powershell
+ubuntu2204.exe   # run ubuntu
 lsb_release -a  #  check Ubuntu Version
 uname -a # check linux version
 printenv ROS_DISTRO  # check ROS version
@@ -201,7 +201,7 @@ sudo apt update
 ## 🎯 **Step 4: Install ROS 2 (Recommended: ROS 2 Foxy or Humble)**  
 1️⃣ Install ROS 2:  
 ```bash
-sudo apt install ros-foxy-desktop -y  # For ROS 2 Foxy (Ubuntu 20.04)
+sudo apt install ros-foxy-desktop -y   # For ROS 2 Foxy (Ubuntu 20.04)
 # OR
 sudo apt install ros-humble-desktop -y  # For ROS 2 Humble (Ubuntu 22.04)
 ```
