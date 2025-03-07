@@ -1,5 +1,20 @@
-If you have **ROS (Robot Operating System)** and **Windows 11**, the best way to set up Ubuntu depends on performance needs and convenience:
 
+### most basic commands ROS:
+
+```
+mkdir -p ~/ros2_ws/src      # create workspace
+cd src && git clone <url>   # clone a repo
+cd ros2_ws && colcon build --symlink-install && colcon test  &&  rosdep install -i --from-path src --rosdistro humble -y # build the workspace and run test and check dependency
+
+sudo apt install <package>  # install an existing package from ROS
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package  # create a package for yourself
+
+ros2 run <package> <node>   # run node
+
+
+
+
+```
 ---
 
 #### check Ubuntu Version
@@ -44,7 +59,7 @@ ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>    
 ros2 pkg create --build-type ament_python --license Apache-2.0 <package_name>     #python
 ```
 
-
+If you have **ROS (Robot Operating System)** and **Windows 11**, the best way to set up Ubuntu depends on performance needs and convenience:
 ## ✅ **Best Ubuntu Setup for ROS on Windows 11**
 ### **1. WSL 2 (Windows Subsystem for Linux) + Ubuntu** (Recommended for Development)  
 If you want to **develop ROS in Ubuntu** while keeping Windows 11 as your main OS, **WSL 2** is a great choice.  
