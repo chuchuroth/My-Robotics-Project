@@ -22,6 +22,8 @@ rm -r <directory> # remove repository
 rm -rf build install log  # remove directory or workspace or build
 colcon build --symlink-install  # If you still get errors, try clearing previous builds
 
+wsl.exe -d <ubuntu name>  # launch ubuntu 
+
 ```
 
 #### system info:
