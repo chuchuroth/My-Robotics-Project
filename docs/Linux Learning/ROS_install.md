@@ -40,6 +40,11 @@ common issue:
 * package override issue: If a package in a merged underlay workspace is overridden...
 * PATH issue
 
+nice demo:
+```
+ros2 launch moveit2_tutorials move_group.launch.py
+ros2 launch moveit2_tutorials move_group_interface_tutorial.launch.py
+```
 
 
 
