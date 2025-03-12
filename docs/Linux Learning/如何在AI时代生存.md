@@ -318,17 +318,6 @@ Would you like examples of structural thinking applied to a specific scenario in
 
 ### things i need for interview:
 
-+ general selbst introduction in en and de (2 pages)
-
-+ specific questions:
-+ what i have been doing recently (robot simulation demo 1 page, chatgpt: make a summary of my project using software engineering language, to explain to people what I have done step-by-step, which skills are involved, and what result I have realized with my projects ) + business related (about how I come up with the business idea, reason for quiting, 1 page)
-+ what i have done at flex (1 page)
-+ projects related to the position (1 page)
-+ what i know about the company, why do i apply  (1 page)
- + key skill and project releted to this position (1 page)
-
-+ Softskill question:
-+ how good are you with people/communication, (examples 1 page)
 
 + main job as robotic engineer, side job as xxx
 
