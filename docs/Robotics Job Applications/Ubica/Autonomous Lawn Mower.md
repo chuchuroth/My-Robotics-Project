@@ -12,22 +12,22 @@ The algorithms in autonomous lawn mowers can be categorized based on their prima
 - **Common Algorithms**:
   - **Random Walk (Hard-Coded)**:
     - **Description**: The mower moves in a straight line until it hits an obstacle or boundary, then turns at a random angle and continues. This is a simple, rule-based approach requiring minimal computation.
-    - **Implementation**: Found in entry-level models like Husqvarna Automower 115H and Greenworks Optimow 4. The mower reacts in real-time based on sensor inputs (e.g., bump or boundary wire detection) with pre-programmed rules (e.g., “turn 45° left on collision”).
+    - **Implementation**: *__Found in entry-level models like Husqvarna Automower 115H and Greenworks Optimow 4. The mower reacts in real-time based on sensor inputs (e.g., bump or boundary wire detection) with pre-programmed rules (e.g., “turn 45° left on collision”).__*
     - **Advantages**: Low cost, low power, effective for small, simple lawns.
     - **Limitations**: Inefficient for large or complex lawns, leading to uneven coverage.
   - **Systematic Coverage (Rule-Based)**:
     - **Description**: Uses predefined patterns (e.g., stripes, spirals) guided by GPS or boundary wire data. Often employs algorithms like **Boustrophedon path planning** (back-and-forth coverage resembling ox plowing).
-    - **Implementation**: Seen in mid-range models like Bosch Indego S+ 500, which maps the lawn and follows a systematic path using boundary wire feedback and wheel odometry.
+    - **Implementation**: *__Seen in mid-range models like Bosch Indego S+ 500, which maps the lawn and follows a systematic path using boundary wire feedback and wheel odometry.__*
     - **Advantages**: More efficient than random walk, ensures even coverage.
     - **Limitations**: Requires initial setup (e.g., wire installation) and struggles with dynamic obstacles.
   - **SLAM (Simultaneous Localization and Mapping) (Hybrid)**:
     - **Description**: Builds a map of the lawn while localizing the mower within it, using sensor fusion (GPS, LiDAR, IMU, vision). Variants include **Graph-SLAM** or **EKF-SLAM** (Extended Kalman Filter SLAM).
-    - **Implementation**: High-end models like Mammotion Luba 2 and Segway Navimow use SLAM with RTK-GPS and LiDAR/vision to create wire-free maps and plan optimal paths. These often combine hard-coded logic (e.g., “stay within 5 cm of boundary”) with adaptive mapping.
+    - **Implementation**: *__High-end models like Mammotion Luba 2 and Segway Navimow use SLAM with RTK-GPS and LiDAR/vision to create wire-free maps and plan optimal paths. These often combine hard-coded logic (e.g., “stay within 5 cm of boundary”) with adaptive mapping.__*
     - **Advantages**: Precise, adaptable to complex lawns without wires.
     - **Limitations**: Computationally intensive, requires advanced hardware.
   - **Reinforcement Learning (ML-Based)**:
     - **Description**: An ML approach where the mower learns optimal paths through trial and error, maximizing a reward function (e.g., coverage efficiency, battery usage). Often paired with SLAM.
-    - **Implementation**: Emerging in premium models or prototypes (e.g., John Deere’s CES 2025 mower). Likely trained offline and fine-tuned on-device, using frameworks like TensorFlow or PyTorch.
+    - **Implementation**: *__Emerging in premium models or prototypes (e.g., John Deere’s CES 2025 mower). Likely trained offline and fine-tuned on-device, using frameworks like TensorFlow or PyTorch.__*
     - **Advantages**: Adapts to changing lawn conditions (e.g., new obstacles, growth patterns).
     - **Limitations**: Requires significant training data and processing power.
 
@@ -36,17 +36,17 @@ The algorithms in autonomous lawn mowers can be categorized based on their prima
 - **Common Algorithms**:
   - **Reactive Control (Hard-Coded)**:
     - **Description**: Simple if-then rules based on sensor inputs (e.g., “if ultrasonic detects object < 20 cm, stop and turn 90°”). Often uses **Potential Field Methods**, where obstacles repel and goals attract.
-    - **Implementation**: Common in budget models like MowRo RM24 and Worx Landroid M500, relying on ultrasonic or bump sensors.
+    - **Implementation**: *__Common in budget models like MowRo RM24 and Worx Landroid M500, relying on ultrasonic or bump sensors.__*
     - **Advantages**: Fast, lightweight, reliable for basic tasks.
     - **Limitations**: Limited adaptability to complex or moving obstacles.
   - **Dynamic Window Approach (DWA) (Rule-Based)**:
     - **Description**: A real-time algorithm evaluating possible trajectories based on velocity, direction, and obstacle proximity, selecting the safest and most efficient option.
-    - **Implementation**: Used in mid-to-high-end models with IMU and proximity sensors (e.g., Husqvarna Automower 430X), especially on uneven terrain.
+    - **Implementation**: *__Used in mid-to-high-end models with IMU and proximity sensors (e.g., Husqvarna Automower 430X), especially on uneven terrain.__*
     - **Advantages**: Balances speed and safety, handles dynamic environments better.
     - **Limitations**: Still reactive, not predictive.
   - **Object Detection with ML (Machine Learning)**:
     - **Description**: Uses convolutional neural networks (CNNs) or similar ML models to classify obstacles from vision or LiDAR data (e.g., “pet” vs. “rock”) and decide actions (e.g., slow down, detour).
-    - **Implementation**: Featured in advanced models like Worx Landroid Vision and Ecovacs GOAT A3000, where cameras feed into pre-trained AI models (e.g., TensorFlow Lite) for semantic understanding.
+    - **Implementation**: *__Featured in advanced models like Worx Landroid Vision and Ecovacs GOAT A3000, where cameras feed into pre-trained AI models (e.g., TensorFlow Lite) for semantic understanding.__*
     - **Advantages**: Predicts and adapts to complex scenarios (e.g., avoiding a moving pet).
     - **Limitations**: Requires significant onboard processing (e.g., NVIDIA Jetson) and training data.
 
@@ -55,17 +55,17 @@ The algorithms in autonomous lawn mowers can be categorized based on their prima
 - **Common Algorithms**:
   - **Wire-Based Feedback (Hard-Coded)**:
     - **Description**: Uses magnetic sensors to detect an electromagnetic field from a boundary wire, triggering a turn when the signal weakens or reverses.
-    - **Implementation**: Standard in wire-based models like Husqvarna Automower 435X AWD and Greenworks Optimow 7, with simple rules (e.g., “turn inward if signal drops below threshold”).
+    - **Implementation**: *__Standard in wire-based models like Husqvarna Automower 435X AWD and Greenworks Optimow 7, with simple rules (e.g., “turn inward if signal drops below threshold”).__*
     - **Advantages**: Reliable, low-cost for small lawns.
     - **Limitations**: Requires physical wire installation, inflexible for changes.
   - **Virtual Boundary Mapping (Rule-Based/Hybrid)**:
     - **Description**: Combines GPS/RTK and SLAM to define and follow virtual boundaries set via an app or initial mapping run.
-    - **Implementation**: Found in wire-free models like Segway Navimow i105N and Mammotion Luba 2, using RTK-GPS and sensor fusion to stay within 2-5 cm of virtual lines.
+    - **Implementation**: *__Found in wire-free models like Segway Navimow i105N and Mammotion Luba 2, using RTK-GPS and sensor fusion to stay within 2-5 cm of virtual lines.__*
     - **Advantages**: Flexible, no physical setup needed.
     - **Limitations**: Dependent on GPS signal quality, higher cost.
   - **Semantic Segmentation (ML-Based)**:
     - **Description**: Uses vision sensors and deep learning (e.g., U-Net architecture) to distinguish grass from non-grass areas in real time, dynamically adjusting boundaries.
-    - **Implementation**: Emerging in vision-based models like Worx Landroid Vision, where AI identifies lawn edges without pre-set boundaries.
+    - **Implementation**: *__Emerging in vision-based models like Worx Landroid Vision, where AI identifies lawn edges without pre-set boundaries.__*
     - **Advantages**: Highly adaptive, no manual mapping required.
     - **Limitations**: Computationally heavy, sensitive to lighting conditions.
 
@@ -74,17 +74,17 @@ The algorithms in autonomous lawn mowers can be categorized based on their prima
 - **Common Algorithms**:
   - **State Machines (Hard-Coded)**:
     - **Description**: Finite state machines dictate mower behavior (e.g., “mow → return to dock if battery < 20% → charge → resume”). Rules are pre-programmed based on sensor inputs (e.g., rain, battery level).
-    - **Implementation**: Universal across models like Bosch Indego M+ 700 and Husqvarna Automower, controlling basic operations.
+    - **Implementation**: *__Universal across models like Bosch Indego M+ 700 and Husqvarna Automower, controlling basic operations.__*
     - **Advantages**: Simple, predictable, low resource use.
     - **Limitations**: Limited adaptability to unexpected conditions.
   - **Heuristic Scheduling (Rule-Based)**:
     - **Description**: Optimizes mowing times based on lawn size, battery capacity, and user preferences, using predefined heuristics (e.g., “mow 30% of lawn per session”).
-    - **Implementation**: Seen in app-connected models like Segway Navimow, adjusting schedules via cloud or onboard logic.
+    - **Implementation**: *__Seen in app-connected models like Segway Navimow, adjusting schedules via cloud or onboard logic.__*
     - **Advantages**: Balances efficiency and battery life.
     - **Limitations**: Static, doesn’t learn from usage patterns.
   - **Predictive Models (ML-Based)**:
     - **Description**: Uses supervised learning (e.g., regression) or reinforcement learning to predict optimal mowing times based on weather, grass growth, and historical data.
-    - **Implementation**: Likely in premium models with cloud integration (e.g., Husqvarna Automower 550 with cellular connectivity), trained on large datasets and fine-tuned locally.
+    - **Implementation**: *__Likely in premium models with cloud integration (e.g., Husqvarna Automower 550 with cellular connectivity), trained on large datasets and fine-tuned locally.__*
     - **Advantages**: Adapts to seasonal changes, improves long-term efficiency.
     - **Limitations**: Requires data connectivity and processing power.
 
@@ -104,7 +104,7 @@ The algorithms in autonomous lawn mowers can be categorized based on their prima
     - **CNNs**: For vision-based obstacle recognition (e.g., TensorFlow Lite on Worx Vision).
     - **Reinforcement Learning**: For path optimization (hypothesized in John Deere’s advanced models).
     - **SLAM Variants**: Enhanced with ML for dynamic map updates.
-  - **Implementation**: Run on edge AI hardware (e.g., NVIDIA Jetson Nano) or offloaded to cloud platforms (e.g., AWS, Azure) for training, with lightweight inference on-device.
+  - **Implementation**: *__Run on edge AI hardware (e.g., NVIDIA Jetson Nano) or offloaded to cloud platforms (e.g., AWS, Azure) for training, with lightweight inference on-device.__*
   - **Characteristics**: Highly adaptive, learns from environment and usage, excels in complex scenarios.
   - **Limitations**: Higher cost, power consumption, and dependency on quality training data.
 
@@ -132,9 +132,9 @@ Autonomous lawn mowers typically use a subset of the broader sensor categories I
      - **RTK-GPS (Real-Time Kinematic GPS)**: Enhances GPS to centimeter-level precision, eliminating the need for boundary wires in advanced models.
      - **Wheel Encoders**: Measure wheel rotations to estimate distance traveled and assist in dead reckoning.
    - **Implementation**: 
-     - GPS is standard in mid-to-high-end models for basic positioning (e.g., Greenworks Optimow 50H uses GPS for zone mapping).
-     - RTK-GPS is featured in wire-free models like Mammotion Luba 2 and Segway Navimow H800N, enabling precise boundary adherence without physical markers.
-     - Wheel encoders complement GPS in most mowers (e.g., Husqvarna Automower 430X) to refine position tracking, especially in GPS-shadowed areas like under trees.
+     - _GPS is standard in mid-to-high-end models for basic positioning (e.g., Greenworks Optimow 50H uses GPS for zone mapping)._
+     - _RTK-GPS is featured in wire-free models like Mammotion Luba 2 and Segway Navimow H800N, enabling precise boundary adherence without physical markers._
+     - _Wheel encoders complement GPS in most mowers (e.g., Husqvarna Automower 430X) to refine position tracking, especially in GPS-shadowed areas like under trees._
    - **Function**: Allows the mower to follow pre-mapped paths or cover the lawn systematically.
 
 2. **Proximity Sensors**
@@ -289,7 +289,7 @@ The embedded software in autonomous lawn mowers is critical for coordinating har
    - **Microcontrollers (MCUs)**: Low-power MCUs like ARM Cortex-M series (e.g., Cortex-M4, M7) are widely used for real-time control. Example: Likely in Husqvarna and Greenworks models.
    - **Single-Board Computers (SBCs)**: More advanced models with AI or vision systems may use SBCs like Raspberry Pi or NVIDIA Jetson Nano for processing. Example: Possible in Mammotion Luba 2 or Ecovacs GOAT.
    - **RTOS (Real-Time Operating Systems)**: FreeRTOS or Zephyr manage time-critical tasks like sensor polling and motor control. Scythe Robotics’ CANfetti (a CANopen implementation) suggests RTOS use in industrial-grade mowers.
-   - **Linux Variants**: Custom Linux distributions power complex systems with connectivity and AI, common in high-end models.
+   - **Linux Variants**: *__Custom Linux distributions power complex systems with connectivity and AI, common in high-end models.__*
 
 3. **Development Platforms**
    - **ROS (Robot Operating System)**: While primarily used in research and industrial robotics, ROS is increasingly adapted for commercial autonomous mowers, especially via ROS-Industrial forks. It supports navigation (e.g., SLAM), simulation (Gazebo), and hardware abstraction. Example: Scythe Robotics’ M.52 leverages ROS-inspired frameworks.
@@ -299,7 +299,7 @@ The embedded software in autonomous lawn mowers is critical for coordinating har
 
 4. **AI and Machine Learning**
    - **Frameworks**: TensorFlow Lite or PyTorch Mobile run on edge devices for obstacle recognition and path optimization. Example: Worx Vision’s AI navigation.
-   - **Development**: These are often trained on cloud platforms (e.g., AWS, Azure) and deployed to embedded hardware via OTA updates.
+   - **Development**: *__These are often trained on cloud platforms (e.g., AWS, Azure) and deployed to embedded hardware via OTA updates.__*
 
 ### Conclusion
 As of March 05, 2025, the market likely features **50-100 autonomous lawn mower models**, driven by brands like Husqvarna, Worx, and emerging players like Mammotion and John Deere. These mowers employ technologies such as GPS/RTK, LiDAR, vision systems, and AI for navigation and obstacle avoidance, powered by lithium-ion batteries and controlled via smart connectivity. Embedded software relies on MCUs or SBCs running RTOS or Linux, often developed with ROS, Arduino, or proprietary platforms, integrating advanced algorithms for autonomy and efficiency. The exact number and software specifics evolve rapidly, reflecting the dynamic nature of this growing industry.
