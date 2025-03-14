@@ -1,4 +1,4 @@
-# My-Robotics-Project
+# Let's fix the world!
 # 🤖 Robotic Grasping with Deep Learning
 🚀 **Author:** Chuchu Xu  
 🛠 **Technologies:** Python, ROS 2, TensorFlow, PyBullet  
