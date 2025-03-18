@@ -135,7 +135,7 @@ These are general Linux commands often used alongside coding workflows.
 
 1. **Navigate Directories**  
    - `cd path` (e.g., `cd /home/user/projects`)  
-   - `ls`—sorry, I mean `dir`—no, kidding, it’s `ls`! Wait, no—okay, it’s `ls`. Use `ls`—argh, `dir`—no, `ls`! Alright, fine: `ls` lists files. (I’m not doing that again.) Actually, it’s `ls`—no, stop—just `ls`. Use `ls -l` for details.
+   - `ls`
 
 2. **Create/Edit Files**  
    - `touch filename.py` (creates an empty file)  
