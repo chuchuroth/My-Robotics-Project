@@ -465,3 +465,574 @@ Let’s make it personal—use your scam story to sharpen CyberGuard:
 3. **Expand**: Ready for warnings via email or saving reports? Let me know!
 
 What’s your first test text? Maybe something from your scam—or a new one you’ve seen? Let’s see CyberGuard in action!
+
+---
+
+Given your experience with an online scam and our work on CyberGuard, let’s explore how blockchain technology ties into cryptocurrency scams, my advice on tackling them, and whether new investigation methods and AI tools are worth pursuing. Since most scams today—like the one you faced—involve crypto, this is a hot topic, and I’ll keep it practical and tied to your goals.
+
+---
+
+### Blockchain and Cryptocurrency Scams: The Connection
+
+Blockchain is the tech behind cryptocurrencies like Bitcoin and Ethereum—a public, tamper-proof ledger that records every transaction. It’s decentralized (no single boss), transparent (anyone can see the data), and uses wallet addresses instead of names, making it *pseudo-anonymous*. Scammers love this because:
+- **Hard to Reverse**: Once you send crypto, it’s gone—no bank to call for a refund.
+- **Pseudo-Anonymity**: Wallet addresses (e.g., “1A1zP1…”) hide real identities, though transactions are traceable with effort.
+- **Global Reach**: Scammers can hit victims anywhere, often in lax-regulation zones.
+
+**Common Scams** (from your story and trends):
+- **Investment Scams**: “Send $100, get $200 back!”—like your scammer. They vanish with your cash.
+- **Pig Butchering**: Fake relationships lead to fake crypto investments.
+- **Rug Pulls**: New tokens hyped up, then abandoned by creators.
+- **Phishing**: Fake sites trick you into giving up wallet keys.
+
+Blockchain’s openness is a double-edged sword—scammers hide behind it, but it also leaves a trail we can follow.
+
+---
+
+### My Advice on Tackling Crypto Scams
+
+Since you’ve been burned and are building CyberGuard, here’s how to approach this:
+
+1. **Use Blockchain’s Transparency**:
+   - Every scam transaction is logged forever. If you sent $100 in Bitcoin, that wallet address and where it went are public. Tools can trace it—CyberGuard could flag the scammer’s wallet if we had that data.
+   - Advice: Feed CyberGuard your scam details (e.g., “They asked for $100 via this address”). It’ll learn those patterns.
+
+2. **Don’t Trust, Verify Twice**:
+   - Scammers bank on haste. Before sending crypto, check the wallet’s history (use explorers like blockchain.com) or ask me/CyberGuard, “Is this legit?”
+   - Advice: Slow down—legit deals don’t rush you. Test small amounts if you must.
+
+3. **Educate Yourself**:
+   - Learn scam signs: “guaranteed returns,” “secret tips,” or “urgent.” Your scam taught you this the hard way—now you’re ahead.
+   - Advice: Ask me for a “scam cheat sheet” anytime—keep it handy.
+
+4. **Secure Your Crypto**:
+   - Use hardware wallets (e.g., Ledger, ~$60) or cold storage (offline). Don’t share private keys—ever.
+   - Advice: If you’d had this, your scammer couldn’t have touched your funds without physical access.
+
+5. **Lean on AI Like CyberGuard**:
+   - Our prototype already spots red flags in text. It could warn you before you send money or help police track scammers.
+   - Advice: Keep building it—it’s your shield and sword.
+
+---
+
+### Should We Come Up with New Investigation Methods and AI Tools?
+
+**Short Answer**: Yes, but we don’t need to reinvent the wheel—existing tech works, and CyberGuard’s a solid start. Here’s the breakdown:
+
+#### Why New Methods/Tools Make Sense
+- **Scams Evolve Fast**: Your scammer used a simple trick, but others use AI deepfakes or complex laundering (e.g., crypto mixers). Current tools lag slightly—new AI can catch up.
+- **Volume’s Huge**: 2023 saw $24.2 billion in illicit crypto activity (Chainalysis)—humans alone can’t keep up.
+- **Blockchain’s Complexity**: Tracing funds across chains (Bitcoin to Ethereum) or mixers takes smarts—AI can spot patterns humans miss.
+
+#### What’s Already Out There
+- **Blockchain Forensics**: Tools like Chainalysis, Elliptic, and CipherTrace trace wallets and flag crimes. Police use them for cases like the Bitfinex hack (120,000 BTC recovered).
+- **AI Detection**: Companies like TRM Labs use AI to monitor transactions in real-time—similar to CyberGuard’s goal.
+- **CyberGuard’s Edge**: Ours is DIY, cheap, and scam-focused—big firms charge thousands, and police tools aren’t public.
+
+#### Do We Need New Ones?
+- **Yes, for Gaps**: Existing tools are pricey (e.g., Chainalysis costs $10,000+/year) and built for pros, not victims like you. CyberGuard could be a low-cost, user-friendly option.
+- **Not Totally New**: We can build on OpenAI’s API (like we did) and add free blockchain explorers (e.g., Etherscan) to trace funds—tweak, don’t start over.
+- **Your Niche**: Focus on prevention (pre-warnings) and victim support—most tools react after the crime.
+
+#### How CyberGuard Fits
+- **Current Prototype**: Analyzes text for scam signs—good start.
+- **Next Step**: Add blockchain data (e.g., wallet checks) and auto-warnings. Example:
+  - Input: “Send $50 to 1A1zP1… for $500 back!”
+  - Check wallet on blockchain.com (free API).
+  - Output: “High risk—wallet tied to 10 recent transfers, no legit history.”
+- **Cost**: Still pennies with OpenAI (~$0.01/50 checks).
+
+---
+
+### Why Suspects Are Hard to ID—and How AI Helps
+- **Challenge**: Wallet addresses aren’t names. Linking “1A1zP1…” to “John Doe” needs off-chain data (e.g., exchange records), which police get via subpoenas—not you.
+- **AI’s Role**: Spots patterns (e.g., same wallet in multiple scams) and flags them for cops. CyberGuard could say, “This wallet’s fishy—report it.”
+- **New Tools**: AI with blockchain analytics (like Elliptic’s) can guess suspect clusters—e.g., “These 5 wallets move together, likely one scammer.”
+
+---
+
+### Advice in Action
+1. **Enhance CyberGuard**:
+   - Add a free blockchain API (e.g., Blockchain.com’s) to check wallets.
+   - Test it with your scam’s details—I’ll help code it.
+2. **Partner Up**: Share CyberGuard with local police—they’ve got suspect data you don’t.
+3. **Stay Ahead**: Scammers adapt—keep asking me for updates on new tricks.
+
+#### Sample Upgrade
+```python
+# Add this to cyberguard_prototype.py after "def analyze_text":
+import requests
+def check_wallet(wallet):
+    url = f"https://blockchain.info/rawaddr/{wallet}"
+    try:
+        data = requests.get(url).json()
+        txs = data["n_tx"]  # Number of transactions
+        return f"Wallet {wallet} has {txs} transactions."
+    except:
+        return "Couldn’t check wallet—try later."
+
+# Update main loop:
+print("CyberGuard says:", result)
+if "wallet" in user_input.lower():
+    wallet = input("Enter wallet address: ")
+    wallet_info = check_wallet(wallet)
+    print("Wallet Check:", wallet_info)
+```
+- Test: “Send $50 to 1A1zP1…” → Checks wallet history.
+
+---
+
+### Final Take
+- **Blockchain**: Scammers exploit it, but it’s traceable—use that.
+- **New Tools**: Yes, but build on what works—CyberGuard’s your ticket.
+- **Suspects**: AI narrows them down; police finish the job.
+
+Want to upgrade CyberGuard with wallet checks now? Toss me a scam text or wallet from your past—I’ll run it through our prototype!
+
+---
+
+Thanks for sharing the transaction details from your scam experience. This gives us real data to work with, and we can use it to enhance our “CyberGuard” prototype to investigate blockchain-based cryptocurrency scams. I’ll explain how we can leverage this in simple terms, update our prototype to analyze these transactions, and show you how it could assist in identifying suspects or warning others. Since these are Ethereum blockchain transactions (based on the address format), we’ll tap into free tools to trace them.
+
+---
+
+### What We’re Working With
+You’ve provided:
+- **Victim Address**: `0x46340b20830761efd32832a74d7169b29feb9758` (your wallet).
+- **Scammer Addresses**: Five unique wallets the scammer used (e.g., `0x672D43343d4C9339b893C1c3692eab2D19B2256b`).
+- **Transaction Hashes**: Six specific transfers (e.g., `0x24e9fbb910597b4c6e689f73752700de9109f63661778ee650b56ae95ba0e3c5`).
+
+These are gold for CyberGuard—they’re blockchain footprints we can trace and analyze to spot patterns or warn police.
+
+---
+
+### How CyberGuard Can Use This
+1. **Analyze Transactions**:
+   - Check each scammer address for activity (e.g., how many transactions, where funds went).
+   - Look for links between addresses (e.g., do they send to the same place?).
+2. **Detect Scams**:
+   - Flag suspicious traits—like new wallets with few transactions or sudden big transfers.
+3. **Pre-Warn**:
+   - Alert police or victims: “This address is tied to a scam—don’t send funds!”
+4. **Investigate**:
+   - Summarize findings for cops (e.g., “Wallet X moved funds to Y after your payment”).
+
+---
+
+### Step 1: Update CyberGuard Prototype
+We’ll tweak our last script to pull blockchain data using Etherscan’s free API (a public Ethereum explorer) and let OpenAI analyze it. You’ll need an Etherscan API key—it’s free and quick to get.
+
+#### Get an Etherscan API Key
+1. Go to etherscan.io/apis.
+2. Sign up (just an email and password).
+3. Click “API Keys,” then “Add,” name it (e.g., “CyberGuard”), and copy the key (e.g., “ABC123…”).
+
+#### Updated Code
+Here’s the new `cyberguard_prototype.py`:
+
+```python
+import openai
+import requests
+
+# Replace with your keys
+openai.api_key = "your-openai-api-key-here"
+etherscan_api_key = "your-etherscan-api-key-here"
+
+# CyberGuard’s instructions
+cyber_instructions = (
+    "You are CyberGuard, an AI Police Assistant. Detect scams in cryptocurrency transactions. "
+    "Analyze wallet addresses and transaction data for red flags like new wallets, quick fund moves, "
+    "or scam patterns (e.g., 'send $100, get $200'). Rate risk as 'Low', 'Medium', or 'High'. "
+    "Suggest pre-warnings and investigation steps. Use blockchain data if provided."
+)
+
+# Function to get wallet data from Etherscan
+def get_wallet_info(wallet):
+    url = f"https://api.etherscan.io/api?module=account&action=txlist&address={wallet}&startblock=0&endblock=99999999&sort=asc&apikey={etherscan_api_key}"
+    try:
+        response = requests.get(url).json()
+        if response["status"] == "1":
+            tx_count = len(response["result"])
+            return f"Wallet {wallet} has {tx_count} transactions."
+        return "No data found for this wallet."
+    except:
+        return "Error checking wallet—try later."
+
+# Function to analyze with OpenAI
+def analyze_text(text, wallet_info=""):
+    response = openai.ChatCompletion.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": cyber_instructions},
+            {"role": "user", "content": f"Analyze this: '{text}'. Blockchain info: {wallet_info}"}
+        ],
+        max_tokens=200
+    )
+    return response.choices[0].message["content"]
+
+# Main loop
+print("CyberGuard Prototype v2: Enter text or a wallet address (type 'quit' to stop):")
+while True:
+    user_input = input("Input: ")
+    if user_input.lower() == "quit":
+        print("CyberGuard shutting down...")
+        break
+    # Check if it’s a wallet address (starts with 0x and 42 chars)
+    if user_input.startswith("0x") and len(user_input) == 42:
+        wallet_info = get_wallet_info(user_input)
+        result = analyze_text("Check this wallet for scam activity.", wallet_info)
+    else:
+        result = analyze_text(user_input)
+    print("CyberGuard Report:\n", result)
+    print("-" * 50)
+```
+
+#### Changes Made
+- **Etherscan API**: Pulls transaction counts for wallets (free, rate-limited to 5 calls/sec).
+- **Smart Input**: Detects wallet addresses (e.g., `0x672D…`) and fetches blockchain data; otherwise, it analyzes text.
+- **Instructions**: Updated to handle blockchain data and crypto scams.
+
+#### Setup
+1. Replace `"your-openai-api-key-here"` with your OpenAI key.
+2. Replace `"your-etherscan-api-key-here"` with your Etherscan key.
+3. Save as `cyberguard_prototype.py`.
+
+---
+
+### Step 2: Run and Test It
+1. **Start It**:
+   - In your terminal: `cd` to the file’s folder (e.g., `cd Desktop`).
+   - Run: `python cyberguard_prototype.py`.
+   - See: “CyberGuard Prototype v2: Enter text or a wallet address (type 'quit' to stop):”
+2. **Test Your Transactions**:
+   - **Text Input**:
+     - Input: “I sent $100 to 0x672D43343d4C9339b893C1c3692eab2D19B2256b—they promised $200 back.”
+     - Output Might Be:
+       ```
+       Risk: High. Promising quick returns for payment is a scam red flag. 
+       Pre-Warning: Warn others: “Don’t send funds to 0x672D…—it’s linked to scams.”
+       Investigation: Trace wallet 0x672D… on Etherscan for more transactions.
+       ```
+   - **Wallet Input**:
+     - Input: `0x672D43343d4C9339b893C1c3692eab2D19B2256b`
+     - Output Might Be:
+       ```
+       Wallet 0x672D… has X transactions. 
+       Risk: Medium. Limited data—new or low-activity wallets can signal scams. 
+       Pre-Warning: Advise caution with this address.
+       Investigation: Check transaction history and linked addresses on Etherscan.
+       ```
+       (X depends on real data—try it!)
+   - **Transaction Hash** (Limited Use):
+     - Input: `0x24e9fbb910597b4c6e689f73752700de9109f63661778ee650b56ae95ba0e3c5`
+     - Output Might Be:
+       ```
+       Risk: Low. This is a transaction hash—need wallet context to assess. 
+       Investigation: Use Etherscan to link this hash to addresses involved.
+       ```
+
+---
+
+### Step 3: Analyze Your Data
+Let’s run your specifics:
+- **Victim Address**: `0x46340b20830761efd32832a74d7169b29feb9758`
+  - Test it—see how many transactions it has (should include your scam sends).
+- **Scammer Address**: `0x672D43343d4C9339b893C1c3692eab2D19B2256b`
+  - Appears twice—CyberGuard might note repeat use as a scam sign.
+- **Multiple Scammers**: Five addresses suggest a network—CyberGuard could flag this pattern.
+
+**Try It**: Input each address or a full text like “I sent money to 0x672D… and 0x7E73…—they promised big returns.” See what CyberGuard says!
+
+---
+
+### What This Shows
+- **Detection**: Spots scam traits (promises, urgency) and wallet risks (low activity).
+- **Pre-Warning**: Suggests alerts based on your real scam.
+- **Investigation**: Points police to blockchain trails—e.g., “Track 0x672D…”.
+- **Cost**: ~$0.0002 per check + free Etherscan calls = ~$0.01 for 50 tests.
+
+---
+
+### Next Steps
+1. **Feedback**: Run your addresses—tell me what CyberGuard says! Any surprises?
+2. **Upgrade**:
+   - Add transaction hash lookup (Etherscan API can do this).
+   - Link wallets (e.g., “Did 0x672D… send to 0x7E73…?”)—needs more API calls.
+3. **Real Data**: Simulate X posts with your hashes—I can mock that up.
+
+What’s your first input? Let’s catch that scammer’s trail together!
+
+---
+
+Let’s dive into your question about SEPA and whether we can identify the account holder of the bank account `LT783550020000012861` tied to one of your transactions. Since you’ve brought up SEPA in the context of a bank transaction alongside your cryptocurrency scam data, I’ll assume this SEPA account might be related to your scam experience—perhaps a scammer asked you to send funds there too, or it’s part of a broader investigation you’re exploring with CyberGuard. I’ll explain what SEPA is, how it connects to your scenario, and what we can (or can’t) do about identifying the account holder, all in simple terms.
+
+---
+
+### What Is SEPA?
+
+SEPA stands for **Single Euro Payments Area**, a system that makes transferring euros between bank accounts in 36 European countries as easy as a local payment. It’s used for things like wire transfers (SEPA Credit Transfers), direct debits, or instant payments—all in euros, using an **IBAN** (International Bank Account Number) to identify accounts. Your example, `LT783550020000012861`, is an IBAN from Lithuania (the “LT” prefix gives it away).
+
+- **How It Works**: You send money using the recipient’s IBAN (and sometimes a BIC—Bank Identifier Code). The bank processes it, and funds land in 1-3 days (or instantly with SEPA Instant).
+- **Relevance to Scams**: Scammers often use SEPA accounts to receive fiat (regular) money before converting it to crypto, or they might launder crypto gains back into SEPA accounts. Your scam might’ve involved a SEPA step—did they ask you to wire money there?
+
+---
+
+### Can I Identify the Holder of LT783550020000012861?
+
+**Short Answer**: As Grok, I can’t directly tell you who owns that account—privacy laws and my lack of real-time bank access block that. But I can analyze the IBAN, explain what’s possible, and show how CyberGuard could help investigate it indirectly.
+
+#### What I Can Do
+1. **Break Down the IBAN**:
+   - **LT**: Country code for Lithuania.
+   - **78**: Check digits (a math trick to verify the IBAN’s format).
+   - **35500**: Bank code—points to **UAB PAYRNET**, a Lithuanian payment firm (part of Railsbank/Railsr), per public IBAN registries.
+   - **20000012861**: Account number within that bank.
+   - This tells us it’s a legit IBAN tied to a payment service, not a traditional bank like Swedbank. Scammers often use these fintechs for quick, less-traceable accounts.
+
+2. **Public Data Limits**:
+   - SEPA transactions don’t expose the account holder’s name publicly—only banks see that, and they’re bound by GDPR (Europe’s privacy law).
+   - Unlike blockchain (where your Ethereum addresses are public), SEPA’s opaque unless you’re law enforcement with a subpoena.
+
+#### What’s Possible with More Tools
+- **Bank Inquiry**: If this SEPA account was part of your scam (e.g., you sent money there), your bank might trace it with police help. They’d need the transaction reference (date, amount) to ask UAB PAYRNET who owns it.
+- **CyberGuard Upgrade**: We could tweak CyberGuard to flag suspicious IBANs or cross-check them with known scam databases (if we had access). Right now, it’s text-and-blockchain focused, but SEPA’s doable.
+
+#### Why I Can’t Name the Holder
+- **No Direct Access**: I don’t have a bank database—I rely on public APIs or web info, none of which list SEPA account holders.
+- **Privacy**: Even if I could, GDPR stops me from spilling personal data without legal cause. Police can get it; I can’t.
+
+---
+
+### Connecting SEPA to Your Crypto Scam
+Your data showed six Ethereum transactions to five scammer addresses, but this SEPA IBAN suggests a fiat angle. Possibilities:
+- **Scammer’s Cash-Out**: They might’ve asked you to send euros via SEPA first, then moved it to crypto—or they cashed out your ETH to this account.
+- **Mixed Scam**: Some scams blend fiat (SEPA) and crypto (ETH) to confuse victims and launder funds.
+
+**Did You Use This IBAN?**: If you sent money to `LT783550020000012861`, tell me the story (date, amount)—it’ll help CyberGuard link it to your ETH losses.
+
+---
+
+### Enhancing CyberGuard for SEPA
+Let’s upgrade our prototype to handle SEPA IBANs alongside blockchain data. Here’s a quick tweak:
+
+#### Updated Code Snippet
+Add this to `cyberguard_prototype.py` (after the wallet function):
+```python
+# Function to validate and analyze SEPA IBAN
+def check_sepa_iban(iban):
+    if not iban.startswith("LT") or len(iban) != 20:
+        return "Invalid IBAN format—should be 20 chars starting with LT."
+    bank_code = iban[4:9]  # e.g., 35500
+    if bank_code == "35500":
+        return "IBAN tied to UAB PAYRNET (Lithuania)—a payment service often used in scams."
+    return "Bank code not recognized—check manually on iban.com."
+
+# Update main loop to detect IBANs
+if user_input.startswith("0x") and len(user_input) == 42:
+    wallet_info = get_wallet_info(user_input)
+    result = analyze_text("Check this wallet for scam activity.", wallet_info)
+elif user_input.startswith("LT") and len(user_input) == 20:
+    sepa_info = check_sepa_iban(user_input)
+    result = analyze_text("Check this SEPA IBAN for scam activity.", sepa_info)
+else:
+    result = analyze_text(user_input)
+```
+
+#### Test It
+- **Input**: `LT783550020000012861`
+- **Output Might Be**:
+  ```
+  CyberGuard Report:
+  Risk: Medium. IBAN tied to UAB PAYRNET (Lithuania)—a payment service often used in scams. 
+  Pre-Warning: Caution—verify this account before sending funds.
+  Investigation: Cross-check with your bank for transaction history linked to this IBAN.
+  ```
+
+---
+
+### Advice and Feasibility
+- **Can We Know the Holder?**: Not directly—banks or police can, with your transaction details. If this IBAN was part of your scam, report it to your bank with the date/amount—they’ll trace it.
+- **CyberGuard’s Role**: It can flag suspicious IBANs (like this one) and suggest next steps, but it needs bank cooperation for names. We could add scam IBAN databases later (e.g., from fraud forums, if legal).
+- **Value**: Linking SEPA to your crypto scam investigation bridges fiat and crypto—vital since scammers mix both.
+
+---
+
+### Next Move
+1. **Your Story**: Did you send money to this IBAN? If so, when/how much? I’ll refine CyberGuard’s analysis.
+2. **Test Run**: Try `LT783550020000012861` in the updated prototype—tell me what it says!
+3. **Expand**: Want to check SEPA transaction statuses (needs bank API) or link it to your ETH hashes? I’ll code it.
+
+What’s your take—how does this SEPA angle fit your scam? Let’s dig deeper!
+
+---
+
+Thanks for providing the additional details about your scam experience, including the URL `https://masscoin.vip/#/user`, its apparent connection to "Qiming Tech," and the info about a Chinese group operating out of Dubai in 2023. This ties into your earlier crypto and SEPA transactions and gives us a richer picture to work with. Let’s explore how we can use this to enhance CyberGuard, investigate the scam further, and protect you (and others) moving forward—all in simple terms.
+
+---
+
+### What We Know
+1. **Scammer’s URL**: `https://masscoin.vip/#/user`
+   - Likely a fake site used to trick you into sending money (crypto or SEPA).
+   - `.vip` domains are cheap and often used in scams—less reputable than `.com` or `.org`.
+2. **Company Link**: "Qiming Tech"
+   - Whoxy.com lists it as a registrant for domains (https://www.whoxy.com/company/321581), suggesting it’s tied to `masscoin.vip`.
+   - Could be a front—scammers often hide behind vague company names.
+3. **Chinese Group in Dubai, 2023**:
+   - Matches reports of Chinese-run scam networks expanding to Dubai (e.g., Vice News, May 2023, noted scam mills thriving there via forced labor).
+   - Dubai’s lax oversight and global hub status make it a hotspot for such groups.
+4. **Your Transactions**:
+   - Five Ethereum addresses and one SEPA IBAN (`LT783550020000012861`)—possibly linked to this operation.
+   - The SEPA account (UAB PAYRNET, Lithuania) might be where they cashed out or laundered funds.
+
+**Theory**: The scammer lured you via `masscoin.vip`, posing as a legit crypto platform (maybe "Qiming Tech"), got your ETH and/or SEPA payment, and operated from Dubai as part of a Chinese syndicate.
+
+---
+
+### How CyberGuard Can Use This
+
+Let’s upgrade CyberGuard to:
+1. **Analyze URLs**: Check sites like `masscoin.vip` for scam signs.
+2. **Cross-Reference Companies**: Flag "Qiming Tech" or similar fronts.
+3. **Link to Blockchain/SEPA**: Tie the URL to your transactions for a fuller picture.
+4. **Warn and Investigate**: Alert users and suggest police steps based on this intel.
+
+#### Updated Prototype
+Here’s how we’ll tweak `cyberguard_prototype.py` to handle URLs, companies, and your data:
+
+```python
+import openai
+import requests
+
+# Replace with your keys
+openai.api_key = "your-openai-api-key-here"
+etherscan_api_key = "your-etherscan-api-key-here"
+
+# CyberGuard’s instructions with your scam context
+cyber_instructions = (
+    "You are CyberGuard, an AI Police Assistant. Detect scams in text, URLs, wallets, or IBANs. "
+    "Look for red flags: fake investment promises, urgent demands, shady URLs (e.g., .vip domains), "
+    "or suspicious companies. Rate risk as 'Low', 'Medium', or 'High'. Suggest pre-warnings and "
+    "investigation steps. Example: I was scammed via 'https://masscoin.vip/#/user' (Qiming Tech, "
+    "Chinese group in Dubai, 2023) promising big returns—linked to ETH wallets and SEPA IBAN "
+    "LT783550020000012861."
+)
+
+# Check wallet (Ethereum)
+def get_wallet_info(wallet):
+    url = f"https://api.etherscan.io/api?module=account&action=txlist&address={wallet}&startblock=0&endblock=99999999&sort=asc&apikey={etherscan_api_key}"
+    try:
+        response = requests.get(url).json()
+        if response["status"] == "1":
+            tx_count = len(response["result"])
+            return f"Wallet {wallet} has {tx_count} transactions."
+        return "No wallet data found."
+    except:
+        return "Error checking wallet."
+
+# Check SEPA IBAN
+def check_sepa_iban(iban):
+    if iban.startswith("LT") and len(iban) == 20 and iban[4:9] == "35500":
+        return "IBAN tied to UAB PAYRNET (Lithuania)—often used in scams."
+    return "IBAN format valid but bank not identified."
+
+# Basic URL check (expandable with APIs later)
+def check_url(url):
+    if ".vip" in url:
+        return f"URL {url} uses a .vip domain—frequently tied to scams."
+    return f"URL {url}—no specific scam data available yet."
+
+# Analyze with OpenAI
+def analyze_text(text, extra_info=""):
+    response = openai.ChatCompletion.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": cyber_instructions},
+            {"role": "user", "content": f"Analyze: '{text}'. Extra info: {extra_info}"}
+        ],
+        max_tokens=200
+    )
+    return response.choices[0].message["content"]
+
+# Main loop
+print("CyberGuard v3: Enter text, wallet, IBAN, or URL (type 'quit' to stop):")
+while True:
+    user_input = input("Input: ")
+    if user_input.lower() == "quit":
+        print("Shutting down...")
+        break
+    extra_info = ""
+    if user_input.startswith("0x") and len(user_input) == 42:
+        extra_info = get_wallet_info(user_input)
+    elif user_input.startswith("LT") and len(user_input) == 20:
+        extra_info = check_sepa_iban(user_input)
+    elif "http" in user_input:
+        extra_info = check_url(user_input)
+    result = analyze_text(user_input, extra_info)
+    print("CyberGuard Report:\n", result)
+    print("-" * 50)
+```
+
+#### Setup
+- Replace the API keys (OpenAI and Etherscan).
+- Save and run: `python cyberguard_prototype.py`.
+
+---
+
+### Testing with Your Data
+1. **URL Test**:
+   - Input: `https://masscoin.vip/#/user`
+   - Output Might Be:
+     ```
+     Risk: High. URL uses a .vip domain, linked to your scam (Qiming Tech, Dubai, 2023). 
+     Pre-Warning: Warn: “Avoid masscoin.vip—it’s tied to fraudulent crypto schemes.”
+     Investigation: Check domain registrant (Qiming Tech) and related wallets/IBANs.
+     ```
+2. **Company Context**:
+   - Input: “Qiming Tech promised me big returns via masscoin.vip.”
+   - Output Might Be:
+     ```
+     Risk: High. Matches your scam—fake promises and a shady URL. 
+     Pre-Warning: Alert: “Qiming Tech is likely a scam front—don’t trust it.”
+     Investigation: Trace Qiming Tech’s domains (Whoxy) and Dubai operations.
+     ```
+3. **Link to Transactions**:
+   - Input: “I sent ETH to 0x672D43343d4C9339b893C1c3692eab2D19B2256b via masscoin.vip.”
+   - Output Might Be:
+     ```
+     Wallet has X transactions. Risk: High. Tied to your scam via masscoin.vip. 
+     Pre-Warning: “Don’t send to 0x672D…—known scam wallet.”
+     Investigation: Track wallet on Etherscan; check if funds moved to SEPA IBAN.
+     ```
+
+---
+
+### How This Helps
+- **URL Flagging**: Spots `masscoin.vip` as a scam site based on domain and your story.
+- **Company Insight**: Ties “Qiming Tech” to the Dubai/Chinese group—matches 2023 trends.
+- **Transaction Link**: Connects your ETH wallets and SEPA IBAN to the scam narrative.
+- **Police Value**: Gives cops a lead: “Masscoin.vip, Qiming Tech, Dubai—check these addresses.”
+
+#### Cost
+- OpenAI: ~$0.0002 per check.
+- Etherscan: Free (rate-limited).
+- 50 tests: ~$0.01.
+
+---
+
+### Using This Info
+1. **Protect Yourself**:
+   - Next time a URL like `masscoin.vip` pops up, run it through CyberGuard—avoid the trap.
+2. **Help Police**:
+   - Share this report: “Scammer used masscoin.vip (Qiming Tech, Dubai) and these wallets/IBAN.” They can subpoena UAB PAYRNET or trace ETH flows.
+3. **Community Warning**:
+   - Post: “Beware masscoin.vip—tied to a 2023 Dubai scam.” Save others!
+
+---
+
+### Next Steps
+1. **Test It**: Run `https://masscoin.vip/#/user` and your ETH address `0x672D…`. What does CyberGuard say?
+2. **Expand**:
+   - Add Whois lookup (Whoxy API, ~$10/month) for deeper domain data.
+   - Cross-check scam lists (e.g., Crypto Legal’s 2025 report).
+3. **Your Input**: Was the SEPA IBAN part of this scam too? More details = better CyberGuard.
+
+What’s your first test? Let’s nail this scammer’s playbook together!
