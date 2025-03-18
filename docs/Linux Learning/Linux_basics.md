@@ -1,4 +1,4 @@
-最好看的字体：  Garamond
+*try this Fond: Garamond*
 
 When using an Ubuntu system, especially if you're new to it or transitioning from another operating system, there are some key operations and commands that can make your experience smoother and more efficient. Ubuntu is a Linux-based OS, so many of these revolve around navigating the terminal and managing the system. Here’s a rundown of the essentials:
 
