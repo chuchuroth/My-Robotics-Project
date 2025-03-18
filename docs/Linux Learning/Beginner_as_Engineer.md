@@ -83,6 +83,7 @@ That's a fantastic combination! C++ and embedded systems open up a world of poss
     * Implement a simple timer-based task scheduler.
 
 By following these recommendations, you'll build a solid foundation in C++ and embedded systems. Remember to be patient, persistent, and enjoy the learning process!
+
 -----
 Great! PCB design is a fascinating and valuable skill. Let's break down how to start your learning journey and how to read circuit plans (schematics).
 
@@ -156,6 +157,7 @@ Great! PCB design is a fascinating and valuable skill. Let's break down how to s
 * Don't be afraid to ask for help from experienced designers.
 
 By following these steps, you'll be well on your way to mastering PCB design and reading circuit plans. Happy designing!
+
 ------
 Starting CAD design can seem daunting, but with the right approach, it's very accessible. Here's a beginner-friendly path to get you started:
 
@@ -242,6 +244,7 @@ Starting CAD design can seem daunting, but with the right approach, it's very ac
 * **Have Fun!** CAD design can be very rewarding.
 
 By following these steps, you'll be well on your way to mastering CAD design.
+
 --------
 Excellent! PLC (Programmable Logic Controller) programming is a gateway to the fascinating world of industrial automation. Let's break down how to start and introduce you to this field:
 
