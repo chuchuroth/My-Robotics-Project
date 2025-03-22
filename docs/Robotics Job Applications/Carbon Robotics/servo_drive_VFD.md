@@ -362,3 +362,33 @@ Let’s unpack the phrase **"Double-check polarity (U-V-W) and STO"** from the S
 - Swapping stepper wires on Moveo was a quick fix. With S210, U-V-W and STO errors are costlier—production halts or safety fines—so double-checking is your insurance.
 
 This should clarify why and how to nail these checks. Want to troubleshoot a specific wiring mix-up further? Let me know!
+
+
+---
+
+
+FANUC robots primarily use **AC servo motors** to power their movements. These motors are renowned for their precision, reliability, and efficiency, making them ideal for the accurate control required in industrial robotics. As a leader in factory automation, FANUC manufactures its own high-performance servo motors, which are seamlessly integrated into their robots to ensure smooth, precise, and repeatable operations.
+
+### Key Features of FANUC Servo Motors
+- **Type**: AC (alternating current), typically brushless for higher efficiency and reduced maintenance.
+- **Feedback System**: Equipped with encoders or resolvers to provide real-time position and speed feedback, enabling precise closed-loop control.
+- **Control Capabilities**: Paired with advanced drive systems to manage speed, position, and torque with high accuracy.
+- **Applications**: Used across FANUC’s diverse robot lineup, from small collaborative models to large industrial arms designed for heavy payloads.
+
+### Why AC Servo Motors?
+Servo motors are the standard choice for industrial robots like those produced by FANUC because they excel at delivering precise control over position, speed, and torque. This precision is essential for tasks such as welding, assembly, material handling, and painting, where accuracy and repeatability are critical. FANUC’s AC servo motors are specifically engineered to support high-speed operations and demanding automation tasks, ensuring top performance across various industries.
+
+### Are There Exceptions?
+While AC servo motors dominate FANUC’s robot designs, certain specialized cases might involve alternative motor types:
+- **Stepper Motors**: Occasionally found in smaller or less precise applications, but these are rare in FANUC’s industrial robots due to the need for high precision and speed.
+- **Linear Motors**: Used in some advanced setups for direct linear motion, though most FANUC robots rely on rotary servo motors for joint movement.
+
+For the vast majority of FANUC robots, however, **AC servo motors** remain the motor of choice.
+
+### FANUC’s Expertise in Servo Motors
+FANUC has a long-standing reputation for excellence in servo motor technology, with over 23.5 million units installed globally. Their motors are designed for:
+- **High Reliability**: Built to endure tough industrial environments.
+- **Energy Efficiency**: Optimized to reduce power consumption without sacrificing performance.
+- **Seamless Integration**: Paired with FANUC’s own controllers and drives for optimal operation.
+
+In conclusion, FANUC robots are powered by **AC servo motors**, which are a cornerstone of their ability to deliver reliable, precise, and high-performing automation solutions across a wide range of industrial applications.
