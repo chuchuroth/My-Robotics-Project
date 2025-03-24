@@ -186,6 +186,7 @@ Here are three practical examples to connect TP programming to real-world tasks,
 #### 1. Pick-and-Place (Material Handling)
 - **Scenario**: A FANUC robot picks parts from a conveyor and places them on a pallet, similar to a ROS node subscribing to a conveyor sensor topic and publishing to a gripper.
 - **TP Program**:
+  
   ```
   1: UFRAME[1] ; ! Set workspace frame
   2: UTOOL[1] ; ! Set gripper tool
@@ -199,11 +200,13 @@ Here are three practical examples to connect TP programming to real-world tasks,
  10: JMP LBL[1] ; ! Loop back
  11: LBL[10] ; ! End
   ```
+
 - **ROS Analogy**: DI[1] is like a sensor topic triggering the pick action, and DO[1] mimics an actuator command. The loop mimics a ROS node’s main loop.
 
 #### 2. Dispensing (Glue Application)
 - **Scenario**: The robot applies glue along a straight path, akin to a ROS path planner sending waypoints.
 - **TP Program**:
+
   ```
   1: UTOOL[2] ; ! Set dispenser tool
   2: L P[1] 200mm/sec FINE ; ! Move to start
@@ -212,11 +215,13 @@ Here are three practical examples to connect TP programming to real-world tasks,
   5: DO[2]=OFF ; ! Stop dispensing
   6: L P[3] 500mm/sec FINE ; ! Move away
   ```
+
 - **ROS Analogy**: P[1] to P[2] is like a MoveIt trajectory, and DO[2] is a service call to activate the dispenser. CNT0 ensures a smooth path, similar to interpolation in ROS.
 
 #### 3. Testing (Quality Inspection)
 - **Scenario**: The robot moves a camera to inspect a part, counting defects with a counter, similar to a ROS node processing image data.
 - **TP Program**:
+
   ```
   1: R[1]=0 ; ! Initialize defect counter
   2: L P[1] 300mm/sec FINE ; ! Move to inspection point 1
@@ -229,6 +234,7 @@ Here are three practical examples to connect TP programming to real-world tasks,
   8: R[1]=R[1]+1 ;
   9: END ;
   ```
+
 - **ROS Analogy**: DI[2] is like a topic from a vision system, R[1] is a variable in a node, and the subroutine is akin to a callback function.
 
 ---
@@ -250,6 +256,7 @@ With your ROS background, you’ll adapt quickly by treating TP as a lower-level
 Comparing FANUC’s TP (Teach Pendant) language to a compiled language like C++ in the context of industrial robots highlights their distinct purposes and trade-offs. TP is a domain-specific, interpreted scripting language tailored for FANUC robots, while C++ is a general-purpose, compiled language often used in robotics (e.g., via ROS or custom firmware). Since production-ready robots prioritize real-time performance and reliability, let’s break down the advantages of TP over C++ in this specific domain, while acknowledging where C++ shines.
 
 ---
+
 
 ### Advantages of TP Over C++ in FANUC Robot Programming
 
