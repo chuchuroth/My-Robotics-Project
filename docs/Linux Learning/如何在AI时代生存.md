@@ -315,3 +315,5 @@ Would you like examples of structural thinking applied to a specific scenario in
 🚀 **“想变聪明？就多收集思维模型！”**
 
 ***
+
+## 其实计划不仅仅是时间安排，还包括对于情绪/状态的提前“安排”，比如这段时间我将以一种什么样的方式生活，我将想一些什么，做一些什么，可以请AI帮忙。
