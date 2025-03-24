@@ -79,7 +79,7 @@ Here are three practical examples to connect TP programming to real-world tasks,
   9: DO[1]=OFF ; ! Open gripper
  10: JMP LBL[1] ; ! Loop back
  11: LBL[10] ; ! End
-  ```
+```
 
 - **ROS Analogy**: DI[1] is like a sensor topic triggering the pick action, and DO[1] mimics an actuator command. The loop mimics a ROS node’s main loop.
 
@@ -87,14 +87,14 @@ Here are three practical examples to connect TP programming to real-world tasks,
 - **Scenario**: The robot applies glue along a straight path, akin to a ROS path planner sending waypoints.
 - **TP Program**:
 
-  ```
+```
   1: UTOOL[2] ; ! Set dispenser tool
   2: L P[1] 200mm/sec FINE ; ! Move to start
   3: DO[2]=ON ; ! Start dispensing
   4: L P[2] 100mm/sec CNT0 ; ! Linear path with glue on
   5: DO[2]=OFF ; ! Stop dispensing
   6: L P[3] 500mm/sec FINE ; ! Move away
-  ```
+```
 
 - **ROS Analogy**: P[1] to P[2] is like a MoveIt trajectory, and DO[2] is a service call to activate the dispenser. CNT0 ensures a smooth path, similar to interpolation in ROS.
 
@@ -102,7 +102,7 @@ Here are three practical examples to connect TP programming to real-world tasks,
 - **Scenario**: The robot moves a camera to inspect a part, counting defects with a counter, similar to a ROS node processing image data.
 - **TP Program**:
 
-  ```
+```
   1: R[1]=0 ; ! Initialize defect counter
   2: L P[1] 300mm/sec FINE ; ! Move to inspection point 1
   3: IF DI[2]=ON, CALL INCREMENT ; ! Defect detected, call subroutine
@@ -113,7 +113,7 @@ Here are three practical examples to connect TP programming to real-world tasks,
   7: INCREMENT: ;
   8: R[1]=R[1]+1 ;
   9: END ;
-  ```
+```
 
 - **ROS Analogy**: DI[2] is like a topic from a vision system, R[1] is a variable in a node, and the subroutine is akin to a callback function.
 
