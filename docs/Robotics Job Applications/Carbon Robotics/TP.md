@@ -66,8 +66,8 @@ Here are three practical examples to connect TP programming to real-world tasks,
 #### 1. Pick-and-Place (Material Handling)
 - **Scenario**: A FANUC robot picks parts from a conveyor and places them on a pallet, similar to a ROS node subscribing to a conveyor sensor topic and publishing to a gripper.
 - **TP Program**:
-  
-  ```
+
+```
   1: UFRAME[1] ; ! Set workspace frame
   2: UTOOL[1] ; ! Set gripper tool
   3: LBL[1] ; ! Start loop
@@ -77,8 +77,8 @@ Here are three practical examples to connect TP programming to real-world tasks,
   7: WAIT 0.5 ; ! Wait 0.5s for grip
   8: L P[2] 500mm/sec FINE ; ! Move to place position
   9: DO[1]=OFF ; ! Open gripper
- 10: JMP LBL[1] ; ! Loop back
- 11: LBL[10] ; ! End
+  10: JMP LBL[1] ; ! Loop back
+  11: LBL[10] ; ! End
 ```
 
 - **ROS Analogy**: DI[1] is like a sensor topic triggering the pick action, and DO[1] mimics an actuator command. The loop mimics a ROS node’s main loop.
