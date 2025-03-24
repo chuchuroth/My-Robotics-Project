@@ -121,3 +121,268 @@ The companies surveyed—**Tesla**, **Amazon**, and **Foxconn**—demonstrate th
 These systems are powered by **SCADA** for monitoring, **PLCs** for control, and **ladder logic** for programming the automation sequences. The integration of **AI and machine learning** is also a growing trend, enhancing the capabilities of these systems.
 
 This survey provides a comprehensive overview of current technology trends in industrial automation, highlighting how leading companies are leveraging robotics and automation to optimize their production lines. If you’d like to dive deeper into specific technical details or explore additional companies, feel free to let me know!
+
+
+---
+
+
+### Key Points
+- It seems likely that FANUC robots use AC servo motors for precise control, commonly integrated with TP for basic programming and Karel for complex logic.
+- Research suggests TP is ideal for simple pick-and-place tasks, using motion commands like L (linear) for precision, while Karel handles advanced features like loops.
+- The evidence leans toward combining TP and Karel for tasks needing external input checks, ensuring flexibility in industrial settings.
+
+### Step-by-Step Guide for Programming a FANUC Robot
+#### Teaching Positions
+Start by using the teach pendant to manually move the robot to the pick-up location (e.g., P[1]) and place location (e.g., P[2]), recording each position into position registers for later use.
+
+#### Writing the TP Program
+Create a basic TP program for the pick-and-place task:
+- Use **L (Linear motion)** for precise movement, e.g., `L P[1] 100% FINE` to move to the pick position at full speed and stop precisely.
+- Add gripper control using digital outputs (DO), e.g., `DO[1]=ON` to close the gripper, with waits like `WAIT 500` for gripper actions.
+- Example program:
+  ```
+  1: L P[1] 100% FINE ;
+  2: DO[1]=ON ;
+  3: WAIT 500 ;
+  4: L P[2] 100% FINE ;
+  5: DO[1]=OFF ;
+  6: WAIT 500 ;
+  ```
+
+#### Adding Loops and Conditions
+- For repeating the task (e.g., 10 times), use TP’s label and jump commands:
+  - Initialize a counter, e.g., `R[1]=0`.
+  - Use `LBL[1]` for the loop start and `JMP LBL[1]` with a condition like `IF R[1]<10`.
+  - Example:
+    ```
+    1: R[1]=0 ;
+    2: LBL[1] ;
+    3: L P[1] 100% FINE ;
+    4: DO[1]=ON ;
+    5: WAIT 500 ;
+    6: L P[2] 100% FINE ;
+    7: DO[1]=OFF ;
+    8: WAIT 500 ;
+    9: R[1]=R[1]+1 ;
+    10: IF R[1]<10, JMP LBL[1] ;
+    ```
+- For external inputs (e.g., checking if an object is present via DI[1]), add conditions like `IF DI[1]=ON, L P[1] 100% FINE ; ELSE JMP LBL[2]`.
+
+#### Testing and Error Handling
+- Test using the teach pendant to step through lines, ensuring movements and I/O work as expected.
+- Use FANUC’s ROBOGUIDE for simulation to verify logic without physical movement.
+- Handle errors by checking teach pendant error codes and consulting the manual for fixes, ensuring safety by avoiding collisions.
+
+#### Unexpected Detail
+Did you know Karel can also manage network communications, like reading data from a vision system, enhancing your program for dynamic environments? This could be useful for adapting to varying object positions.
+
+---
+
+### Survey Note: Detailed Analysis of FANUC Robot Programming for Pick-and-Place Tasks
+
+To address the task of creating a program to control a FANUC robot for picking up an object and placing it elsewhere using TP or Karel, a step-by-step approach is necessary, given the user’s rustiness in FANUC programming. This note provides a comprehensive guide, leveraging the user’s familiarity with basic robotics and programming concepts, and integrates insights from industrial practices.
+
+#### Background on TP and Karel
+- **TP (Teach Pendant Language)**: Used for basic programming, it involves defining positions and simple motion commands, suitable for tasks like pick-and-place. It lacks advanced constructs like loops but supports labels and jumps for basic repetition.
+- **Karel**: A higher-level language, similar to Pascal, enabling complex logic, loops, conditionals, and integration with external systems. It’s ideal for tasks requiring dynamic decision-making or extensive data handling.
+
+For a simple pick-and-place, TP is sufficient, but for advanced features, combining TP with Karel is recommended, aligning with the user’s task requirements.
+
+#### Step-by-Step Programming Guide
+
+##### 1. Teaching Positions
+- **Process**: Use the teach pendant to manually jog the robot to the pick-up location and record it as P[1], then to the place location and record as P[2]. This involves:
+  - Selecting the position register (e.g., P[1]) via the pendant.
+  - Using jog controls (e.g., COORD mode for Cartesian movement) to position the robot.
+  - Pressing the “Record” button to save the position, ensuring no collisions or unreachable points.
+- **Safety Consideration**: Ensure the path is clear of obstacles and operators, as safety is paramount in industrial settings.
+
+##### 2. Writing the TP Program for Basic Motion
+- **Motion Commands**: 
+  - **J (Joint Motion)**: Faster, moves in joint space, less precise for pick-and-place.
+  - **L (Linear Motion)**: Moves in a straight line in Cartesian space, ideal for precision, used with speed (e.g., 100%) and termination (e.g., FINE for precise stop).
+- **Initial Program**: For a basic pick-and-place:
+  ```
+  1: L P[1] 100% FINE ;
+  2: WAIT 1000 ;  (Simulate pick-up, e.g., 1 second)
+  3: L P[2] 100% FINE ;
+  4: WAIT 1000 ;  (Simulate place, e.g., 1 second)
+  ```
+- **Gripper Control**: FANUC robots use digital outputs (DO) for external devices. Update the program to include gripper actions:
+  ```
+  1: L P[1] 100% FINE ;
+  2: DO[1]=ON ;  (Close gripper)
+  3: WAIT 500 ;  (Wait 0.5 seconds for gripper to close)
+  4: L P[2] 100% FINE ;
+  5: DO[1]=OFF ;  (Open gripper)
+  6: WAIT 500 ;  (Wait 0.5 seconds for gripper to open)
+  ```
+- **Reasoning**: Linear motion ensures precision, and waits simulate mechanical actions, aligning with industrial pick-and-place tasks.
+
+##### 3. Adding Loops for Repetition
+- **TP Limitation**: No native loops, so use labels and jumps. For 10 cycles:
+  ```
+  1: R[1]=0 ;  (Initialize cycle count in numeric register R[1])
+  2: LBL[1] ;
+  3: L P[1] 100% FINE ;
+  4: DO[1]=ON ;
+  5: WAIT 500 ;
+  6: L P[2] 100% FINE ;
+  7: DO[1]=OFF ;
+  8: WAIT 500 ;
+  9: R[1]=R[1]+1 ;  (Increment counter)
+  10: IF R[1]<10, JMP LBL[1] ;  (Jump back if less than 10 cycles)
+  ```
+- **Logic**: R[1] starts at 0, increments after each cycle. After 9 cycles, R[1]=9, jumps back; after 10th cycle, R[1]=10, IF 10<10 is false, stops. This ensures 10 cycles, aligning with repetitive industrial tasks.
+
+##### 4. Handling External Inputs
+- **Conditionals in TP**: Use digital inputs (DI) for decisions, e.g., checking if an object is present via DI[1]:
+  - Modify line 2: `2: IF DI[1]=ON, L P[1] 100% FINE ; ELSE JMP LBL[2] ;`
+  - Add after line 8: `9: LBL[2] ;`
+- **Complexity**: For multiple conditions, TP’s label/jump system can get messy. Karel is better for such scenarios, offering WHILE loops and IF-THEN-ELSE, e.g.:
+  ```
+  PROGRAM pick_place_loop
+  VAR
+      cycle_count: INTEGER = 0 ;
+      max_cycles: INTEGER = 10 ;
+  BEGIN
+      WHILE cycle_count < max_cycles DO
+          IF GET_INPUT(1) = TRUE THEN  (Check DI[1])
+              CALL_PROG('pick_place') ;
+          ENDIF
+          cycle_count = cycle_count + 1 ;
+      ENDWHILE
+  END pick_place_loop
+  ```
+- **Recommendation**: For basic tasks, TP suffices; for dynamic inputs, combine with Karel for clarity.
+
+##### 5. Testing and Error Handling
+- **Testing**: Use the teach pendant to step through lines, observing movements and I/O. FANUC’s ROBOGUIDE ([FANUC ROBOGUIDE](https://www.fanucamerica.com/products/robotics/robot-simulation-software/roboguide)) allows simulation, verifying logic without physical risk.
+- **Error Handling**: FANUC displays error codes on the pendant (e.g., position errors, I/O faults). Refer to the manual for diagnostics, ensuring safety by checking for collisions or unreachable positions.
+
+##### 6. Additional Considerations
+- **Robot Model Variations**: Different FANUC models (e.g., LR Mate, M-10iA) may have additional axes or motion types. Check the manual for specifics.
+- **System Integration**: For larger systems, Karel can manage communication (e.g., via EtherNet/IP, Profinet) with other machines, ensuring coordination. Example Karel routine for network:
+  ```
+  ROUTINE read_vision_data
+  VAR
+      vision_ip: STRING = '192.168.0.100' ;
+      vision_port: INTEGER = 5000 ;
+      data: STRING ;
+  BEGIN
+      OPEN_TCP(vision_ip, vision_port) ;
+      READ_LINE(data) ;
+      CLOSE_TCP() ;
+  END read_vision_data
+  ```
+- **Safety**: Ensure paths avoid human operators, using safety interlocks (e.g., e-stops) as per standards like ISO 13849.
+
+#### Unexpected Detail
+Karel’s ability to handle network communications, like reading from a vision system, adds flexibility for dynamic environments, potentially adapting pick positions based on object detection, enhancing industrial applications beyond static tasks.
+
+#### Survey Note: Detailed Analysis of FANUC Robot Programming for Pick-and-Place Tasks
+
+To address the task of creating a program to control a FANUC robot for picking up an object and placing it elsewhere using TP or Karel, a step-by-step approach is necessary, given the user’s rustiness in FANUC programming. This note provides a comprehensive guide, leveraging the user’s familiarity with basic robotics and programming concepts, and integrates insights from industrial practices.
+
+##### Background on TP and Karel
+- **TP (Teach Pendant Language)**: Used for basic programming, it involves defining positions and simple motion commands, suitable for tasks like pick-and-place. It lacks advanced constructs like loops but supports labels and jumps for basic repetition.
+- **Karel**: A higher-level language, similar to Pascal, enabling complex logic, loops, conditionals, and integration with external systems. It’s ideal for tasks requiring dynamic decision-making or extensive data handling.
+
+For a simple pick-and-place, TP is sufficient, but for advanced features, combining TP with Karel is recommended, aligning with the user’s task requirements.
+
+##### Step-by-Step Programming Guide
+
+###### 1. Teaching Positions
+- **Process**: Use the teach pendant to manually jog the robot to the pick-up location and record it as P[1], then to the place location and record as P[2]. This involves:
+  - Selecting the position register (e.g., P[1]) via the pendant.
+  - Using jog controls (e.g., COORD mode for Cartesian movement) to position the robot.
+  - Pressing the “Record” button to save the position, ensuring no collisions or unreachable points.
+- **Safety Consideration**: Ensure the path is clear of obstacles and operators, as safety is paramount in industrial settings.
+
+###### 2. Writing the TP Program for Basic Motion
+- **Motion Commands**: 
+  - **J (Joint Motion)**: Faster, moves in joint space, less precise for pick-and-place.
+  - **L (Linear Motion)**: Moves in a straight line in Cartesian space, ideal for precision, used with speed (e.g., 100%) and termination (e.g., FINE for precise stop).
+- **Initial Program**: For a basic pick-and-place:
+  ```
+  1: L P[1] 100% FINE ;
+  2: WAIT 1000 ;  (Simulate pick-up, e.g., 1 second)
+  3: L P[2] 100% FINE ;
+  4: WAIT 1000 ;  (Simulate place, e.g., 1 second)
+  ```
+- **Gripper Control**: FANUC robots use digital outputs (DO) for external devices. Update the program to include gripper actions:
+  ```
+  1: L P[1] 100% FINE ;
+  2: DO[1]=ON ;  (Close gripper)
+  3: WAIT 500 ;  (Wait 0.5 seconds for gripper to close)
+  4: L P[2] 100% FINE ;
+  5: DO[1]=OFF ;  (Open gripper)
+  6: WAIT 500 ;  (Wait 0.5 seconds for gripper to open)
+  ```
+- **Reasoning**: Linear motion ensures precision, and waits simulate mechanical actions, aligning with industrial pick-and-place tasks.
+
+###### 3. Adding Loops for Repetition
+- **TP Limitation**: No native loops, so use labels and jumps. For 10 cycles:
+  ```
+  1: R[1]=0 ;  (Initialize cycle count in numeric register R[1])
+  2: LBL[1] ;
+  3: L P[1] 100% FINE ;
+  4: DO[1]=ON ;
+  5: WAIT 500 ;
+  6: L P[2] 100% FINE ;
+  7: DO[1]=OFF ;
+  8: WAIT 500 ;
+  9: R[1]=R[1]+1 ;  (Increment counter)
+  10: IF R[1]<10, JMP LBL[1] ;  (Jump back if less than 10 cycles)
+  ```
+- **Logic**: R[1] starts at 0, increments after each cycle. After 9 cycles, R[1]=9, jumps back; after 10th cycle, R[1]=10, IF 10<10 is false, stops. This ensures 10 cycles, aligning with repetitive industrial tasks.
+
+###### 4. Handling External Inputs
+- **Conditionals in TP**: Use digital inputs (DI) for decisions, e.g., checking if an object is present via DI[1]:
+  - Modify line 2: `2: IF DI[1]=ON, L P[1] 100% FINE ; ELSE JMP LBL[2] ;`
+  - Add after line 8: `9: LBL[2] ;`
+- **Complexity**: For multiple conditions, TP’s label/jump system can get messy. Karel is better for such scenarios, offering WHILE loops and IF-THEN-ELSE, e.g.:
+  ```
+  PROGRAM pick_place_loop
+  VAR
+      cycle_count: INTEGER = 0 ;
+      max_cycles: INTEGER = 10 ;
+  BEGIN
+      WHILE cycle_count < max_cycles DO
+          IF GET_INPUT(1) = TRUE THEN  (Check DI[1])
+              CALL_PROG('pick_place') ;
+          ENDIF
+          cycle_count = cycle_count + 1 ;
+      ENDWHILE
+  END pick_place_loop
+  ```
+- **Recommendation**: For basic tasks, TP suffices; for dynamic inputs, combine with Karel for clarity.
+
+###### 5. Testing and Error Handling
+- **Testing**: Use the teach pendant to step through lines, observing movements and I/O. FANUC’s ROBOGUIDE ([FANUC ROBOGUIDE](https://www.fanucamerica.com/products/robotics/robot-simulation-software/roboguide)) allows simulation, verifying logic without physical risk.
+- **Error Handling**: FANUC displays error codes on the pendant (e.g., position errors, I/O faults). Refer to the manual for diagnostics, ensuring safety by checking for collisions or unreachable positions.
+
+###### 6. Additional Considerations
+- **Robot Model Variations**: Different FANUC models (e.g., LR Mate, M-10iA) may have additional axes or motion types. Check the manual for specifics.
+- **System Integration**: For larger systems, Karel can manage communication (e.g., via EtherNet/IP, Profinet) with other machines, ensuring coordination. Example Karel routine for network:
+  ```
+  ROUTINE read_vision_data
+  VAR
+      vision_ip: STRING = '192.168.0.100' ;
+      vision_port: INTEGER = 5000 ;
+      data: STRING ;
+  BEGIN
+      OPEN_TCP(vision_ip, vision_port) ;
+      READ_LINE(data) ;
+      CLOSE_TCP() ;
+  END read_vision_data
+  ```
+- **Safety**: Ensure paths avoid human operators, using safety interlocks (e.g., e-stops) as per standards like ISO 13849.
+
+#### Unexpected Detail
+Karel’s ability to handle network communications, like reading from a vision system, adds flexibility for dynamic environments, potentially adapting pick positions based on object detection, enhancing industrial applications beyond static tasks.
+
+---
+
+### Key Citations
+- [FANUC Robot Simulation Software Overview](https://www.fanucamerica.com/products/robotics/robot-simulation-software/roboguide)
