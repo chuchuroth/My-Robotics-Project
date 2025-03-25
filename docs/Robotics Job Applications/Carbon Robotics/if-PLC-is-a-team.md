@@ -123,3 +123,40 @@ After a preset delay—**typically 8 seconds**—a timer triggers the transition
 To prevent errors, an **interlocking mechanism** ensures that the **star and delta contactors can never be active at the same time**. This safety feature prevents electrical faults or damage to the motor. Additionally, pressing the **Stop button (I0.1)** immediately **deactivates all contactors**, halting the motor safely.  
 
 Overall, this **ladder logic** provides a **structured, automated, and fail-safe** way to control motor startup, improving both efficiency and safety.
+
+
+---
+
+
+### **Automated Tank Filling and Mixing System Explained**  
+
+This system is designed to **automatically manage liquid filling, mixing, and discharge** in a storage tank, ensuring a smooth and efficient process without human intervention. The entire operation is controlled using **PLC logic** and relies on **liquid level switches** to determine when each stage should begin or end.  
+
+#### **How It Works**  
+
+1. **Detecting Low Liquid Level:**  
+   When the liquid level in the tank drops **below the low-level switch**, the switch closes and sends a **24V signal to the PLC**. This tells the system that the tank needs to be refilled.  
+
+2. **Starting the Filling Process:**  
+   Upon receiving the signal, the PLC **activates two pumps**, each injecting a different type of liquid into the tank.  
+
+3. **Filling Continues Until Full:**  
+   The pumps continue operating until the liquid reaches the **high-level switch**. Once the tank is full, the high-level switch closes, sending another **24V signal to the PLC**.  
+
+4. **Stopping the Pumps & Starting Mixing:**  
+   Once the high-level signal is received, the PLC **stops both pumps** and immediately **starts an electric mixer** inside the tank.  
+
+5. **Mixing the Liquids:**  
+   The mixer runs for a **preset duration of 7 seconds**, ensuring the two liquids blend properly.  
+
+6. **Draining the Tank:**  
+   After the mixing time elapses, the PLC **shuts off the mixer** and **opens the discharge valve** at the bottom of the tank. The mixed liquid is then released for further processing.  
+
+7. **Restarting the Cycle:**  
+   As the liquid drains, the level in the tank gradually drops. When it reaches the low-level switch again, the entire process **automatically restarts**, beginning a new cycle.  
+
+8. **Emergency Stop Function:**  
+   The system includes a **stop button** for manual shutdown. This switch is **normally closed**, keeping the system running. If pressed, it **breaks the circuit and stops all operations**, shutting down the pumps, mixer, and discharge valve instantly.  
+
+### **Summary**  
+This is a **fully automated liquid processing system** that uses level sensors to control the filling, mixing, and draining processes. It **repeats the cycle automatically** without the need for human intervention—ensuring efficiency and consistency. The stop button provides a safety feature, allowing operators to **halt the system at any time** if needed.
