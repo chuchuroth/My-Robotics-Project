@@ -125,3 +125,42 @@ This survey provides a comprehensive overview of current technology trends in in
 
 ---
 
+In industrial automation, various fieldbus topologies are employed to facilitate efficient communication between controllers, sensors, actuators, and other devices on production lines. These topologies are chosen based on factors such as the specific application requirements, desired data transmission speed, and environmental considerations. Here are some commonly deployed fieldbus topologies in real-life production environments:
+
+**1. PROFIBUS (Process Field Bus):**
+
+- **Topology:** Linear (Bus) Topology
+
+- **Use Case:** Widely used in factory and process automation, PROFIBUS DP (Decentralized Peripherals) connects controllers to distributed I/O devices, enabling efficient data exchange. For example, in a manufacturing plant, PROFIBUS can link PLCs with sensors and actuators along an assembly line, facilitating synchronized operations. citeturn0search3
+
+**2. Modbus:**
+
+- **Topology:** Linear (Bus) or Star Topology
+
+- **Use Case:** Modbus is employed in various industrial settings for connecting supervisory computers with remote terminal units (RTUs) in SCADA systems. Its simplicity and reliability make it suitable for applications like monitoring and controlling HVAC systems in large facilities. citeturn0search1
+
+**3. DeviceNet:**
+
+- **Topology:** Trunk-Line/Drop-Line Topology
+
+- **Use Case:** Commonly utilized for connecting industrial controllers to simple devices such as sensors and actuators. In automotive manufacturing, DeviceNet can integrate various assembly line devices, enabling real-time control and monitoring. citeturn0search1
+
+**4. EtherNet/IP:**
+
+- **Topology:** Star or Tree Topology
+
+- **Use Case:** Employed in complex industrial processes requiring high-speed data transfer. For instance, in a bottling plant, EtherNet/IP can connect high-speed conveyors, robotic arms, and quality inspection systems to a central controller, ensuring coordinated and efficient operations. citeturn0search1
+
+**5. ControlNet:**
+
+- **Topology:** Bus or Tree Topology
+
+- **Use Case:** Suitable for applications needing high-speed, real-time data transfer. In a chemical processing plant, ControlNet can link various process controllers and monitoring systems, providing deterministic data exchange essential for process control. citeturn0search1
+
+**6. PROFINET:**
+
+- **Topology:** Star, Line, or Tree Topology
+
+- **Use Case:** Designed for openness and determinism, PROFINET is used in applications requiring real-time Ethernet communication. For example, in a cotton gin facility, PROFINET can serve as the backbone protocol, connecting controllers and automation devices to enhance productivity. citeturn0search4
+
+Each of these fieldbus systems offers distinct advantages tailored to specific industrial applications. The choice of topology and protocol depends on factors such as the required communication speed, network size, device compatibility, and environmental conditions of the production line. 
