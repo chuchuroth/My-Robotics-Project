@@ -155,6 +155,94 @@ In summary, to get a head start with your FANUC LR Mate 200iD, learn its specifi
 
 ---
 
+
+Based on the FANUC Robot LR Mate 200iD Maintenance Manual (B-83495EN/03), here are the **essential must-knows** for operators, programmers, and maintenance engineers to ensure safe and efficient operation of FANUC robots, particularly the LR Mate 200iD series. These points cover safety precautions, daily checks, periodic maintenance, troubleshooting, and best practices.
+
+---
+
+### 1. Safety Precautions
+Safety is the top priority when working with FANUC robots. Key measures include:
+
+- **Mandatory Training**: All personnel (operators, programmers, and maintenance engineers) must complete FANUC training courses to understand robot operation and safety protocols.
+- **Safety Fence**: Install a safety fence with a gate around the robot’s work area. The robot stops automatically when the gate is opened (via an interlocking signal to the controller).
+- **Emergency Stop**: Ensure emergency stop buttons are easily accessible on the operator panel and teach pendant. Pressing them halts the robot immediately (Power-Off Stop).
+- **Power-Off Procedures**: Turn off the robot’s power when not in use or during maintenance to prevent accidental movement. Use a lockout mechanism if necessary.
+- **Proper Attire**: Wear safety shoes, helmets, and appropriate clothing when working near the robot. Avoid gloves when using the teach pendant to prevent operation errors.
+- **Hazardous Conditions**: Do not operate the robot in flammable, explosive, high-humidity, or underwater environments unless specifically designed for such conditions.
+
+**For Specific Roles**:
+- *Operators*: Stay outside the safety fence during operation and avoid entering the robot’s work area.
+- *Programmers*: When teaching inside the safety fence, operate at low speeds, keep the emergency stop button ready, and ensure no one else enters the area.
+- *Maintenance Engineers*: Power off the robot before entering the work area unless maintenance requires power-on, in which case press the emergency stop button before entry and secure an escape route.
+
+---
+
+### 2. Daily Checks
+Perform these quick checks daily to ensure the robot remains in good condition:
+
+- **External Damage**: Look for visible damage or peeling paint on the robot’s body.
+- **Water Ingress**: Check for signs of water or moisture inside the robot, especially in humid environments.
+- **Connector Security**: Ensure all exposed connectors are tight and secure to prevent electrical issues.
+- **End Effector Bolts**: Tighten bolts on the end effector to avoid loosening during operation.
+- **Cleanliness**: Remove spatter, sawdust, or dust from the robot to maintain performance and prevent buildup.
+
+---
+
+### 3. Periodic Maintenance
+Follow the maintenance schedule to keep the robot running smoothly. Key tasks include:
+
+- **Greasing Reducers**:
+  - Frequency: Every 3840 hours (approximately 1 year of continuous operation).
+  - Amount: 14 ml (except 7H: 12 ml; 7C/7LC: 6 ml).
+  - Grease Type: Use Harmonic Grease 4B No. 2 (A98L-0040-0230) for most models or MOBILE SHC Polyrex 005 for 7C/7LC.
+- **Battery Replacement**:
+  - Built-in batteries: Replace every 1 year (A98L-0031-0027, C battery, 1.5V alkali, 4 pcs).
+  - External batteries: Replace every 1.5 years (A98L-0031-0005, D battery, 1.5V alkali, 4 pcs).
+  - Purpose: Prevents data loss in the controller.
+- **Cable Inspection**:
+  - Frequency: Check every 3840 hours; replace every 15360 hours (approximately 4 years).
+  - Action: Inspect for wear, cuts, or damage; replace if necessary.
+- **Mechanical Stopper**: Inspect annually (3840 hours) to ensure it limits motion correctly.
+- **Ventilator Cleaning**: Clean every 320 hours to maintain airflow and prevent overheating.
+
+**Maintenance Schedule Highlights**:
+- *3 Months (960 hours)*: Check for damage, water, and clean spatter/dust.
+- *1 Year (3840 hours)*: Tighten bolts, check connectors, grease reducers.
+- *2 Years (7680 hours)*: More detailed inspections; replace cables if needed.
+- *4 Years (15360 hours)*: Overhaul major components (reducers, motors).
+
+---
+
+### 4. Troubleshooting
+Be prepared to diagnose and resolve common issues:
+
+- **Fault Codes**: Learn key codes like *SRVO-050* (collision detection) to identify problems quickly. Refer to the troubleshooting section of the manual.
+- **Power-Off Stop Issues**: Avoid frequent power-off stops (e.g., by pressing emergency stop repeatedly) as they can damage the robot. Use controlled stops (Category 1) or hold stops (Category 2) when possible.
+- **Error Reset**: After fixing an issue, press the reset button to clear errors and resume operation.
+
+---
+
+### 5. Best Practices
+Maximize robot longevity and safety with these habits:
+
+- **Minimize Power-Off Stops**: Frequent power-off stops can cause mechanical wear. Design systems to use controlled stops instead (e.g., decelerate before stopping).
+- **Data Backup**: Regularly save programs and system variables to memory cards or USB drives to protect against data loss.
+- **Welding Robot Insulation**: For arc welding models (e.g., ARC Mate 50iD), ensure dual insulation between the end effector and welding torch. Remove spatter periodically to prevent current leakage.
+- **Manual Access**: Keep the maintenance manual (B-83495EN/03) accessible for reference and follow its procedures precisely.
+
+---
+
+### Summary
+To work effectively with the FANUC LR Mate 200iD series:
+- **Prioritize Safety**: Train personnel, use safety devices, and follow power-off protocols.
+- **Stay Proactive**: Perform daily checks and adhere to the periodic maintenance schedule.
+- **Troubleshoot Smartly**: Understand fault codes and avoid unnecessary power-off stops.
+- **Adopt Best Practices**: Backup data, maintain insulation, and consult the manual regularly.
+
+By mastering these must-knows, you’ll ensure the robot operates safely, efficiently, and with minimal downtime.
+
+---
+
 Let’s dive into the second task from your job description: *"Transfer experience and knowledge to maintenance team on sustaining Fanuc Robots and other multiple automation components and elements."* Since you’re coming from a background with hobby-level robotic arms (Arduino-based and your BCN3D Moveo), and you’ve got no experience with FANUC systems, I’ll break this down by comparing your hobby robots to industrial FANUC robots, filling in the knowledge gap, and then covering some must-know basics of preventive maintenance for FANUC systems. This will help you see where your skills align and what you’ll need to learn to tackle this task effectively.
 
 ---
