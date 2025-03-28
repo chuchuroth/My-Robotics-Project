@@ -522,6 +522,186 @@ Robots serve a wide range of applications, enhancing automation across industrie
 ### Coordinate Mask Setup
 - `$SCR_GRP.$COORD_MASK`: Controls jogging coordinate options.
 
+---
+# FANUC Robot Programming Guide
+
+## 1. Creating and Editing Programs
+
+- **Creating a Program**:
+  - Access: `SELECT` menu > `CREATE`.
+  - Naming: Use `KEYBOARD` in `OPTION` menu.
+    - **Rules**: No starting numbers, no spaces.
+- **Editing**:
+  - Enter: Click `EDIT` to access editing interface.
+  - Add Instructions: Via `INSTRUCTION` menu (F1 key on teach pendant).
+    - Types: Motion, logic control, I/O.
+- **Editing Operations**:
+  - Use `EDIT COMMAND` menu: `COPY`, `PASTE`, `REPLACE`, `INSERT`, `DELETE`, `REMARK`.
+  - **Replace Note**: Applies from cursor line downward only.
+
+## 2. Motion Types
+
+FANUC robots support multiple motion types:
+
+- **Joint Motion**:
+  - Fastest movement; joints move to target angles at max speed.
+  - Path: Undefined.
+  - Program: Select `JOINT` motion type.
+  - Use: Quick positioning, transitions between teach points.
+  - Recording: Joint angles; recommended for `HOME` (origin) position (independent of tool/user frames).
+- **Linear Motion**:
+  - TCP moves in a straight line at constant speed (mm/sec).
+  - Program: Select `LINEAR` motion type.
+  - Use: Precise paths (e.g., welding, spraying, material handling).
+- **Circular Motion**:
+  - TCP follows a circular arc.
+  - Structure: One linear segment + two arc segments.
+  - Program: Change to `CIRCLE` or `CIRCULAR ARC`:
+    - `CIRCLE` (C command): Define two points on circle.
+    - `CIRCULAR ARC` (A command): Define start, intermediate, end points for free curves.
+  - Use: Irregular paths (e.g., welding, spraying).
+
+## 3. Recording Positions
+
+- **Method**: Press `SHIFT` + `POINT` (or `TEACH`) keys together.
+- **Position Representation Options**:
+  - **Cartesian Coordinates (XYZWPR)**:
+    - Based on active `User Frame` and `Tool Frame`.
+    - **Caution**: Issues if run under different user coordinate system.
+  - **Joint Coordinates (JOINT)**:
+    - Based on joint angles; versatile, independent of tool/user frames.
+  - **Position Registers (PR)**:
+    - Store position data; access via `DATA` > `Position Registers`.
+    - Naming: For easy identification.
+    - Recording: `SHIFT` + `RECORD` at target position.
+    - Calling: Use in program to reference stored positions.
+
+## 4. Coordinate Systems (Frames)
+
+Coordinate systems are key for precision:
+
+- **World Frame**:
+  - Robot’s reference system, centered at base.
+  - Basis for all other frames.
+- **Tool Frame (UTOOL)**:
+  - Defines TCP position/orientation relative to J6 flange.
+  - **Importance**: Determines motion trajectory.
+  - Setup: Three Point Method or Direct Entry; in Roboguide, edit tool properties.
+  - Default: Flange center.
+  - Switch: `SHIFT` + `COORD`.
+- **User Frame (UFRAME)**:
+  - Defines workpiece/fixture position in World Frame.
+  - **Benefit**: Program via workpiece coords; re-teach only UFRAME if workpiece moves.
+  - Setup: Three Point Method; in Roboguide, use Fixture settings.
+  - Switch: `SHIFT` + `COORD`.
+
+## 5. Basic Commands
+
+- **Position Registers**: `PR[n] = P[m]` assigns position `P[m]` to `PR[n]`.
+- **Data Registers (R)**:
+  - Store integers/floating-point numbers; access via `DATA` > `Data Registers`.
+  - Use: Counting, logic (e.g., `R = R + 1` adds 1).
+- **Input/Output (I/O)**:
+  - **Digital I/O**:
+    - `DO[n] = ON/OFF`: Controls external devices.
+    - `IF DI[m] = ON THEN ...`: Checks input status.
+  - **Robot I/O (RI)**: Controls end effector (e.g., gripper, sensors).
+- **Calling Programs**: `CALL program_name` invokes subroutines.
+- **Jumps and Labels**:
+  - `LBL[n]`: Defines label.
+  - `JMP LBL[n]`: Unconditional jump.
+- **Conditional Branching**:
+  - `IF condition THEN ...`: E.g., register/I/O checks.
+  - `SELECT R[n] = constant THEN CALL program_name`: Multi-case branching.
+- **Wait**:
+  - `WAIT condition`: Pauses until true (e.g., `DI[m] = ON`).
+  - `WAIT time (sec)`: Time-based pause.
+- **Payload**: `PAYLOAD[n]` sets end effector/workpiece weight for accuracy/safety.
+- **FOR Loop**: `FOR R[n] = start TO end BY step` with `ENDFOR` for repetition.
+
+## 6. Looping
+
+- **Basic Loops**: Use `IF` + `JMP`.
+- **Structured Loops**: `FOR/ENDFOR` for repeated code blocks.
+
+## 7. Macros
+
+- **Purpose**: Small background programs for logic/motion.
+- **Setup**: `SETUP` > `Macro`; assign to teach pendant buttons.
+- **Note**: Non-motion macros need `Group Mask` set to ``.
+
+## 8. Conditional Monitoring
+
+- **Function**: Monitors conditions (e.g., input signals) during main program.
+- **Setup**: `MONITOR` and `MONITOR END` in `INSTRUCTION` menu.
+- **Action**: Triggers non-motion jobs (e.g., user alarms) when conditions met.
+
+## 9. Menu Utility
+
+- **Purpose**: Operator interaction via teach pendant.
+- **Types**: Prompt Boxes, Yes/No Select, List Select.
+- **Setup**: `SETUP` > `Menu Utility`.
+- **Use**: Call via `INSTRUCTION` > `Macro`; store selections in data registers for branching.
+
+## 10. Offsets
+
+- **Purpose**: Adjust positions without re-teaching.
+- **Method**: Use Position Offset Registers to modify existing positions.
+
+## 11. Program Checks and Production Setup
+
+- **Checks**: `MENU` > `SETUP` > `Program Select`:
+  - Verify `HOME` position, speed override.
+- **System Config**: `MENU` > `SYSTEM` > `Config`:
+  - Power failure recovery, auto-start, forced I/O in Auto mode.
+
+## 12. Program Adjust and Reference Positions
+
+- **Program Adjust**: `MENU` > `SETUP` > `Program Adjust`.
+  - Fine-tunes trajectories without re-teaching.
+- **Reference Positions**: E.g., `HOME`; set via `MENU` > `SETUP` > `Reference Position`.
+
+## 13. User Alarms
+
+- **Purpose**: Custom alarms/actions.
+- **Setup**: Non-motion macros; trigger via `INSTRUCTION` > `MISCELLANEOUS` > `UAlarm`.
+
+## 14. Roboguide (Simulation Software)
+
+- **Purpose**: Offline simulation, testing, optimization.
+- **Features**: Collision detection, cycle time analysis.
+- **Setup**: Create workcell from robot backup; edit tool/user frames visually.
+
+## 15. Navigation and Basic Operations
+
+- **Teach Pendant Menus**:
+  - `MENU`: Access functions/settings.
+  - `SELECT`: Manage programs.
+  - `EDIT`: Edit current program.
+  - `DATA`: Edit registers/positions.
+  - `I/O`: Monitor/control signals.
+  - `SYSTEM`: Configure robot.
+  - `ALARM`: View alarm history.
+  - `POSITION`: Check current position.
+- **Modes**:
+  - **TEACH (T1/T2)**: Manual operation; requires Deadman Switch.
+  - **AUTO**: Full program run; starts via Cycle Start.
+  - **STEP**: Debug step-by-step.
+  - **CONTINUOUS**: Full run.
+- **Coord Switching**: `COORD` key (Joint, World, Tool, User).
+
+## 16. Error Codes
+
+- **Example**: `MOTN-017` + three-digit code (axis/error type, e.g., motion limit).
+- **Purpose**: Diagnose issues via error codes.
+
+## 17. UOP Communication with Allen Bradley CompactLogix via Ethernet/IP
+
+- **Setup**:
+  - Configure robot IP and `MENU` > `I/O` > `Ethernet IP`.
+  - Match settings on PLC (e.g., CompactLogix).
+- **UOP Signals**: Control start, stop, emergency stop; monitor status.
+
 
 ---
 
