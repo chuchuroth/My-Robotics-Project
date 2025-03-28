@@ -1,4 +1,156 @@
+### here are some basics and key concepts of Fanuc robot programming. 
+ 1. **Creating and Editing Programs**
+- To create a new program, you need to enter the SELECT menu and then choose CREATE. You can name the program through the KEYBOARD in the OPTION menu. It is recommended that program names do not start with a number and do not contain spaces. After creating the program, you need to click EDIT to enter the program editing interface.
+- In the editing interface, you can add various instructions, such as motion instructions, logic control instructions, I/O instructions, etc., through the INSTRUCTION menu (usually the F1 key on the teach pendant). You can use the EDIT COMMAND menu for basic editing operations such as COPY, PASTE, REPLACE, INSERT, DELETE, REMARK. When using the replace function, be aware that it usually only applies to the current line where the cursor is located and the code after it.
+2. **Motion Types**
+- Fanuc robots support a variety of motion types:
+- Joint Motion: This is the fastest way of moving. Each robot joint moves simultaneously to the target angle at its maximum possible speed. The path is not defined. In the program, you can add this by selecting the JOINT motion type. Joint motion is usually used to quickly move the robot to an approximate position or as a transition between TEACH points. When recording joint positions, the data is based on the movement angle of each joint. It is recommended to record the HOME (origin) position as a joint position because it is independent of the tool coordinate system and user coordinate system.
+- Linear Motion: The robot's Tool Center Point (TCP) moves from the starting point to the target point at a constant speed along a straight line path. In the program, you can select the LINEAR motion type. Linear motion is often used in applications requiring precise paths, such as welding, spraying, material handling, etc.. The speed unit for linear motion is usually millimeters per second (mm/sec).
+- Circular Motion: The robot TCP moves along a circular arc path. Fanuc's circular motion usually consists of one linear segment and two arc segments. To use the circular command, the motion type needs to be changed to CIRCLE or CIRCULAR ARC when teaching the points. CIRCULAR ARC motion (A
+command) allows defining arcs with free curve shapes by defining the start point, intermediate point, and end point of the arc. This is very useful for irregular curved paths, such as welding or spraying. The ordinary CIRCLE command (C command) usually requires defining two points on the circle.
+3. **Recording Positions**
+- To record the robot's current position, you usually need to press the SHIFT key and the POINT (or
+TEACH) key simultaneously. When recording a position, you can choose different POSITION REPRESENTATION methods as needed. Common methods include:
+- Cartesian Coordinates (XYZWPR): Based on the currently active User Frame and Tool Frame. If you
+try to run a position recorded under this coordinate system under another user coordinate system, problems may occur.
+- Joint Coordinates (JOINT): Based on the angle of each joint of the robot. Joint coordinates are more
+versatile because they do not depend on a specific tool coordinate system or user coordinate system.
+- Position Registers (PR): Position registers are a data type used to store robot position data. You can
+enter the DATA menu and then select Position Registers to create and edit position registers. You can
+name the position registers for easy identification. To record the current robot position into the
+selected position register, you can press the SHIFT and RECORD keys when the robot is at the target
+position. In the program, you can choose to use position registers to call previously recorded positions.
+4. **Coordinate Systems (Frames)**
+- Understanding coordinate systems is crucial for precise programming. World Frame: This is the robot's reference coordinate system, usually located at the center of the
+robot base. All other coordinate systems are defined relative to the world coordinate system.
+- Tool Frame (UTOOL): Also known as the Tool Center Point (TCP), defines the position and
+orientation of the tool tip relative to the robot's sixth axis flange. Correctly setting the tool coordinate
+system is essential because it determines the robot's actual movement trajectory when performing
+tasks. The tool coordinate system can be set by various methods, such as the Three Point Method or
+the Direct Entry Method. In Roboguide, the tool coordinate system can be set by editing the tool
+properties and moving the coordinate system icon. By default, the tool coordinate system is located
+at the center of the robot flange. The active tool coordinate system can be switched using the SHIFT +
+COORD key combination.
+- User Frame (UFRAME): Used to define the position and orientation of the workpiece or fixture in the
+world coordinate system. By defining the user coordinate system, you can program based on the
+workpiece coordinates. Even if the position of the workpiece in the workspace changes, you only
+need to re-teach the user coordinate system without changing all the points in the program. The user
+coordinate system can also be set by various methods, such as the Three Point Method. In Roboguide,
+it can be done by adding a Fixture and defining its position and orientation, and then creating a user
+coordinate system based on that fixture. The active user coordinate system can be switched using the
+SHIFT + COORD key combination.
+5. **Basic Commands**
+Setting Position Registers: You can use the `PR[n] = P[m]` instruction to assign the data of a position
+(`P[m]`) to a position register (`PR[n]`).
+- Data Registers (R): Used to store numerical values (integers, floating-point numbers). You can enter
+the DATA menu and then select Data Registers to create and edit data registers. Data registers are
+often used for counting, logical judgments, etc.. For example, the `R = R + 1` instruction will add 1 to
+the value of data register R.
+- Input/Output (I/O): Used to communicate with external devices. Digital Input (DI) and Digital Output (DO): Used to control the on/off state of external devices or
+receive signals from external devices. You can use the `DO[n] = ON/OFF` instruction to control digital
+output and use the `IF DI[m] = ON THEN ...` instruction to check the digital input status.
+- Robot I/O (RI): Usually used for some functions of the robot itself, such as controlling the gripper
+or sensors of the end effector.
+- Calling Programs: You can use the `CALL program_name` instruction to call another subroutine
+within the current program.
+- Jumps and Labels: Used to control the program flow. Label: Use `LBL[n]` to define a label in the program. Jump: Use the `JMP LBL[n]` instruction to unconditionally jump to the specified label. Conditional Branching: Execute different program segments based on conditions.
+- IF Statement: Use the `IF condition THEN ...` structure for conditional judgment. The condition
+can be comparing the values of registers, I/O status, etc..
+- SELECT Statement: Used to execute different program segments based on different values of a
+register, similar to the `switch` or `case` statements in other programming languages. You can use the
+`IF SELECT R[n] = constant THEN CALL program_name` structure.
+- Wait: Pauses the robot program execution until a specific condition is met or a certain period of
+time has passed. You can use the `WAIT condition` instruction to wait for a condition to become true
+(e.g., wait for a digital input signal to turn ON). You can also use the `WAIT time (sec)` instruction to
+wait for a specified amount of time.
+- Payload: Used to define the weight and center of gravity of the robot's end effector and workpiece. Correctly setting the payload can improve the robot's motion accuracy and safety. You can use the
+`PAYLOAD[n]` instruction to activate predefined payload parameters.
+- FOR Loop: Used to repeat a segment of code a specified number of times. Use the `FOR R[n] = start
+TO end BY step` and `ENDFOR` structure to define the loop.
+6. **Looping**
+- You can use `IF` statements and `JMP` instructions to create basic loop structures. In addition, Fanuc
+also provides more convenient `FOR/ENDFOR` loop structures to repeatedly execute blocks of code.
+7. **Macros**
+- Macros are small programs that can run in the background. They are usually used to perform logical
+operations or simple motion commands and can be quickly executed by assigning them to buttons on
+the teach pendant or manual functions. When creating a macro program, if it only contains logic and
+no motion, you need to ensure that the Group Mask is set to an asterisk (``). You can use the Macro
+option in the SETUP menu to set up macros.
+8. **Conditional Monitoring**
+- Conditional monitoring allows you to monitor specific conditions (e.g., input signal status) in the
+background while the main program is running. If the set condition is met, it can trigger the robot to
+stop or perform other actions. You can use the MONITOR and MONITOR END instructions in the
+INSTRUCTION menu to define the program segment to be monitored and call another non-motion
+program (Non-Motion Job), such as a user alarm program, when the condition is met.
+9. **Menu Utility**
+- The menu utility allows you to interact with the operator through the teach pendant during
+production. You can create custom Prompt Boxes, Yes/No Select boxes, or Select from List boxes. These interactions can be configured through the Menu Utility option in the SETUP menu. In the
+program, you can use the Macro (actually calling the menu utility function) under the INSTRUCTION
+menu to call these custom menus and get input from the operator. The operator's selection is usually
+stored in the specified data register, and you can use these return values for conditional branching in
+the program.
+10. **Offsets**
+- Offsets allow you to make small adjustments to existing positions or repeat the same motion
+trajectory at different locations without re-teaching. You can use Position Offset Registers to add
+offsets to existing position data.
+11. **Program Checks and Production Setup**
+- Before putting the robot into production, it is very important to perform program checks and setup. You can set program check items in MENU -> SETUP -> Program Select, such as checking if the robot is
+in the HOME (origin) position and whether the correct speed override is enabled. More detailed
+system configuration options, such as power failure recovery settings, automatic program start
+settings, and whether forced I/O is allowed in automatic mode, can be found in MENU -> SYSTEM ->
+Config.
+12. **Program Adjust and Reference Positions**
+- The program adjust function allows you to make small adjustments to the robot's trajectory during
+program execution without re-teaching. This is very useful for compensating for slight deviations in
+workpieces or fixtures. The Program Adjust option can be found under MENU -> SETUP. Reference
+Positions (such as HOME (origin)) are important positions for robot safety and calibration. Reference
+positions can be defined and calibrated in MENU -> SETUP -> Reference Position.
+13. **User Alarms**
+- User alarms allow you to customize the robot's alarm messages and handling methods. You can
+create non-motion macro programs to define alarm trigger conditions and the actions to be
+performed (e.g., stop the program, cancel motion, display custom error messages). You can use the
+UAlarm (User Alarm) instruction under INSTRUCTION -> MISCELLANEOUS to trigger user-defined
+alarms in the program.
+14. **Roboguide (Simulation Software)**
+- Roboguide is Fanuc's robot simulation software that can simulate real robot working environments on
+a computer. It allows you to create, test, and optimize robot programs offline, and also perform
+collision detection, cycle time analysis, etc.. You can create a Roboguide workcell from an actual robot
+backup. In Roboguide, you can more easily create and edit tool coordinate systems and user
+coordinate systems, and perform 3D visual programming and debugging.
+15. **Navigation and Basic Operations**
+- Familiarity with the teach pendant's operating interface is the foundation of programming.
+- MENU: Used to access various functions and settings of the robot.
+- SELECT: Used to select and create programs (Jobs).
+- EDIT: Used to edit the currently selected program.
+- DATA: Used to view and edit various data, such as registers and position registers.
+- I/O (Input/Output): Used to monitor and control input/output signals.
+- SYSTEM: Contains the robot's system configuration and variables.
+- ALARM: Used to view current and historical robot alarm information.
+- POSITION: Used to view the robot's current position information, which can be displayed in different
+coordinate systems.
+TEACH Mode (usually activated by the T1 or T2 mode button on the teach pendant) is the mode for
+program teaching and manual operation. In teach mode, the enabling switch (Deadman Switch) needs
+to be pressed to move the robot.
+AUTO Mode is the mode for the robot to automatically run programs. In automatic mode, the
+program is usually started by the start button (Cycle Start).
+STEP Mode allows the program to be executed step by step for debugging.
+CONTINUOUS Mode allows the program to run continuously.
+COORD key is used to switch the coordinate system (e.g., Joint, World, Tool, User) during manual
+jogging. Not all robot configurations allow jogging in all coordinate systems.
+16. **Error Codes**
+- When the robot encounters an error, an error code will be displayed. Understanding basic error codes
+helps in diagnosing problems. For example, the MOTN-017 error usually accompanies a three-digit
+number, and you can use this number to determine which axis and what type of error occurred (e.g., motion limit error).
+17. **UOP (User Operator Panel)**
+- Communication with Allen Bradley CompactLogix via Ethernet/IP
+Fanuc robots can communicate with external devices (e.g., Allen Bradley PLC) via Ethernet/IP. This
+requires corresponding configuration, including setting the robot's IP address, configuring the
+Ethernet/IP interface (usually done in MENU -> I/O -> Ethernet IP), and corresponding configuration
+on the PLC side. Through UOP (User Operator Panel) signals, the PLC can control robot operations
+such as start, stop, emergency stop, and monitor the robot's status.
 
+
+---
 Based on your notes on programming FANUC robots, I’ll teach you a few practical examples of how to program a FANUC robot in a real factory setting. These examples are designed to reflect common industrial applications and will walk you through the steps using the teach pendant, a key tool for programming FANUC robots. Let’s dive into three examples: a pick and place operation, a welding application, and a palletizing task.
 
 ---
