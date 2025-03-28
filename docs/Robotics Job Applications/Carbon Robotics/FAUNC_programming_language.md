@@ -153,154 +153,104 @@ such as start, stop, emergency stop, and monitor the robot's status.
 
 ---
 
-### What is a Robot and its Purpose
-- Robots have a variety of applications, including material handling, palletizing, pick and place, material
-removal (such as grinding, painting), etc..In the post-epidemic era, the application of robots will be more extensive due to their reliability, not
-getting sick, ability to maintain cleanliness, and production of high-quality parts. Learning robot technology is to be at the forefront of future development. Robots are being used in
-various industries such as the RV industry, automotive industry, pharmaceutical industry (integrated
-with cameras), etc.. Do not be limited by the robot applications shown in the course. There are many future application
-areas that have not yet been created. Material handling is one of the largest application areas for robots, followed by palletizing and
-material removal. Welding is also an important application.
-- Robot Space
-- Maximum Space: The furthest range that the robot arm can reach when fully extended, even if
-operations may not be possible at that position. Imagine the furthest distance the robot can reach
-when fully "lying down" and extended.
-- Restricted Space: An area set for safety or practical work needs, which may be limited by protective
-measures or is within the maximum space but suitable for actual work.
-- Operating Space: The area where the robot actually works. It can be understood as the range within
-the restricted space where the robot actually performs operations.
-- Maximum Envelope: All areas swept by all moving parts of the robot during motion.
-- Operating Envelope: The area where the robot performs actual work, usually concentrated in one
-area to reduce cycle time.
--Safety Operator safety is always the top priority. Robots can be replaced, parts can be remade, but people
-cannot be replicated. The safety priority of a robot system from high to low is: operator, robot, external equipment (such as
-signal lights, fixtures, controllers), tooling, workpiece.
-- The Teach Pendant has an Emergency Stop (E-stop) button, which is used to stop all movements in an
-emergency.
-- The Dead Man Switch has three positions: fully released (no movement), fully pressed (emergency
-stop), middle position (allows movement). The operator needs to keep the dead man switch in the
-middle position when manually operating the robot.
-- Common safety measures include: Light Curtains (stop upon entry), Safety Fences, Pressure Mats
-(triggered when stepped on), Interlocks (e.g., prohibits startup if the door is not closed), Warning
-Lights, Motion Limits (physical limit screws).
-- Collaborative Robots have additional pressure, speed, and safety sensors and can stop upon collision. When entering the robot work area, be sure to carry the teach pendant or some kind of emergency
-stop device. Ideally, it should be the teach pendant. There are usually safety doors and guardrails with interlocks.
-- The Robotics Industries Association (RIA) has developed relevant safety guidelines, which can be
-viewed on its website.
-- Maximum envelope is the area that all moving parts of the robot may reach.
-- Anti-Tie Down Logic is used to prevent people from bypassing safety mechanisms for operational
-convenience. For example, it is absolutely forbidden to place heavy objects on pressure sensors to
-keep them activated. Multiple safety mechanisms need to be considered during programming to prevent all safety
-measures from being bypassed simultaneously. Entering the opened robot work envelope is absolutely prohibited.
-- In an educational environment, even small robots can cause injury, so never start the robot in
-automatic mode before the teacher checks. When moving the robot in automatic mode, be sure to close the safety door. Be careful when
-entering the work area in manual (teach) mode for observation or setting coordinate systems, and do
-not stay in the robot work cell for too long.
-- The robot can be subjected to Lock Out Tag Out to ensure safety during maintenance work and
-prevent accidental startup. This is especially important when replacing servo motors and other
-scenarios requiring power disconnection.
-- When programming, procedural precautions should be taken to ensure handshaking signals between
-the robot and external equipment to ensure safe operation and avoid damage to equipment or
-workpieces.
-- Pay attention to Override Speed, visualize the robot's motion trajectory, keep the work area clean, and ensure circuit protection is in place during programming.
-- Home Position and Interference Zones and other functions can be used in programming to improve
-safety.
-- Axes and Motion
-Industrial robots usually have six axes, providing six degrees of freedom, allowing them to operate
-flexibly.
-- Major Axes:
-- Axis 1 (J1): The large rotating axis at the base, providing torsional motion (hip).
-- Axis 2 (J2): Usually located above Axis 1, providing bending motion (waist bends forward).
-- Axis 3 (J3): Provides shoulder up and down movement. Minor Axes: Used for fine movements.
-- Axis 4 (J4): Usually provides a torsional movement (wrist twist).
-- Axis 5 (J5): Provides wrist bending or swinging motion (wrist).
-- Axis 6 (J6): The rotation of the end flange, used for tool posture adjustment (face rotation). Sometimes robots have additional axes, such as
-- Axis 7 (J7) mounted on a gantry or with a turntable, which will not be covered in this course. Each axis can move independently, but the robot's greatest strength lies in its ability to coordinate the
-simultaneous movement of multiple axes. The motion range (Axis Limits) of each axis can be limited by programming. The motion range of an
-axis is usually expressed in angles (e.g., a circle is 360 degrees). The manufacturer presets the motion
-range of the axes, which can be adjusted as needed, but caution should be exercised, and a robot
-restart may be required after adjustment.
-- Fanuc robots use the Dual Check Safety (DCS) system to provide an additional layer of safety by
-checking the robot's speed and position. DCS can set position checks, speed checks, and speed checks
-in the Cartesian coordinate system. DCS can recognize whether the robot is about to leave the set
-safety area and stop its motion.
-#### Controller
-The controller is the brain of the robot and runs the software. The Teach Pendant is usually connected to the controller via a cable. The controller internally contains a power supply, transformer, memory, I/O board, etc..
-- Fanuc offers different sizes of controllers, such as the A-type controller, B-type controller, Open Air
-Mate controller, and Mate controller, suitable for different application scenarios and installation
-spaces. We use the A-type controller. The controller usually has an Operating Panel containing a fault reset button, teach/run mode switch
-key, start button, and fault indicator light, etc. The B-type controller has these. There are also user-defined buttons on the operating panel that can be used to start macro programs, etc.. The controller has Local and Remote two operation modes. Local mode is used for testing and
-teaching, and remote mode is used for production operation, usually controlled by a PLC or other
-controllers.
-#### Software
-The software is pre-installed in the robot controller. Be sure to back up the software image regularly to prevent system failures. There are three main operating modes for the robot:
-- T1 Mode: Limits the robot's maximum speed to 250 mm/s, used for safe teaching.
-- T2 Mode: Test run mode, allows the robot to run at up to 100% speed, but still in teach mode and
-controlled by the teach pendant.
-- Automatic (Auto) Mode: Full-speed operation mode. In automatic mode, if the safety fence is breached (Class 1 Stop), the servo power will be
-disconnected after a short delay, and the robot will stop and brake.
-In T1 and T2 modes, safety measures such as safety fences may be bypassed because the operator
-may be inside the work cell for operation, requiring attention to safety. Robot System Components
-Mechanical Unit: The robot's mechanical arm, driven by AC Servo Motors. Servo motors precisely
-know their position through serial pulse counters. Each servo motor has a Mechanical Brake. When the servo is powered on, the brake is released; when
-powered off, the brake engages to prevent the robot from falling due to gravity. The robot's joints
-need to be lubricated regularly. There is a Rotary Pulse Encoder inside the servo motor. The robot records the "Home" position, which is a preset reference point. At the factory, the robot
-has an Absolute Zero Setup, usually with the arm fully extended and upright, used for calibration. However, in actual applications, the "Home" position may be arbitrarily set. There are batteries (usually four C-type batteries) inside the robot to power the encoders when the
-power is off, maintaining the robot's position memory. If the batteries run out after a power outage, the robot will issue an alarm after being turned on because it does not know its position. Controller: The control center of the robot. Peripheral Equipment: Such as Teach Pendant, Programmable Logic Controller (PLC), End of Arm
-Tooling, Human Machine Interface (HMI), cameras, and vision systems. Teach Pendant
-The teach pendant is the main tool for programming robots, similar to a large game controller. The programming process usually involves manually Jogging the robot to the target position and then
-pressing a button to store the position and motion method. The teach pendant has an emergency stop button (E-stop) and a dead man switch for safe operation. Each button has its unique function, which will be explained in detail in subsequent courses. The Shift key is usually used in combination with other buttons to execute the blue-labeled functions. The Menu button is used to access various settings and configurations. Cursor up and down keys, hold the Shift key and use them together to jump quickly. The Step mode button is used for program debugging and can execute the program step by step or
-continuously. It is recommended to use step mode when testing a program for the first time. The Reset button is used to clear alarms. Commonly used buttons include: Previous, Reset, Enter. The functions of Soft Keys change according to the current screen content.
-Buttons such as Position and I/O (Input/Output) are used to view relevant information. Older controllers have indicator lights on the panel, while newer controllers have the status indicator
-lights concentrated at the top (LED). We use the newer touchscreen teach pendant, which can
-theoretically connect a mouse and keyboard. Forward and Backward buttons can be used to move through program instructions. When manually operating the robot, you usually need to press and hold the Shift key while using the
-arrow keys to Jog the robot. Manual Operation (Jogging)
-Jog speed can be adjusted and is displayed as an Override Percentage, indicating the percentage of
-the current allowable speed. If the speed limit in T1 mode is 250 mm/s, a 50% override speed is 125
-mm/s. There are multiple Jog speeds, and even Fine Speed can be achieved, moving only one servo pulse at
-a time. When jogging the robot in Joint mode, press and hold the Shift key and press the buttons labeled J1, J2, etc. to control the forward or reverse movement of each joint separately. Joint mode is usually
-used to unjam or reconfigure the robot. When jogging the robot under other coordinate systems, the movement trajectory of the robot's end
-effector (TCP) may not be a straight line. Fanuc robots have five different coordinate systems, which can be switched by pressing the COORD
-button. Joint coordinate system: Each joint moves independently. World coordinate system: Moves along the X, Y, Z axes of the Cartesian coordinate system, relative
-to the origin of the world coordinate system. Tool coordinate system: Moves relative to the Tool Center Point (TCP). User coordinate system: User-defined coordinate system. Jog Frame coordinate system.
-In the Cartesian Jogging system (such as the world coordinate system), the robot's movement is
-related to the X, Y, Z axes in mathematics, and all movements are relative to a zero point (origin). The origin of the world coordinate system is usually located at the intersection of the robot base J1
-and J2. The right-hand rule is used to determine the positive directions of the X, Y, and Z axes in the world
-coordinate system. Positions can be represented using joint coordinates, world coordinates, or user coordinates. Singularity
-A singularity may occur when certain axes of the robot become too aligned. In the world coordinate
-system, it is easy to occur when the J4 and J6 axes are roughly in a straight line.
-At a singularity, the robot controller has difficulty calculating how to achieve the target TCP position
-because there are multiple combinations of joint angles that can reach the same position. The solution to the singularity problem is to switch to the Joint coordinate system and slightly jog the
-J5 axis (approximately ±10-15 degrees), and then switch back to the world coordinate system. This
-can break the straight line state of the axes. Hope this note helps you. Error Types and Causes
-Hardware issues: Dead battery, switch failure, broken cable, tool not properly connected. Uncommon
-but may occur. Fanuc systems have hardware fault diagnosis functions. Software issues: Incorrect programming, such as operational errors by third-party personnel, motion
-errors in the program (such as circular arc programming errors). External errors: Safety-related errors, such as the emergency stop being pressed, or stops triggered by
-interlocks with other automation equipment (such as opening a safety door). Many external errors
-can be cleared with the reset button. Clearing Errors
-When an error occurs, the teach pendant will display an error message, such as a DCS error. The Reset button (usually above the number keys) can clear many errors. Detailed alarm codes and descriptions can be viewed through Menu button -> Alarm. The Diagnostic button can also provide fault information. Fanuc provides electronic documents containing a complete list of alarm codes. Alarm codes usually
-consist of a four-digit prefix and a three-digit code, along with a description. Press F1 to view motion errors and application-specific errors. Press F5 (Detail) to view more detailed error information. Clear all error messages: Press and hold the Shift key and then press the F4 soft key on the teach
-pendant. The Dead Man Switch usually requires a reset to clear the error after being released. However, in this
-video, the system variable is set to automatically reset when the dead man switch is pressed again. Pressing and releasing the Emergency Stop (E-stop) will also be recorded as an error. DCS (Dual Check Safety) errors: Monitor the robot's speed and position to prevent collisions. Steps to clear DCS errors:
-1. Release all buttons. 2. Re-enable the dead man switch (press to the middle position). 3. Press and hold the Shift key. 4. While holding the Shift key, press the Reset button. 5. Release the Reset button, but continue holding the Shift key.
-6. Move the robot out of the dangerous area in manual (Jog) mode, moving in the opposite direction
-of what caused the error. 7. Be clear about what you are doing when operating in manual mode and avoid blindly pressing
-buttons. Program Management
-If you want to run another program after testing one, you need to Abort all running programs. Go to the Function menu (top right of the teach pendant) and select Abort All. This is a common
-operation to ensure the system is in a clean state.
-If a program is paused, it cannot be deleted. The system is like a room with someone inside; it needs
-to be cleared before operations can be performed. Aborting all programs does not change the robot's current position unless there are program or
-manual operation commands.
-If you see an error message like INF i i n t f 105, it indicates that a program is currently running. Singularity
-In the World Coordinate System, the robot may enter a singularity when the fourth axis (J4) and the
-sixth axis (J6) are roughly in a straight line. At a singularity, the robot controller encounters difficulty in calculating how to move the Tool Center
-Point (TCP) because there are an infinite number of joint angle combinations that can achieve the
-same end position. Symptoms of Singularity: When attempting to move the robot along certain directions (e.g., the Z-axis)
-in the world coordinate system, the controller will display a MOTN-230 Singularity error, and the
-robot will not move. Methods to resolve singularity issues:
-1. Switch to the Joint Coordinate System. 2. Slightly rotate the fifth axis (J5) by approximately 5 degrees. 3. Switch back to the World Coordinate System, at which point the robot should be able to move
-normally. This operation can break the alignment of J4 and J6 into a straight line. 4. This method can solve the singularity problem while keeping the Tool Center Point roughly
-unchanged.
+#### Coordinate System Navigation
+- You can Jog (manually move the robot) using `SHIFT` + axis buttons (X, Y, Z, W, P, R) on the virtual teach pendant.
+- The `COORD` menu is used to select different Jogging coordinate systems (World, Joint, Tool, User, Jog Frame).
+- World: Fixed coordinate system based on the robot base center. 
+- Joint: Based on the independent movement of each joint.
+- Tool: Based on the currently active tool coordinate system.
+- User: Based on the currently active user coordinate system.
+
+- Jog Frame: User-defined Jogging coordinate system.
+- If the World coordinate system is not available, it can be enabled by modifying the system variable
+`$SCR_GRP.$COORD_MASK`.
+- This variable is a binary mask, with each bit corresponding to an available coordinate system.
+- For example, the decimal value 31 (binary 11111) indicates that all commonly used coordinate systems (Joint, Jog Frame, World, Tool, User) are enabled.
+
+- You can roughly move the robot model in Roboguide by dragging it with the mouse. Program Node Map
+- You can toggle whether to display auxiliary elements such as points and lines in the program through
+`View` -> `Program Node Map`.
+
+- The displayed position marker types (`Position Triads`, `Position Connector Lines`) can be adjusted. Double Monitor Display
+- You can use `SHIFT` + `DISPLAY` to simultaneously display two different information windows (such as program and I/O status) on the teach pendant screen.
+
+#### Program Editing Tips and Utilities Edit Command
+- Located in the `EDIT` menu at the bottom of the teach pendant screen.
+- Replace: You can batch replace specified motion attributes (such as speed) in the program.
+The replace operation proceeds downwards from the current cursor position. To replace the entire program, the cursor needs to be moved to the top of the program.
+- Copy and Paste: You can copy and paste one or more program lines. Use `SELECT` to select the lines to be copied.
+- `COPY` copies the selected lines.
+- `PASTE` pastes the copied content at the current cursor position. You can choose to paste logic (`LOGIC`) or position ID and logic (`POSITION ID`).
+- Insert: You can insert a new line at the current cursor position.
+- Delete: You can delete the line where the current cursor is located or multiple selected lines.
+- Remark: You can use `EDIT COMMAND` -> `REMARK` to comment out the selected lines of code, making them not executed ( `//` is displayed at the beginning of the line).
+
+#### Macros
+- Small programs used to perform tasks in the background, can contain logic or motion commands.
+- Macros can be set in `MENU` -> `SETUP` -> `MACRO`.
+- Macros can be assigned to user keys or manual functions on the teach pendant. Non-motion type macros (`GROUP MASK` as ``) can be run under normal user keys. Macros can be called using `INSTRUCTION` -> `MISC`.
+
+#### Menu Utility
+- Custom menus can be created through `MENU` -> `SETUP` -> `MENU UTILITIES`.
+- You can create menu types such as `Prompt Message`, `Yes/No Select`, `Select from the list`.
+- Operators can interact with the program through these custom menus during runtime, for example, selecting subroutines to be executed.
+
+#### Advanced Topics Payload
+- Refers to the total weight of the robot's end effector and workpiece.
+- Correct payload settings can improve the robot's motion accuracy and performance and prevent overloading.
+- Can be configured in `MENU` -> `SYSTEM` -> `MOTION` -> `PAYLOAD`. Different payload schemes can be set and switched in the program.
+
+---
+# Comprehensive Guide to FANUC Robotics
+
+## Various Applications of Robots
+
+- **Material Handling**: Largest application area.
+- **Palletizing**
+- **Picking and Placing**
+- **Material Removal**: Examples include grinding, spray painting.
+- **Welding**
+- **Popular Industries**:
+  - Automotive Industry
+  - Pharmaceutical Industry
+  - RV Industry
+  - Others
+
+### Importance in the Post-Epidemic Era
+- Automation
+- Reliability
+- No sick leave
+- Maintains cleanliness
+- Improves part quality
+
+### Discussion on Jobs
+- Do robots replace or create jobs?
+- Future potential: Don’t limit to known applications; new uses will emerge.
+
+## Robot Terminology
+
+- **Maximum Space**: Furthest reach of all robot parts, even if operation isn’t possible there.
+- **Restricted Space**: Area limited for safety or practical reasons (via devices/software).
+- **Operating Space**: Where the robot actually performs tasks.
+
+## Robot Safety - First Principles
+
+- **Core Principle**: Operator safety is paramount; robots/parts are replaceable, people are not.
+- **Safety Priority**:
+  1. Operator
+  2. Robot
+  3. External Devices (e.g., signal lights, fixtures, controller)
+  4. Tooling (end-of-arm tools)
+  5. Workpiece (object handled)
+
+### Safety Devices and Measures
+- **Teach Pendant**: Includes Emergency Stop (E-stop) button.
+- **Dead Man Switch**: Three states:
+  - Fully released: Stop
+  - Fully pressed: Stop
+  - Middle position: Allows movement
+- **Light Curtains**: Stop
+
 
 ---
 
