@@ -249,7 +249,258 @@ The replace operation proceeds downwards from the current cursor position. To re
   - Fully released: Stop
   - Fully pressed: Stop
   - Middle position: Allows movement
-- **Light Curtains**: Stop
+- **Light Curtains**: Stop robot when work area is entered.
+- **Safety Fences**
+- **Pressure Mats**: Detect entry into danger zones.
+- **Interlocks**: E.g., dual-key start requirement.
+- **Warning Lights**
+- **Motion Limits**: Physical switches or software settings.
+
+### Collaborative Robots (Cobots)
+- Equipped with:
+  - Pressure sensors
+  - Safety sensors
+  - Speed sensors
+- Auto-stop on collision with a person.
+
+### Safety Precautions for Work Area
+- Always carry teach pendant or E-stop device.
+- Safety doors/guardrails with interlocks.
+- Follow Robotics Industries Association (RIA) guidelines.
+- **Maximum Envelope**: Entire potential motion range.
+- **Operating Envelope**: Actual work area.
+- **Anti-Tie Down Logic**: Prevents bypassing safety mechanisms.
+
+## Axis Limits
+- **Range**: Programmable, expressed in angles (e.g., ±180°).
+- **Adjustments**: May require robot restart.
+- **Types**:
+  - Hard Stops: Physical limits (e.g., Axis 5 prevents self-bending).
+  - Limit Switches: Electrical detection.
+  - Software Limits: Axes 4 and 6.
+
+## FANUC Dual Check Safety (DCS)
+- **Purpose**: Additional safety layer.
+- **Functions**:
+  - Position check
+  - Speed check
+  - Cartesian coordinate speed check
+- **Action**: Stops robot if entering unsafe areas or moving too fast.
+- **Features**: Defines restricted zones; stops on exit.
+
+## Important Safety Precautions
+- No loose clothing/jewelry.
+- Visually inspect robot and work cell.
+- Never enter powered robot envelope.
+- In education: No Auto mode without permission.
+- Close safety door in Auto mode.
+- Caution in manual/teach mode; limit time in work area.
+- **Lock Out Tag Out**: For maintenance (e.g., servo motor replacement).
+  - Release residual energy (flywheels, capacitors, springs).
+
+## Programming Considerations
+- Ensure safety via programming.
+- **Handshaking**: Sync with external devices.
+- **Motion Limits**: Protect equipment/personnel.
+- Monitor override speed, visualize trajectories.
+- Keep work area clean; ensure circuit protection.
+- **Advanced Concepts**: Home Position, Interference Zones.
+
+## General Robot System Components
+- **Mechanical Unit**: Robot body.
+- **Controller**: Runs software, the robot’s brain.
+- **Peripheral Equipment**: E.g., Teach Pendant.
+
+### Teach Pendant
+- **Purpose**: Programs robot, akin to a game controller.
+- **Method**: Jog to position, store with button press.
+- **Features**:
+  - E-stop button
+  - Dead Man Switch
+  - Shift (blue functions), Menu, Cursor Keys
+  - Step Mode (line-by-line execution)
+  - Reset (clear alarms), Enter, Previous, Soft Keys
+  - Position, I/O buttons
+- **Design**: Modern touchscreens, supports mouse/keyboard.
+- **Jogging**: Shift + J1-J6 keys.
+
+### Mechanical Unit and Servo Motors
+- **AC Servo Motors**:
+  - Drive motion with serial pulse counters for position.
+  - Mechanical Brake: On when off, off when on.
+  - Drift risk if brake fails without power.
+- **Maintenance**: Lubricate joints (not motors).
+- **Home Position**: User-set; Absolute Zero for calibration.
+- **Batteries**: C-type, maintain encoder memory.
+
+### Robot Axes
+- **Major Axes**:
+  - J1: Base rotation (torsion)
+  - J2: Arm bending
+  - J3: Shoulder up/down
+- **Minor Axes**:
+  - J4: Wrist torsion
+  - J5: Wrist pitch
+  - J6: Flange roll
+- **Optional**: J7 (gantry/turntable, not covered).
+- **Spider Robots**: 3 axes for high-speed pick/place.
+- **Motion**: Independent or coordinated.
+
+### Axis Motion Range and Limits
+- Limited by hard stops, limit switches, software (Axes 4, 6).
+- Axis 5: Hard stops prevent over-bending.
+
+### Controller
+- **Components**: Power supply, transformer, memory, I/O board.
+- **Types**: A, B, Open Air Mate, Mate.
+- **Operating Panel**:
+  - Fault Reset
+  - Teach/Run switch
+  - Go (Start) button
+  - Fault LED
+- **Modes**: Local (test), Remote (production via PLC).
+
+### Software
+- Pre-installed; back up with images.
+- **Modes**:
+  - T1: 250 mm/s max
+  - T2: Test, up to 100% speed
+  - Auto: Full speed, safety door stops
+- Safety door behavior varies by mode.
+
+### Peripheral Equipment
+- PLC
+- End-of-Arm Tooling
+- HMI
+- Cameras/Vision Systems
+
+## More Details on Teach Pendant
+- Middle Dead Man Switch position enables movement.
+- Shift + Cursor: Quick menu skip.
+- Step Mode: Line-by-line execution.
+- Key Buttons: Previous, Reset, Enter.
+- Soft Keys: Context-dependent.
+- Position/I/O: Display current status.
+
+## Starting the Robot
+- Via switch.
+
+## Jog Speed
+- **Override Speed**: % of max (e.g., 50% of 250 mm/s = 125 mm/s).
+- **Options**: Includes Fine Speed (1 pulse).
+
+## Manual Teaching (Jogging)
+- **Joint Mode**: Shift + J1-J6, for jams/reconfiguration.
+- **World Mode**: TCP moves in XYZ straight lines.
+- **Tool Mode**: TCP relative to tool system.
+- **User Mode**: TCP relative to custom system.
+- **Jog Frame Mode**: Less common.
+- Switch via Chord button.
+
+## Cartesian Coordinates
+- Used in World, Tool, User modes.
+- Origin at J1-J2 intersection.
+- Right Hand Rule for XYZ directions.
+
+## Singularity
+- **Cause**: Axes align, affecting motion.
+- **Fix**: Joint mode, adjust J5 (±10-15°).
+
+## FANUC Robot Programming Basics
+
+### Creating and Editing Jobs
+- **Create**: `SELECT` > `CREATE`, name (no numbers/spaces).
+- **Details**: Add comments, set `Group Mask` (1 for motion).
+- **Edit**: Use `EDIT`, add via `INSTRUCTION`.
+
+### Recording and Calling Positions
+- **Position Registers**: `DATA` > `POSITION REGISTERS`.
+- Record: `SHIFT` + `RECORD`.
+- Types: Cartesian (XYZ WPR), Joint angles.
+- Call: `INSTRUCTION` > `MOTION` > `JOINT`/`LINEAR`.
+
+### Data Registers
+- Store integers; view/modify via `DATA`.
+- Manipulate with `ADD`.
+
+### Motion Types
+- **Joint**: Fast, undefined path, % speed.
+- **Linear**: Straight path, mm/s speed.
+- **Circular/Arc**: 3-point arc (start, mid, end), for welding.
+
+### Speed
+- Joint/Circular: %.
+- Linear: mm/s.
+- Adjust via teach pendant.
+
+### Termination Type
+- **Fine**: Precise stop.
+- **Continuous**: Smooth pass-through.
+
+### Common Instructions
+- **Motion**: `JOINT`, `LINEAR`, `CIRCLE`.
+- **I/O**: `DO` controls devices; view via `I/O`.
+- **Register**: `R[] = R[] + Number`.
+- **Branching**: `JMP LBL`, `LBL`.
+- **Conditional**: `IF`, `SELECT`.
+- **Wait**: `WAIT DI[] = ON`, with timeout.
+- **Payload**: `PAYLOAD [Number]`.
+
+### User and Tool Frames
+- **User Frame**: Workpiece reference, 3-point setup (`MENU` > `SETUP` > `FRAMES`).
+- **Tool Frame**: TCP reference, 3-point or offset.
+- Switch: `SHIFT` + `COORD`.
+
+### Program Adjust
+- Fine-tune via `MENU` > `SETUP` > `ADJUST`.
+
+### Reference Positions
+- E.g., Home Position, callable in program.
+
+### I/O (Input/Output)
+- **Digital I/O**: For PLC, sensors; `DO[]`, `DI[]`.
+- **Robot I/O**: End effector devices.
+- **Ethernet I/O**: Requires option, uses UOP signals.
+
+### Program Flow Control
+- **Jump**: `LBL`, `JMP LBL`.
+- **Conditional**: `IF`, `SELECT`.
+- **Wait**: Pauses until condition met.
+- **Looping**: `FOR`/`ENDFOR`, `JMP LBL`.
+
+## Roboguide Software
+
+### Installation and Setup
+- Large file; select robot model/version.
+- Create/import cell from backup.
+
+### Creating a Cell
+- New: `File` > `New Cell`.
+- From Backup: `MENU` > `FILE` > `BACKUP EVERYTHING`.
+
+### Importing Tools
+- Adjust CAD gripper models in `IOTool Properties`.
+
+### Teach Pendant Simulation
+- Virtual pendant; physical option with `ROBOGUIDE MODE`.
+
+### Coordinate System Navigation
+- Jog via `SHIFT` + axis buttons; switch via `COORD`.
+
+## Advanced Topics
+
+### Payload
+- Set via `MENU` > `SYSTEM` > `MOTION` > `PAYLOAD`.
+
+### Machine Vision
+- Components: Light sources, cameras, filters.
+- Key for detection/measurement.
+
+### FANUC UOP with Ethernet I/O
+- Maps signals (start, stop) to PLC (e.g., CompactLogix).
+
+### Coordinate Mask Setup
+- `$SCR_GRP.$COORD_MASK`: Controls jogging coordinate options.
 
 
 ---
