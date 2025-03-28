@@ -215,6 +215,7 @@ To simulate the integration, the user needs to follow these detailed steps, assu
    - To launch the simulation in RViz, use the demo launch file provided in the MoveIt configuration package. For the M-10iA, the command is:
      ```
      roslaunch fanuc_m10ia_moveit_config demo_moveit.launch
+      roslaunch fanuc_m10ia_moveit_config demo.launch  # try this one
      ```
    - This will open RViz with the robot model loaded, and the MoveIt Motion Planning plugin enabled. Users can then use the interface to set goals, plan paths, and visualize motions, simulating the integration process without physical hardware.
    - This approach is straightforward and requires no additional setup beyond the package installation, making it ideal for initial testing.
