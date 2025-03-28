@@ -21,7 +21,8 @@ name the position registers for easy identification. To record the current robot
 selected position register, you can press the SHIFT and RECORD keys when the robot is at the target
 position. In the program, you can choose to use position registers to call previously recorded positions.
 4. **Coordinate Systems (Frames)**
-- Understanding coordinate systems is crucial for precise programming. World Frame: This is the robot's reference coordinate system, usually located at the center of the
+- Understanding coordinate systems is crucial for precise programming.
+- World Frame: This is the robot's reference coordinate system, usually located at the center of the
 robot base. All other coordinate systems are defined relative to the world coordinate system.
 - Tool Frame (UTOOL): Also known as the Tool Center Point (TCP), defines the position and
 orientation of the tool tip relative to the robot's sixth axis flange. Correctly setting the tool coordinate
