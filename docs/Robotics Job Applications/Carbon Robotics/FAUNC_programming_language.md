@@ -129,14 +129,14 @@ coordinate systems, and perform 3D visual programming and debugging.
 - ALARM: Used to view current and historical robot alarm information.
 - POSITION: Used to view the robot's current position information, which can be displayed in different
 coordinate systems.
-TEACH Mode (usually activated by the T1 or T2 mode button on the teach pendant) is the mode for
+- TEACH Mode (usually activated by the T1 or T2 mode button on the teach pendant) is the mode for
 program teaching and manual operation. In teach mode, the enabling switch (Deadman Switch) needs
 to be pressed to move the robot.
-AUTO Mode is the mode for the robot to automatically run programs. In automatic mode, the
+- AUTO Mode is the mode for the robot to automatically run programs. In automatic mode, the
 program is usually started by the start button (Cycle Start).
-STEP Mode allows the program to be executed step by step for debugging.
-CONTINUOUS Mode allows the program to run continuously.
-COORD key is used to switch the coordinate system (e.g., Joint, World, Tool, User) during manual
+- STEP Mode allows the program to be executed step by step for debugging.
+- CONTINUOUS Mode allows the program to run continuously.
+- COORD key is used to switch the coordinate system (e.g., Joint, World, Tool, User) during manual
 jogging. Not all robot configurations allow jogging in all coordinate systems.
 16. **Error Codes**
 - When the robot encounters an error, an error code will be displayed. Understanding basic error codes
