@@ -1,3 +1,15 @@
+problem-solving:
+- gather information
+- use resources
+- check system wiring
+- examine program logic
+- monitor system behaviour
+- perform system audits
+- fine-tune PID loops
+-  utilize PLC program debugging
+
+
+
 ### Key Points
 - Research suggests Tesla likely uses Ethernet-based fieldbus topology, possibly their custom TTPoE protocol, for factory automation, though specifics are not publicly disclosed.
 - It seems likely that Tesla employs advanced automation approaches, including robotic assembly, custom control systems, and continuous improvement processes.
