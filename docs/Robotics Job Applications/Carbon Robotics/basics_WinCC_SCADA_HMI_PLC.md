@@ -748,3 +748,35 @@ This covers inputs, outputs, timers, and safety.
 
 ### **Final Thoughts**
 PLC programming blends wiring, logic, and problem-solving. Start simple—master switches and lights—then build up to timers and sequences. Hands-on practice, even with simulations, is key to understanding. If you’d like to explore a specific topic deeper (e.g., timers, troubleshooting), just let me know!
+
+
+---
+
+
+
+A **normally-closed (NC) switch** in PLC programming is primarily used for safety and fail-safe operations. Here’s its purpose and functionality:
+
+---
+
+### **Use of Normally-Closed Switch in PLC Programming**
+1. **Fail-Safe Design**:
+   - A normally-closed switch ensures that the system defaults to a safe state in case of a wiring fault or disconnection.
+   - For example, a machine stop button is typically wired as NC. If the wire breaks, the circuit opens, stopping the machine immediately to prevent accidents[1][2].
+
+2. **Continuous Monitoring**:
+   - NC switches are often used in applications where continuous operation is required until an interruption occurs. For instance, an NC switch can keep a motor running until it is intentionally stopped.
+
+3. **Safety Functions**:
+   - Critical functions like emergency stops or limit switches use NC contacts to ensure immediate action when activated or when a fault occurs[2][5].
+
+4. **Logic Behavior**:
+   - In ladder logic, an NC input is represented as `XIO` (Examine If Open). When the physical NC switch is closed, the input bit is `1`. When the switch is activated (opened), the input bit becomes `0`, interrupting the circuit[4][6].
+
+---
+
+### **Key Applications**
+- **Stop Buttons**: Ensures reliable stopping of machinery even in case of wiring faults[1][2].
+- **Limit Switches**: Used to detect end-of-travel positions for moving parts.
+- **Safety Circuits**: Integrated into systems where failure must result in immediate shutdown.
+
+By using NC switches, PLC systems can achieve higher reliability and safety, especially in critical industrial processes.
