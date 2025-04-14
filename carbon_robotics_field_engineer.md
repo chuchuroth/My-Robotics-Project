@@ -137,6 +137,7 @@ Great! Now, let's focus on **interview preparation** for the Field Robotics Engi
 2️⃣ **Do you need help structuring responses using the STAR method (Situation, Task, Action, Result)?**  
 
 Let me know how you’d like to proceed! 🚀
+
 ----
 Great plan! Below are **example answers** for all the key questions using the **STAR method**. Use them as a reference to craft your own responses based on your experience.  
 
