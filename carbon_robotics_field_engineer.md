@@ -56,6 +56,7 @@ We’ll focus on:
 4. **Scenario-Based Questions** (handling breakdowns, customer complaints, maintenance scheduling)  
 
 Would you like to start with mock interview questions, or do you prefer the revised resume first? 🚀
+
 -----
 I'll tailor your resume to better fit the **Field Robotics Engineer** role at Carbon Robotics. Key improvements will include:  
 
@@ -73,6 +74,7 @@ I've tailored your resume to align with the **Field Robotics Engineer** role at 
 ✅ **Flexibility for fieldwork and travel**  
 
 Review the document and let me know if you’d like any refinements. Next, we can prepare for your interview! 🚀
+
 ----
 Great! Now, let's focus on **interview preparation** for the Field Robotics Engineer role at Carbon Robotics.  
 
