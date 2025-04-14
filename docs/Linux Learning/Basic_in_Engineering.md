@@ -205,8 +205,6 @@ Once you’re comfortable, we can move to a PCB layout for this circuit. What do
 
 ---
 
-Great, let’s shift gears to mechanical engineering and get you started on designing a mechanical part using CAD (Computer-Aided Design) software. Since you’re a beginner in both hardware and mechanical engineering, I’ll keep this simple, practical, and focused on the basics. We’ll design a straightforward part—a **flat mounting bracket with holes**—to give you a feel for the process.
-
 ---
 
 
@@ -275,6 +273,12 @@ Finding PCB circuit diagrams for learning purposes can be done through a variety
 * **Learn to read a Bill of Materials(BOM):** Knowing how to interpret a BOM is very important for understanding what components are required for a PCB.
 
 By exploring these resources and following these tips, you can effectively learn from PCB circuit diagrams and improve your electronics design skills.
+
+---
+
+
+
+Great, let’s shift gears to mechanical engineering and get you started on designing a mechanical part using CAD (Computer-Aided Design) software. Since you’re a beginner in both hardware and mechanical engineering, I’ll keep this simple, practical, and focused on the basics. We’ll design a straightforward part—a **flat mounting bracket with holes**—to give you a feel for the process.
 
 
 ---
