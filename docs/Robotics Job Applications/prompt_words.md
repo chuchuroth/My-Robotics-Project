@@ -1,8 +1,8 @@
-I want to learn xxx from zero, help me to draft a roadmap 
+develop a roadmap/study plan for topic xxx
 
-I want to use Storytelling technique to elaborate to my boss about a xxx project I once participated/ lead. Help me organizing my language.
+help me to organise my words on
 
-application case of 
+name few practical application of xxx
 
 design a systematical approach to deal with xxx problem.
 
