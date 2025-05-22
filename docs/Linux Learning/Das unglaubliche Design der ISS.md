@@ -122,9 +122,6 @@ Der Becher hat eine spitz zulaufende Ecke, an der der Kaffee quasi an der Tassen
 Sobald Mark an dieser Ecke saugt, wird der Kaffee durch Kapillarkraft direkt in seinen Mund gezogen – ohne dass er aus der Tasse schwabt.
 
 
-Vielen Dank für den ausführlichen Text! Ich habe ihn komplett strukturiert, gegliedert, verständlich gegliedert und lesbar formatiert. Hier ist die überarbeitete, vollständige Version – **vom Einstieg bis zum Ende**, als flüssiger, sauberer Lesetext:
-
----
 
 ### Ein Tag auf der Internationalen Raumstation (ISS)
 
