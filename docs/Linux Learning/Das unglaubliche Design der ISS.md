@@ -122,50 +122,160 @@ Der Becher hat eine spitz zulaufende Ecke, an der der Kaffee quasi an der Tassen
 Sobald Mark an dieser Ecke saugt, wird der Kaffee durch Kapillarkraft direkt in seinen Mund gezogen – ohne dass er aus der Tasse schwabt.
 
 
+Vielen Dank für den ausführlichen Text! Ich habe ihn komplett strukturiert, gegliedert, verständlich gegliedert und lesbar formatiert. Hier ist die überarbeitete, vollständige Version – **vom Einstieg bis zum Ende**, als flüssiger, sauberer Lesetext:
+
+---
+
+### Ein Tag auf der Internationalen Raumstation (ISS)
+
 **Das hier ist Dimitri.**
-Er ist für den heutigen Tag als Wissenschaftsoffizier eingeteilt und steht schon mitten in den Vorbereitungen für ein medizinisches Experiment.
-Über 3.000 davon wurden seit dem Jahr 2000 auf der ISS durchgeführt – z. B. zur Entwicklung neuer Medikamente oder der Erforschung von Muskelschwund.
-Denn schon nach wenigen Tagen im All bilden sich Muskeln und Knochen zurück.
-Das liegt daran, dass Astronaut\:innen ihren Körper nicht gegen die Schwerkraft stützen müssen.
-Sie treiben deshalb täglich zwei Stunden Sport, um dem Muskelabbau entgegenzuwirken.
+Marks Kaffee- und Kosmonautenkollege. Trotz der angespannten geopolitischen Lage bleibt die ISS eines der wenigen Projekte, in denen Russland und die USA weiterhin zusammenarbeiten.
 
-**Mark macht sich in der Zwischenzeit bereit für seinen Außeneinsatz.**
-Er ist Teil eines Zwei-Personen-Teams, das heute neue Solarpanels montieren soll.
-Das ist gefährlich – selbst kleinste Trümmerteile, die mit hoher Geschwindigkeit unterwegs sind, können das Leben der Raumfahrer gefährden.
+Jetzt kommen auch die Spätaufsteher dazu. Meistens besteht die Besatzung aus Amerikanern und Russen, manchmal auch aus Europäern, Kanadiern und Japanern.
 
-Vor dem Einsatz macht Mark einen Sicherheitscheck mit seinem Partner.
-Dann steigen sie in die Schleuse.
-Diese funktioniert ähnlich wie eine U-Boot-Schleuse.
-Sobald der Druck ausgeglichen ist, öffnet sich die äußere Luke.
-Die Astronauten krabbeln hinaus – das Ganze dauert bis zu zwei Stunden.
+Bei der Frühkonferenz bespricht die Crew die wichtigsten Tagesordnungspunkte mit den fünf ISS-Bodenkontrollzentren auf der Erde.
+Der wichtigste Punkt heute: **Ein Sonnensegel ist beschädigt.**
+Es hat zwei Risse – einer davon fast einen Meter lang. Da die ISS mit Solarenergie läuft, ist die Stromversorgung dadurch beeinträchtigt. Heute muss jemand raus und das Segel flicken. Doch: Die Solarmodule stehen unter Spannung – 100 Volt – und es gibt weder passende Ersatzteile noch geeignetes Werkzeug. Eine extrem riskante Operation.
 
-**Inzwischen trifft ein Versorgungsschiff ein.**
-Es bringt neue Experimente, frisches Essen, Kleidung, Ersatzteile und manchmal sogar kleine Überraschungen:
-Geschenke von Familienmitgliedern, neue Filme oder auch frische Lebensmittel wie Obst und Gemüse.
+Die US-Astronauten **Scott Parazynski** und **Doug Wheelock** machen sich bereit. Doch vorher steht noch ein anderer Punkt an:
+**Ein neues russisches Modul soll heute andocken – das Prischal.**
+Normalerweise würde man keinen Außeneinsatz und ein Modul-Andocken auf denselben Tag legen. Doch für unser Video machen sie eine Ausnahme – es ist einfach zu interessant.
 
-Beim Entladen muss jede Bewegung sitzen.
-In der Schwerelosigkeit kann ein Paket leicht davonschweben und sich in einer schlecht zugänglichen Ecke verkanten – oder versehentlich etwas beschädigen.
+---
 
-**Am Nachmittag ist Freizeit angesagt.**
-Mark nutzt sie, um mit seiner Familie zu telefonieren.
-Das geht über Satellitenverbindung – mit bis zu zwei Sekunden Verzögerung.
-Trotzdem ist der Kontakt zur Erde für die psychische Gesundheit enorm wichtig.
+### Zwei Tage zuvor – Baikonur
 
-Andere Crewmitglieder lesen, schauen Filme oder machen Fotos der Erde.
-Manche spielen auch Gitarre – es gibt eine an Bord.
-Haustiere sind natürlich nicht erlaubt, aber:
-Auf der ISS leben kleine, fliegende Mikroorganismen, die sozusagen als "Haustiere" gelten – etwa winzige Springschwänze, die in Versuchsboxen gehalten werden.
+Das hier ist der Weltraumbahnhof **Baikonur**, mitten in der kasachischen Steppe. Er gehört zur russischen Raumfahrtbehörde **Roscosmos**.
+Auf der Startrampe steht eine **Sojus-2-Trägerrakete** mit dem Raumschiff **MS-17** und dem eigentlichen Herzstück: einem vier Tonnen schweren Knotenmodul namens **Prischal**.
 
-**Am Abend gibt es noch eine gemeinsame Videokonferenz mit der Bodenstation.**
-Dabei wird der Tag ausgewertet und der nächste geplant.
-Dann geht’s zurück in die Schlafkabine.
-Mark schreibt ein paar Gedanken in sein digitales Tagebuch und schwebt dann in seinen Schlafsack.
+In einer Höhe von 193 bis 240 Kilometern trennen sich Rakete und Raumschiff. Um der ISS nahe zu kommen, muss das Modul in eine nahezu identische Umlaufbahn einschwenken. Nach zwei Tagen ist es dann in Sichtweite – nur noch 200 m trennen ISS und Prischal.
 
-**In eine ruhige, künstlich verdunkelte Kabine.**
-Vor dem Einschlafen denkt er noch einmal an seine Familie, an die Erde –
-an die irdischen Geräusche, Gerüche, Gefühle.
-Dann schließt er die Augen.
-Und draußen zieht schon wieder der nächste Sonnenaufgang vorbei.
+**Andocken:** Das läuft vollautomatisch. Die finale Ausrichtung beginnt.
+**Geschafft. Prischal ist angedockt.**
 
-**Ein ganz normaler Tag im Weltall.**
+---
+
+### Die Internationale Raumstation heute
+
+Die ISS besteht aus 16 unter Druck stehenden Modulen.
+Das bedeutet: Die Besatzung kann sich frei ohne Raumanzüge bewegen.
+
+Das Rückgrat der Station ist eine große **Gitterstruktur**. Sie steht nicht unter Druck, ist aber modular aufgebaut und besteht aus elf Teilen. An ihr sind die Sonnensegel und Module befestigt.
+
+* Das erste Modul: **Sarja** – 12,60 m lang, 20 Tonnen schwer, russische Fertigung.
+* Danach: **Unity** – ein amerikanisches Verbindungsmodul.
+* Im Juli 2000: **Swesda** – das erste Wohnmodul. Ab da konnten die ersten Raumfahrer einziehen.
+
+Über 40 Shuttlestarts und mehr als 20 Jahre hat es gebraucht, um die ISS in ihrer jetzigen Form zusammenzusetzen.
+
+Sie besteht aus zwei Hauptblöcken:
+
+* Ein russischer Block
+* Ein US-Block mit einem **europäischen** und einem **japanischen Modul**
+
+Besonders spannend: **Canadarm2**, ein 16 m langer Roboterarm mit Greifmechanismus.
+Er kann Module bewegen – oder Raumfahrer bei Außeneinsätzen halten. Der Arm kann sich entlang der Station bewegen und genau dort arbeiten, wo er gebraucht wird.
+
+**Daten & Fakten:**
+
+* 6 Forschungslabore
+* 2 Wohnmodule
+* 1 Beobachtungskuppel mit Panoramablick
+* Unzählige Stauräume, Verbindungsknoten und Technikräume
+* Wohnfläche: vergleichbar mit einer **Boeing 747**
+* Solarmodule: 260.000 Solarzellen auf 2.500 m² – etwa die Fläche eines Fußballfeldes
+* Die Solarpanels sind beweglich und richten sich stets zur Sonne.
+* Im Erdschatten übernehmen Batterien die Stromversorgung.
+
+---
+
+### Alltag auf der ISS
+
+**Mittagspause.**
+Mark holt sich einen Snack: **Erdnussbutter auf Tortilla**.
+Brot gibt es nicht – alles, was krümelt, ist gefährlich. Krümel fliegen in der Schwerelosigkeit lange herum und landen leicht in Augen oder Geräten.
+
+Das Essen wird auf der Erde von Ernährungsexpert\:innen entwickelt – mit den Astronauten gemeinsam ausgewählt. Jeder darf persönliche Favoriten mitnehmen:
+Chili nach Papas Rezept, schwäbische Käsespätzle von Oma oder auch **Nutella**.
+
+Ein Problem bleibt: **Das Essen schmeckt fade.**
+Der Dauerschnupfen durch die Flüssigkeitsverschiebung im Körper beeinträchtigt Geschmack und Geruch.
+Deshalb wird gern mit **flüssigem Salz, Pfeffer oder Tabasco** nachgewürzt.
+
+---
+
+### Training & Forschung
+
+**Zwei Stunden Sport pro Tag** sind Pflicht – wegen der Schwerelosigkeit:
+
+* Muskelabbau
+* Geringere Knochendichte
+* Herz-Kreislauf-System wird träge
+
+Nach dem Training kommt Marks Lieblingsbeschäftigung: **Forschung**.
+Die ISS ist das teuerste Forschungsprojekt der Menschheitsgeschichte.
+
+---
+
+### Experimente mit Mäusen und Pflanzen
+
+Das hier sind 15 Mäuse.
+Ihnen wurden auf der Erde spezielle Antikörper verabreicht – Mark untersucht, wie sich diese auf das **Knochenwachstum** auswirken.
+Denn Schwerelosigkeit beschleunigt Knochenschwund. Die Forschung hilft mit, das Medikament **Prolia** gegen Osteoporose zu entwickeln.
+
+**Pflanzenforschung:**
+Die **Ackerschmalwand** (auch Schaumkresse genannt) wächst normalerweise mit Wurzeln nach unten, Blättern nach oben – orientiert sich an Licht und Schwerkraft.
+Im All?
+**Kein oben, kein unten.**
+Die Pflanzen wachsen wild in alle Richtungen.
+
+Auch den **Chilipflanzen** geht es gut. Doch:
+
+* Sie reifen rund zwei Wochen später
+* Ihr **Capsaicin-Gehalt** ist vermutlich höher → also **scharfer**
+
+---
+
+### Der gefährlichste Außeneinsatz
+
+Jetzt wird es ernst: **Außeneinsatz an den beschädigten Solarpanels**.
+Die Crew: Scott Parazynski und Doug Wheelock.
+Sie sind im Modul **Quest**, der Ausstiegsschleuse. Der Druck wird gesenkt – dann treten sie ins Vakuum.
+
+Sicherungsleinen befestigen, Luke auf – sie steigen hinaus.
+Das Ziel ist weit entfernt – **noch nie war ein Mensch so weit draußen an der ISS.**
+Der Roboterarm wird verlängert, Scotts Fuß wird daran befestigt.
+Langsam bringt er ihn zu den Solarpanels – 400 km über dem Amazonas.
+
+Scott sagt später:
+
+> „Ich fühlte mich wie ein winziger Wurm am Ende einer Angelrute – allein im Nichts.“
+
+**Die Reparatur:**
+Aus **Aluminiumstreifen, Draht und Klebeband** wurden Klammern gebastelt.
+Scott befestigt sie wie Knöpfe an einem Hemd.
+**Es hält.**
+Erleichterung auf der ganzen Station. Der Einsatz war erfolgreich.
+
+---
+
+### Ein Blick nach vorn
+
+Die ISS ist über 25 Jahre alt.
+
+* Mal streikt die Klimaanlage
+* Mal funktioniert die Sauerstoffaufbereitung nicht
+* Manchmal entweicht Luft – und das Leck bleibt unauffindbar
+
+**2030** soll die Raumstation **kontrolliert zum Absturz** gebracht und im Ozean versenkt werden.
+
+Mark ist dankbar für seine Zeit im All –
+aber er freut sich auch auf seine Familie.
+Und auf die erste **Pizza auf der Erde** – mit ordentlich Krümeln. Und eine **lange Dusche.**
+
+Heute geht die Sonne schon zum **13. Mal** unter.
+**Gute Nacht.**
+Und natürlich:
+**Cheers.**
+
 
