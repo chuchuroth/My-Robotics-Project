@@ -1,4 +1,3 @@
-**Die legendärste Mission der CIA**
 
 **1968 mitten im kalten Krieg** Das sowjetische Raketen-Boot K129 geleitet lautlos durch die Tiefen des Pazifiks. Dann knapp **3000 km nordwestlich von Hawaii** verschwindet das Schiff plötzlich vom Radar. Bis heute weiß niemand genau warum das U-Boot vom Meer verschluckt wurde. Sicher ist nur dass es **wertvolle Waffen und Informationen an Bord** hatte. So wertvoll dass die **CIA** eines der spektakulärsten Bergungs und Ablenkungsmanöver aller Zeiten auf die Beine gestellt hat. Das ist die wahre Geschichte des unglaublichen Isorian Projekts.1968年，冷战正酣。苏联导弹潜艇K129悄无声息地潜行在太平洋深处。然后，在夏威夷西北方向约3000公里处，这艘潜艇突然从雷达上消失了。直到今天，没有人确切知道这艘U型潜艇为何被大海吞噬。唯一确定的是，它船上载有宝贵的武器和信息。这些东西如此宝贵，以至于中央情报局（CIA）策划了有史以来最引人注目的打捞和转移行动之一。这就是令人难以置信的“亚速尔群岛项目”（Isorian Projekts）的真实故事。
 
