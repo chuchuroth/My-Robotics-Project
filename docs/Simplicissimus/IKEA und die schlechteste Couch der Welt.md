@@ -1,4 +1,4 @@
-**IKEA und die schlechteste Couch der Welt**
+
 
 Steile These: In deinem Zimmer steht gerade mindestens ein Möbelstück von Ikea. Egal ob das Billy Regal, das Malm Bett oder dieser Klassiker hier. Das schwedische Möbelhaus hat unsere Art zu wohnen verändert: stylische, preiswerte Möbel zur Selbstmontage im flachen Pappkarton und Köttbullar – ein unfassbares Erfolgsrezept. Aber bei einer Geschäftsidee hat sich der Konzern so richtig verschätzt. Aufblasbare Möbel, insbesondere diese Couch, gilt heute als der größte Fail der Firmengeschichte. Macht euch bereit für ein absurdes Produktdesaster, groteske Fehlkalkulationen und sehr viel verschenktes Potenzial.大胆假设：你房间里此刻至少有一件宜家的家具。无论是 Billy 书架、Malm 床，还是这个经典款。这个瑞典家具品牌彻底改变了我们的居家方式——时尚、实惠的可组装家具，扁平包装纸箱，还有瑞典肉丸 —— 成就了一个不可思议的成功公式。但在某个商业点子上，这家公司却彻底看走了眼。充气家具，尤其是这款沙发，如今被认为是宜家历史上最大的失败。准备好迎接一个荒谬的产品灾难、离谱的误算，还有大量被浪费的潜力吧。
 
